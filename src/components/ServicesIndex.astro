@@ -1,0 +1,46 @@
+---
+import Contact from './Contact.astro';
+import Icon from './Icon.astro';
+import { services, serviceHref } from '../data/services';
+import { homeHref, projectHref, useT, type Lang } from '../i18n/ui';
+
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const t = useT(lang);
+---
+
+<nav class="wrap crumbs" aria-label="Breadcrumb">
+  <ol>
+    <li><a href={homeHref(lang)}>Redon Cela</a></li>
+    <li aria-current="page">{t('nav.services')}</li>
+  </ol>
+</nav>
+
+<section class="wrap">
+  <div class="section-head">
+    <p class="eyebrow">{t('nav.services')}</p>
+    <h1 class="h1">{t('svc.index.h1')}</h1>
+    <p class="lead">{t('svc.index.lead')}</p>
+  </div>
+  <div class="svc-index">
+    {services.map((s) => {
+      const c = s.i18n[lang];
+      return (
+        <article class="svc-index-item">
+          <Icon name={s.icon} />
+          <div>
+            <h2 class="h3"><a href={serviceHref(lang, s)}>{c.navLabel}</a></h2>
+            <p>{c.lead}</p>
+            <p class="service-seen">
+              {t('services.seen')}{' '}
+              {s.related.map((p, i) => <>{i > 0 && ', '}<a href={projectHref(lang, p.slug)}>{p.name}</a></>)}
+            </p>
+            <a class="more" href={serviceHref(lang, s)}>{t('svc.read', { name: c.navLabel })} <Icon name="chevron" /></a>
+          </div>
+        </article>
+      );
+    })}
+  </div>
+</section>
+
+<Contact lang={lang} />

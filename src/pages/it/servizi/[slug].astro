@@ -1,0 +1,24 @@
+---
+import Base from '../../../layouts/Base.astro';
+import ServicePage from '../../../components/ServicePage.astro';
+import { services, serviceAlternates, type Service } from '../../../data/services';
+import { serviceJsonLd } from '../../../data/seo';
+export function getStaticPaths() {
+  return services.map((service) => ({ params: { slug: service.i18n['it'].slug }, props: { service } }));
+}
+const lang = 'it';
+const { service } = Astro.props as { service: Service };
+const c = service.i18n[lang];
+---
+<Base
+  lang={lang}
+  title={c.metaTitle}
+  description={c.metaDescription}
+  path={`/services/${service.id}/`}
+  alternates={serviceAlternates(service)}
+  image={`/og/service-${service.id}-${lang}.png`}
+  imageAlt={c.h1}
+  jsonLd={serviceJsonLd(service, lang, Astro.site!)}
+>
+  <ServicePage service={service} lang={lang} />
+</Base>

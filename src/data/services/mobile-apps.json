@@ -1,0 +1,278 @@
+{
+  "id": "mobile-apps",
+  "icon": "phone",
+  "related": ["tdown", "saneo", "ucs", "circleon"],
+  "heroShot": "projects/tdown/flight-mobile.webp",
+  "i18n": {
+    "en": {
+      "slug": "mobile-app-development",
+      "navLabel": "Mobile apps",
+      "metaTitle": "Mobile app development for iOS and Android | Redon Cela",
+      "metaDescription": "Mobile app development for iOS and Android: native SwiftUI or one shared codebase with Capacitor, push notifications, live maps and App Store release.",
+      "eyebrow": "iOS and Android apps",
+      "h1": "Mobile app development for iOS and Android",
+      "lead": "I build apps for iOS and Android, native in SwiftUI where it matters and from shared web code with Capacitor where it doesn't. You get one person who writes the app, the backend behind it and handles the store release.",
+      "problemsTitle": "When an app starts to make sense",
+      "problems": [
+        "Your customers already use your website on their phone, and they ask why there is no app in the store.",
+        "You were quoted two separate teams, one for iOS and one for Android, plus a third for the backend.",
+        "People miss the moment that matters because nothing tells them: the appointment, the departure, the new message.",
+        "Your staff work on the move and the desktop admin panel is unusable on a phone.",
+        "Someone else started an app, left it half built, and it never made it through App Store review."
+      ],
+      "buildTitle": "What I build",
+      "build": [
+        {
+          "title": "Native iOS apps in SwiftUI",
+          "text": "For apps where the feel matters, like maps, live updates and gestures, I write SwiftUI and MapKit. The tdown iOS app uses no third-party dependencies at all."
+        },
+        {
+          "title": "iOS and Android from one codebase",
+          "text": "If you already have a Vue or Nuxt web app, Capacitor turns it into store apps without a rewrite. Saneo ships a patient app and a doctor app, Saneo Pro, from the same Vue code."
+        },
+        {
+          "title": "Push notifications",
+          "text": "Alerts sent from the server, so they arrive even when the app is closed. tdown sends departed, landing soon, landed and time to leave alerts through Firebase Cloud Messaging."
+        },
+        {
+          "title": "Maps and live data",
+          "text": "Live positions, clustered pins, distances and drive times. Data goes through your own backend with a cache, so the app holds no API keys."
+        },
+        {
+          "title": "Backend and admin screens",
+          "text": "The API, database, login and admin screens behind the app. Usually Firebase or a TypeScript API on Postgres, depending on the data."
+        },
+        {
+          "title": "App Store and Google Play release",
+          "text": "Signing, store listings, screenshots, privacy forms and review, plus the updates after launch."
+        }
+      ],
+      "processTitle": "How a project runs",
+      "process": [
+        {
+          "title": "Scope call",
+          "text": "We go through who uses the app, what they do on it and what must work offline or in the background. I tell you whether native or Capacitor fits, and why."
+        },
+        {
+          "title": "Clickable first version",
+          "text": "I build the main screens early with real data, so you test them on your own phone instead of reading a spec."
+        },
+        {
+          "title": "Build and test on devices",
+          "text": "Features arrive in small releases through TestFlight and Google Play internal testing. You and a few real users try each one."
+        },
+        {
+          "title": "Store release and handover",
+          "text": "I prepare the listings, submit the builds and answer review questions. The code, accounts and docs stay with you."
+        }
+      ],
+      "proofTitle": "Apps I have built",
+      "proofText": "tdown runs as a SwiftUI app, an Android app and a web app on one Firebase backend. Saneo shows the Capacitor side, and USA College Sport and CircleOn show portals designed for the phone first.",
+      "faqTitle": "Questions about mobile apps",
+      "faq": [
+        {
+          "q": "Should my app be native or cross-platform?",
+          "a": "It depends on what the app does. Maps, animations and background work feel better native, so I write those in SwiftUI. Forms, bookings, lists and dashboards work well from shared web code with Capacitor, and you maintain one codebase instead of three."
+        },
+        {
+          "q": "Can you turn my existing website into an app?",
+          "a": "Often, yes. If your web app is built in Vue, Nuxt or similar, Capacitor wraps it and adds native features like push, camera and location. I first check that the screens work well on a phone, because a plain website inside an app shell tends to fail App Store review."
+        },
+        {
+          "q": "Do you publish the app on the App Store and Google Play?",
+          "a": "Yes. I handle signing, store listings, screenshots, privacy details and review. By default the developer accounts are in your company's name, so the app stays yours if we stop working together."
+        },
+        {
+          "q": "Can the app send push notifications?",
+          "a": "Yes, on iOS and Android. I send them from the server with Firebase Cloud Messaging, so they arrive with the app closed. You decide which events trigger them and what the message says."
+        },
+        {
+          "q": "What happens after launch?",
+          "a": "Apple and Google release new system versions every year, and apps need small updates to keep working. I can stay on for updates and new features, or hand the repository and docs over to your own team."
+        }
+      ],
+      "ctaTitle": "Planning an app?",
+      "ctaText": "Tell me who it is for and what it should do. I will reply with how I would build it and what I need from you."
+    },
+    "it": {
+      "slug": "sviluppo-app-mobile",
+      "navLabel": "App mobile",
+      "metaTitle": "Sviluppo app mobile iOS e Android | Redon Cela",
+      "metaDescription": "Sviluppo app mobile per iOS e Android: native in SwiftUI o da un unico codice con Capacitor, notifiche push, mappe in diretta e pubblicazione sugli store.",
+      "eyebrow": "App iOS e Android",
+      "h1": "Sviluppo app mobile per iOS e Android",
+      "lead": "Sviluppo app per iOS e Android: native in SwiftUI quando serve, dal codice web condiviso con Capacitor quando basta. Hai una sola persona che scrive l'app e il backend e si occupa della pubblicazione sugli store.",
+      "problemsTitle": "Quando un'app comincia ad avere senso",
+      "problems": [
+        "I tuoi clienti usano già il sito dal telefono e ti chiedono perché non c'è un'app.",
+        "Ti hanno proposto due team separati, uno per iOS e uno per Android, più un terzo per il backend.",
+        "Le persone si perdono il momento importante perché nessuno le avvisa: l'appuntamento, la partenza, il nuovo messaggio.",
+        "Il tuo personale lavora fuori sede e il gestionale pensato per il desktop sul telefono è inutilizzabile.",
+        "Un'app iniziata da qualcun altro è rimasta a metà e non ha mai superato la revisione dell'App Store."
+      ],
+      "buildTitle": "Cosa sviluppo",
+      "build": [
+        {
+          "title": "App iOS native in SwiftUI",
+          "text": "Per le app dove conta la sensazione d'uso, come mappe, aggiornamenti in diretta e gesti, scrivo in SwiftUI e MapKit. L'app iOS di tdown non usa nessuna libreria esterna."
+        },
+        {
+          "title": "iOS e Android da un solo codice",
+          "text": "Se hai già un'applicazione web in Vue o Nuxt, Capacitor la trasforma in app per gli store senza riscriverla. Saneo pubblica un'app per i pazienti e una per i medici, Saneo Pro, dallo stesso codice Vue."
+        },
+        {
+          "title": "Notifiche push",
+          "text": "Avvisi inviati dal server, che arrivano anche con l'app chiusa. tdown avvisa quando il volo decolla, quando sta per atterrare, quando atterra e quando è ora di uscire, tramite Firebase Cloud Messaging."
+        },
+        {
+          "title": "Mappe e dati in tempo reale",
+          "text": "Posizioni in diretta, pin raggruppati, distanze e tempi di guida. I dati passano dal tuo backend con una cache, così l'app non contiene chiavi API."
+        },
+        {
+          "title": "Backend e pannello di gestione",
+          "text": "API, database, login e schermate di amministrazione dietro l'app. Di solito Firebase oppure un'API TypeScript su Postgres, in base ai dati."
+        },
+        {
+          "title": "Pubblicazione su App Store e Google Play",
+          "text": "Firma, schede dello store, screenshot, moduli sulla privacy e revisione, più gli aggiornamenti dopo il lancio."
+        }
+      ],
+      "processTitle": "Come lavoriamo",
+      "process": [
+        {
+          "title": "Prima chiamata",
+          "text": "Vediamo chi userà l'app, cosa ci farà e cosa deve funzionare offline o in background. Ti dico se conviene nativa o con Capacitor, e perché."
+        },
+        {
+          "title": "Prima versione cliccabile",
+          "text": "Costruisco presto le schermate principali con dati veri, così le provi sul tuo telefono invece di leggere un documento."
+        },
+        {
+          "title": "Sviluppo e test sui dispositivi",
+          "text": "Le funzioni arrivano in piccoli rilasci tramite TestFlight e il test interno di Google Play. Tu e qualche utente reale le provate una per una."
+        },
+        {
+          "title": "Pubblicazione e consegna",
+          "text": "Preparo le schede, invio le build e rispondo alle domande della revisione. Codice, account e documentazione restano a te."
+        }
+      ],
+      "proofTitle": "App che ho sviluppato",
+      "proofText": "tdown gira come app SwiftUI, app Android e app web su un unico backend Firebase. Saneo mostra il lato Capacitor, mentre USA College Sport e CircleOn sono portali pensati prima di tutto per il telefono.",
+      "faqTitle": "Domande frequenti sulle app",
+      "faq": [
+        {
+          "q": "Meglio un'app nativa o un'app ibrida?",
+          "a": "Dipende da cosa fa l'app. Mappe, animazioni e lavoro in background rendono meglio in nativo, quindi li scrivo in SwiftUI. Moduli, prenotazioni, elenchi e dashboard funzionano bene come app ibrida con Capacitor, e mantieni un solo codice invece di tre."
+        },
+        {
+          "q": "Puoi trasformare il mio sito in un'app?",
+          "a": "Spesso sì. Se la tua applicazione web è fatta in Vue, Nuxt o simili, Capacitor la impacchetta e aggiunge funzioni native come push, fotocamera e posizione. Prima controllo che le schermate funzionino bene sul telefono, perché un semplice sito dentro un'app di solito non passa la revisione dell'App Store."
+        },
+        {
+          "q": "Ti occupi tu della pubblicazione su App Store e Google Play?",
+          "a": "Sì. Seguo firma, schede dello store, screenshot, dati sulla privacy e revisione. Di norma gli account sviluppatore sono intestati alla tua azienda, così l'app resta tua anche se smettiamo di lavorare insieme."
+        },
+        {
+          "q": "L'app può inviare notifiche push?",
+          "a": "Sì, su iOS e Android. Le invio dal server con Firebase Cloud Messaging, così arrivano anche con l'app chiusa. Decidi tu quali eventi le fanno partire e cosa dice il messaggio."
+        },
+        {
+          "q": "Cosa succede dopo il lancio?",
+          "a": "Apple e Google rilasciano ogni anno nuove versioni del sistema, e le app hanno bisogno di piccoli aggiornamenti per continuare a funzionare. Posso restare per aggiornamenti e nuove funzioni, oppure consegnare repository e documentazione al tuo team."
+        }
+      ],
+      "ctaTitle": "Stai pensando a un'app?",
+      "ctaText": "Scrivimi per chi è e cosa deve fare. Ti rispondo con come la costruirei e cosa mi serve da te."
+    },
+    "sq": {
+      "slug": "zhvillim-aplikacionesh-mobile",
+      "navLabel": "Aplikacione mobile",
+      "metaTitle": "Zhvillim aplikacionesh mobile iOS dhe Android | Redon Cela",
+      "metaDescription": "Zhvillim aplikacionesh mobile për iOS dhe Android: native në SwiftUI ose nga një kod i vetëm me Capacitor, njoftime push, harta live dhe publikim në store.",
+      "eyebrow": "Aplikacione iOS dhe Android",
+      "h1": "Zhvillim aplikacionesh mobile për iOS dhe Android",
+      "lead": "Ndërtoj aplikacione për iOS dhe Android: native në SwiftUI kur ka rëndësi, nga kodi i përbashkët web me Capacitor kur mjafton. Ke një person të vetëm që shkruan aplikacionin dhe backend-in dhe e publikon në App Store e Google Play.",
+      "problemsTitle": "Kur një aplikacion fillon të ketë kuptim",
+      "problems": [
+        "Klientët e tu e përdorin tashmë faqen nga telefoni dhe pyesin pse nuk ka aplikacion.",
+        "Të kanë ofruar dy ekipe të ndara, një për iOS dhe një për Android, plus një të tretë për backend-in.",
+        "Njerëzit humbasin momentin e rëndësishëm sepse askush nuk i njofton: takimin, nisjen, mesazhin e ri.",
+        "Stafi yt punon në terren dhe paneli i administrimit nuk përdoret dot nga telefoni.",
+        "Një aplikacion i nisur nga dikush tjetër mbeti në gjysmë dhe nuk e kaloi kurrë rishikimin e App Store."
+      ],
+      "buildTitle": "Çfarë ndërtoj",
+      "build": [
+        {
+          "title": "Aplikacione iOS native në SwiftUI",
+          "text": "Për aplikacionet ku ndjesia në përdorim ka rëndësi, si hartat, përditësimet live dhe gjestet, shkruaj në SwiftUI dhe MapKit. Aplikacioni iOS i tdown nuk përdor asnjë librari të jashtme."
+        },
+        {
+          "title": "iOS dhe Android nga një kod i vetëm",
+          "text": "Nëse ke tashmë një aplikacion web në Vue ose Nuxt, Capacitor e kthen në aplikacione për store pa e rishkruar. Saneo ka një aplikacion për pacientët dhe një për mjekët, Saneo Pro, nga i njëjti kod Vue."
+        },
+        {
+          "title": "Njoftime push",
+          "text": "Njoftime të dërguara nga serveri, që vijnë edhe kur aplikacioni është i mbyllur. tdown njofton kur fluturimi niset, kur është gati të ulet, kur ulet dhe kur është koha të nisesh, përmes Firebase Cloud Messaging."
+        },
+        {
+          "title": "Harta dhe të dhëna live",
+          "text": "Pozicione në kohë reale, pika të grupuara në hartë, distanca dhe kohë udhëtimi. Të dhënat kalojnë nga backend-i yt me cache, prandaj aplikacioni nuk mban çelësa API."
+        },
+        {
+          "title": "Backend dhe panel administrimi",
+          "text": "API-ja, databaza, hyrja e përdoruesve dhe ekranet e administrimit pas aplikacionit. Zakonisht Firebase ose një API TypeScript mbi Postgres, sipas të dhënave."
+        },
+        {
+          "title": "Publikim në App Store dhe Google Play",
+          "text": "Nënshkrimi, faqet në store, screenshot-et, formularët e privatësisë dhe rishikimi, plus përditësimet pas publikimit."
+        }
+      ],
+      "processTitle": "Si ecën një projekt",
+      "process": [
+        {
+          "title": "Biseda e parë",
+          "text": "Shohim kush do ta përdorë aplikacionin, çfarë do të bëjë në të dhe çfarë duhet të punojë pa internet ose në sfond. Të them nëse përshtatet native apo Capacitor, dhe pse."
+        },
+        {
+          "title": "Versioni i parë që klikohet",
+          "text": "Ndërtoj herët ekranet kryesore me të dhëna reale, që t'i provosh në telefonin tënd në vend që të lexosh një dokument."
+        },
+        {
+          "title": "Zhvillim dhe testim në pajisje",
+          "text": "Funksionet vijnë me publikime të vogla përmes TestFlight dhe testimit të brendshëm në Google Play. Ti dhe disa përdorues realë i provoni një nga një."
+        },
+        {
+          "title": "Publikimi dhe dorëzimi",
+          "text": "Përgatis faqet në store, dërgoj versionet dhe u përgjigjem pyetjeve të rishikimit. Kodi, llogaritë dhe dokumentacioni mbeten te ti."
+        }
+      ],
+      "proofTitle": "Aplikacione që kam ndërtuar",
+      "proofText": "tdown punon si aplikacion SwiftUI, aplikacion Android dhe aplikacion web mbi të njëjtin backend Firebase. Saneo, për pacientët dhe mjekët në Shqipëri, tregon anën me Capacitor, ndërsa USA College Sport dhe CircleOn janë portale të menduara para së gjithash për telefonin.",
+      "faqTitle": "Pyetje për aplikacionet mobile",
+      "faq": [
+        {
+          "q": "Aplikacion native apo cross-platform?",
+          "a": "Varet nga çfarë bën aplikacioni. Hartat, animacionet dhe puna në sfond ndihen më mirë native, prandaj i shkruaj në SwiftUI. Formularët, rezervimet, listat dhe panelet punojnë mirë nga kodi i përbashkët web me Capacitor, dhe mban një kod në vend të tre."
+        },
+        {
+          "q": "Mund ta kthesh faqen time në aplikacion?",
+          "a": "Shpesh po. Nëse aplikacioni yt web është në Vue, Nuxt ose diçka të ngjashme, Capacitor e paketon dhe shton funksione native si push, kamera dhe vendndodhje. Fillimisht kontrolloj që ekranet të punojnë mirë në telefon, sepse një faqe e thjeshtë brenda një aplikacioni zakonisht nuk e kalon rishikimin e App Store."
+        },
+        {
+          "q": "A e publikon ti aplikacionin në App Store dhe Google Play?",
+          "a": "Po. Merrem me nënshkrimin, faqet në store, screenshot-et, të dhënat e privatësisë dhe rishikimin. Si parazgjedhje, llogaritë e zhvilluesit janë në emër të biznesit tënd, që aplikacioni të mbetet yti edhe nëse ndalojmë bashkëpunimin."
+        },
+        {
+          "q": "A mund të dërgojë aplikacioni njoftime push?",
+          "a": "Po, në iOS dhe Android. I dërgoj nga serveri me Firebase Cloud Messaging, që të vijnë edhe kur aplikacioni është i mbyllur. Ti vendos cilat ngjarje i nisin dhe çfarë thotë mesazhi."
+        },
+        {
+          "q": "Çfarë ndodh pas publikimit?",
+          "a": "Apple dhe Google nxjerrin çdo vit versione të reja të sistemit, dhe aplikacionet kanë nevojë për përditësime të vogla që të vazhdojnë të punojnë. Mund të vazhdoj me përditësimet dhe funksionet e reja, ose t'ia dorëzoj kodin dhe dokumentacionin ekipit tënd."
+        }
+      ],
+      "ctaTitle": "Po mendon për një aplikacion?",
+      "ctaText": "Më shkruaj për kë është dhe çfarë duhet të bëjë. Punoj në shqip me biznese në Shqipëri dhe Kosovë, dhe të përgjigjem si do ta ndërtoja."
+    }
+  }
+}

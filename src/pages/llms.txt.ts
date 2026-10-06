@@ -1,6 +1,7 @@
 import type { APIRoute } from 'astro';
 import { projects, hostOf } from '../data/projects';
 import { EMAIL, profile } from '../data/profile';
+import { services, serviceHref } from '../data/services';
 
 // Plain-text summary for AI assistants and search tools (llmstxt.org).
 export const GET: APIRoute = ({ site }) => {
@@ -13,6 +14,10 @@ export const GET: APIRoute = ({ site }) => {
     `Contact: ${EMAIL}`,
     `LinkedIn: ${profile.linkedinUrl}`,
     `GitHub: ${profile.githubUrl}`,
+    '',
+    '## Services',
+    '',
+    ...services.map((s) => `- [${s.i18n.en.navLabel}](${abs(serviceHref('en', s))}): ${s.i18n.en.lead}`),
     '',
     '## Projects',
     '',

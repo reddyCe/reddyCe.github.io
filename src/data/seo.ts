@@ -1,6 +1,7 @@
 import { projects, type Project } from './projects';
 import { profile, EMAIL } from './profile';
 import { prefix, projectHref, ui, type Lang } from '../i18n/ui';
+import { services, serviceHref, servicesIndexHref, type Service } from './services';
 
 const abs = (site: URL, p: string) => new URL(p, site).href;
 
@@ -132,6 +133,66 @@ export function projectJsonLd(p: Project, lang: Lang, site: URL) {
           ],
         },
       ],
+    },
+  ];
+}
+
+export function serviceJsonLd(s: Service, lang: Lang, site: URL) {
+  const c = s.i18n[lang];
+  const url = abs(site, serviceHref(lang, s));
+  return [
+    {
+      '@context': 'https://schema.org',
+      '@graph': [
+        {
+          '@type': 'Service',
+          '@id': `${url}#service`,
+          name: c.navLabel,
+          serviceType: c.navLabel,
+          description: c.metaDescription,
+          url,
+          inLanguage: lang,
+          provider: person(site),
+          areaServed: ['Albania', 'Kosovo', 'Italy', 'Germany', 'European Union', 'Worldwide'],
+          availableLanguage: ['English', 'Italian', 'Albanian'],
+          hasOfferCatalog: {
+            '@type': 'OfferCatalog',
+            name: c.buildTitle,
+            itemListElement: c.build.map((b) => ({ '@type': 'Offer', itemOffered: { '@type': 'Service', name: b.title, description: b.text } })),
+          },
+          subjectOf: s.related.map((p) => ({ '@type': 'CreativeWork', name: p.name, url: abs(site, projectHref(lang, p.slug)) })),
+        },
+        {
+          '@type': 'FAQPage',
+          '@id': `${url}#faq`,
+          inLanguage: lang,
+          mainEntity: c.faq.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+        },
+        {
+          '@type': 'BreadcrumbList',
+          itemListElement: [
+            { '@type': 'ListItem', position: 1, name: 'Redon Cela', item: abs(site, `${prefix(lang)}/`) },
+            { '@type': 'ListItem', position: 2, name: ui[lang]['nav.services'], item: abs(site, servicesIndexHref(lang)) },
+            { '@type': 'ListItem', position: 3, name: c.navLabel, item: url },
+          ],
+        },
+      ],
+    },
+  ];
+}
+
+export function servicesIndexJsonLd(lang: Lang, site: URL) {
+  return [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'ItemList',
+      name: ui[lang]['svc.index.h1'],
+      itemListElement: services.map((s, i) => ({
+        '@type': 'ListItem',
+        position: i + 1,
+        url: abs(site, serviceHref(lang, s)),
+        name: s.i18n[lang].navLabel,
+      })),
     },
   ];
 }

@@ -2,16 +2,17 @@
 import Icon from './Icon.astro';
 import { useT, type Lang } from '../i18n/ui';
 import { EMAIL, profile } from '../data/profile';
-interface Props { lang: Lang }
+interface Props { lang: Lang; title?: string; lede?: string }
 const t = useT(Astro.props.lang);
+const { title, lede } = Astro.props;
 const mailto = `mailto:${EMAIL}?subject=${encodeURIComponent(t('contact.subject'))}`;
 ---
 <section class="section wrap contact" id="contact" aria-labelledby="contact-title">
   <div class="panel panel-accent" data-reveal>
     <div class="panel-text">
       <p class="eyebrow">{t('contact.kicker')}</p>
-      <h2 id="contact-title" class="h2">{t('contact.title')}</h2>
-      <p class="lead">{t('contact.lede')}</p>
+      <h2 id="contact-title" class="h2">{title ?? t('contact.title')}</h2>
+      <p class="lead">{lede ?? t('contact.lede')}</p>
       <p class="btn-row">
         <a class="btn btn-light" href={mailto}><Icon name="mail" />{t('contact.write')}</a>
         <button class="btn btn-outline-light" type="button" data-copy={EMAIL} data-done={t('contact.copied')}>

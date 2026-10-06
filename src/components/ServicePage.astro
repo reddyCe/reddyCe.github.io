@@ -1,0 +1,130 @@
+---
+import type { ImageMetadata } from 'astro';
+import Contact from './Contact.astro';
+import Frame from './Frame.astro';
+import Icon from './Icon.astro';
+import { services, serviceHref, servicesIndexHref, proofShot, type Service } from '../data/services';
+import { hostOf } from '../data/projects';
+import { homeHref, projectHref, useT, type Lang } from '../i18n/ui';
+
+interface Props { service: Service; lang: Lang }
+const { service: s, lang } = Astro.props;
+const t = useT(lang);
+const c = s.i18n[lang];
+
+const assets = import.meta.glob<{ default: ImageMetadata }>('../assets/projects/**/*.webp', { eager: true });
+const heroImage = s.heroShot ? assets[`../assets/${s.heroShot}`]?.default : undefined;
+const heroKind: 'desktop' | 'mobile' = s.heroShot && /mobile/.test(s.heroShot) ? 'mobile' : 'desktop';
+const heroProject = s.related.find((p) => s.heroShot?.includes(`/${p.slug}/`)) ?? s.related[0];
+const others = services.filter((x) => x.id !== s.id);
+---
+
+<nav class="wrap crumbs" aria-label="Breadcrumb">
+  <ol>
+    <li><a href={homeHref(lang)}>Redon Cela</a></li>
+    <li><a href={servicesIndexHref(lang)}>{t('nav.services')}</a></li>
+    <li aria-current="page">{c.navLabel}</li>
+  </ol>
+</nav>
+
+<article>
+  <header class="wrap pp-hero svc-hero">
+    <div class="panel">
+      <div class="panel-text panel-accent">
+        <p class="eyebrow">{c.eyebrow}</p>
+        <h1 class="h1">{c.h1}</h1>
+        <p class="lead">{c.lead}</p>
+        <p class="btn-row">
+          <a class="btn btn-dark" href="#contact">{t('svc.brief')}</a>
+          <a class="btn btn-outline-light" href="#proof">{t('svc.examples')}</a>
+        </p>
+      </div>
+      <div class="panel-media">
+        {heroImage && (
+          <Frame image={heroImage} kind={heroKind} alt={`${heroProject?.name ?? ''}: ${c.h1}`} url={hostOf(heroProject?.url) || 'app'} eager />
+        )}
+      </div>
+    </div>
+  </header>
+
+  <section class="wrap section" aria-labelledby="problems">
+    <div class="svc-problems">
+      <h2 id="problems" class="h2">{c.problemsTitle}</h2>
+      <ul class="checks">{c.problems.map((p) => <li>{p}</li>)}</ul>
+    </div>
+  </section>
+
+  <section class="wrap section" aria-labelledby="build">
+    <div class="section-head"><h2 id="build" class="h2">{c.buildTitle}</h2></div>
+    <div class="services-list">
+      {c.build.map((b) => (
+        <div class="service svc-item">
+          <h3>{b.title}</h3>
+          <p>{b.text}</p>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <section class="wrap section" aria-labelledby="process">
+    <div class="section-head"><h2 id="process" class="h2">{c.processTitle}</h2></div>
+    <ol class="numbers svc-steps">
+      {c.process.map((step, i) => (
+        <li class="num">
+          <p class="num-label">{String(i + 1).padStart(2, '0')}</p>
+          <h3 class="svc-step-title">{step.title}</h3>
+          <p class="num-sub">{step.text}</p>
+        </li>
+      ))}
+    </ol>
+  </section>
+
+  <section class="wrap section" id="proof" aria-labelledby="proof-title">
+    <div class="section-head">
+      <h2 id="proof-title" class="h2">{c.proofTitle}</h2>
+      <p>{c.proofText}</p>
+    </div>
+    <div class="svc-proof">
+      {s.related.map((p) => {
+        const shot = proofShot(s.id, p);
+        return (
+          <a class="svc-proof-card" href={projectHref(lang, p.slug)}>
+            <div class="svc-proof-media">
+              {shot && <Frame image={shot.image} kind={shot.kind} alt={`${p.name}: ${shot.caption?.[lang] ?? ''}`} url={hostOf(p.url) || p.slug} sizes="(max-width: 900px) 100vw, 600px" />}
+            </div>
+            <div class="svc-proof-text">
+              <h3>{p.name}</h3>
+              <p>{p.i18n[lang].tagline}</p>
+              <span class="more">{t('svc.proof.more')} <Icon name="chevron" /></span>
+            </div>
+          </a>
+        );
+      })}
+    </div>
+  </section>
+
+  <section class="wrap section" aria-labelledby="faq">
+    <div class="svc-faq">
+      <h2 id="faq" class="h2">{c.faqTitle}</h2>
+      <div>
+        {c.faq.map((f) => (
+          <details class="faq">
+            <summary>{f.q}<Icon name="chevron" /></summary>
+            <p>{f.a}</p>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <nav class="wrap section" aria-labelledby="other-services">
+    <h2 id="other-services" class="h3 svc-others-title">{t('svc.all')}</h2>
+    <ul class="tiles">
+      {others.map((o) => (
+        <li><a class="tile" href={serviceHref(lang, o)}><Icon name={o.icon} />{o.i18n[lang].navLabel}</a></li>
+      ))}
+    </ul>
+  </nav>
+</article>
+
+<Contact lang={lang} title={c.ctaTitle} lede={c.ctaText} />

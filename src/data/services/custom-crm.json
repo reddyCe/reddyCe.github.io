@@ -1,0 +1,278 @@
+{
+  "id": "custom-crm",
+  "icon": "kanban",
+  "related": ["alproperty", "circleon", "saneo", "ucs"],
+  "heroShot": "projects/alproperty/crm-clients-pipeline.webp",
+  "i18n": {
+    "en": {
+      "slug": "custom-crm-development",
+      "navLabel": "Custom CRM",
+      "metaTitle": "Custom CRM and internal tools development | Redon Cela",
+      "metaDescription": "Custom CRM development for agencies, clinics and small teams: sales pipelines, client records, admin panels and roles, built to replace Excel and WhatsApp.",
+      "eyebrow": "CRM and internal tools",
+      "h1": "Custom CRM development for teams that outgrew Excel",
+      "lead": "I build CRMs, admin panels and internal tools that follow the way your team already works. Leads, clients, listings and tasks move out of spreadsheets and chat threads into one place the whole team can open.",
+      "problemsTitle": "Does this sound familiar?",
+      "problems": [
+        "Leads arrive on WhatsApp, Instagram and the phone, and nobody knows who called back.",
+        "The client list is an Excel file that three people edit, and every copy is a little different.",
+        "When an agent goes on holiday, their clients and notes stay on their phone.",
+        "You pay for a CRM built for American sales teams and use a tenth of it.",
+        "Every Monday someone spends the morning putting numbers together for a report."
+      ],
+      "buildTitle": "What I build",
+      "build": [
+        {
+          "title": "Sales pipelines",
+          "text": "A Kanban board where each lead moves from first contact to closed deal. Drag a card and the status, date and owner update for everyone."
+        },
+        {
+          "title": "Client and listing records",
+          "text": "One page per client, property, patient or athlete, with notes, files, history and the person responsible. In the ALProperty CRM, agents see which listings match a buyer's budget and preferred areas."
+        },
+        {
+          "title": "Admin panels",
+          "text": "A back office to manage users, plans, payments and content. For CircleOn.me I built an admin dashboard with tabs for users, payments, growth attribution and activity."
+        },
+        {
+          "title": "Dashboards",
+          "text": "The numbers you now put together by hand, calculated from live data: portfolio value, listings per agent, revenue per plan, open requests."
+        },
+        {
+          "title": "Roles and permissions",
+          "text": "Admins, agents, doctors, coaches or staff each see and change only what they should. New accounts can wait for approval before they get in."
+        },
+        {
+          "title": "Automations and integrations",
+          "text": "Leads from your website land in the CRM, listings get translated automatically, payments go through Stripe, posters and Instagram posts export with your branding. The repetitive work runs by itself."
+        }
+      ],
+      "processTitle": "How a project runs",
+      "process": [
+        {
+          "title": "I learn how you work",
+          "text": "We go through your current spreadsheets, chats and forms with the people who use them every day. I write down the steps, the roles and who needs to see what."
+        },
+        {
+          "title": "A first version on your data",
+          "text": "I build the core screens first, usually the pipeline and the client records, and load a sample of your real data. You click through it with your team and tell me what is wrong."
+        },
+        {
+          "title": "Moving in",
+          "text": "I import your Excel files and contacts, set up accounts and roles, and stay close while the team switches over. The old sheet can stay read-only for a while."
+        },
+        {
+          "title": "Running and improving",
+          "text": "Once the team uses it daily, new requests come up: a report, an export, an extra status. I add them in small releases."
+        }
+      ],
+      "proofTitle": "Internal tools I've built",
+      "proofText": "Four systems I built where staff manage clients, bookings, athletes or payments behind a public product: an agency CRM in Durrës, a clinic workspace, athlete tracking for a recruiting agency and an admin dashboard for a paid video tool.",
+      "faqTitle": "Questions about custom CRM development",
+      "faq": [
+        {
+          "q": "Why build a custom CRM instead of using HubSpot, Salesforce or Pipedrive?",
+          "a": "Off-the-shelf CRMs work well when your process looks like theirs. When it doesn't, the team ends up back in Excel and the CRM stays half empty. A custom CRM has your statuses, your fields and your language, and nothing you don't use."
+        },
+        {
+          "q": "Can you import our existing Excel files and contacts?",
+          "a": "Yes, importing the data you already have is part of the work. I map your columns to the new fields, flag duplicates, and we check the result together before the team switches over."
+        },
+        {
+          "q": "Will the CRM work on a phone?",
+          "a": "Yes. I build every screen for phones as well as desktops. ALProperty agents use the CRM on their phones to filter listings by status and use the quick actions on each card."
+        },
+        {
+          "q": "Can different people see different things?",
+          "a": "Yes. Roles and permissions are part of the design from the start. The ALProperty CRM has admin and agent roles with account approval, and the USA College Sport platform separates players, coaches and admins."
+        },
+        {
+          "q": "Who owns the code and the data?",
+          "a": "By default the code lives in your own repository and the data in your own cloud account, such as Firebase or Postgres. If we stop working together, you keep everything and another developer can take over."
+        }
+      ],
+      "ctaTitle": "Tell me how your team works today",
+      "ctaText": "Send me a short description of your process and where it lives now: Excel, WhatsApp, a notebook. I'll reply with how I would approach it."
+    },
+    "it": {
+      "slug": "crm-su-misura",
+      "navLabel": "CRM su misura",
+      "metaTitle": "Sviluppo CRM su misura e gestionali web | Redon Cela",
+      "metaDescription": "Sviluppo CRM su misura per agenzie, studi medici e piccole aziende: pipeline, schede clienti, pannelli admin e ruoli, al posto di Excel e WhatsApp.",
+      "eyebrow": "CRM e gestionali",
+      "h1": "CRM su misura per chi lavora ancora con Excel e WhatsApp",
+      "lead": "Sviluppo CRM, gestionali e pannelli di amministrazione che seguono il modo in cui il tuo team lavora già. Contatti, clienti, immobili e attività escono dai fogli Excel e dalle chat e finiscono in un unico posto, aperto a tutto il team.",
+      "problemsTitle": "Ti riconosci in queste situazioni?",
+      "problems": [
+        "I contatti arrivano su WhatsApp, Instagram e al telefono, e nessuno sa chi ha richiamato chi.",
+        "L'elenco clienti è un file Excel che modificano in tre, e ogni copia è un po' diversa.",
+        "Quando un collaboratore va in ferie, i suoi clienti e le sue note restano sul suo telefono.",
+        "Paghi un CRM pensato per i team commerciali americani e ne usi un decimo.",
+        "Ogni lunedì qualcuno passa la mattina a mettere insieme i numeri per un report."
+      ],
+      "buildTitle": "Cosa sviluppo",
+      "build": [
+        {
+          "title": "Pipeline di vendita",
+          "text": "Una bacheca Kanban dove ogni contatto passa dal primo messaggio alla trattativa chiusa. Sposti una scheda e stato, data e responsabile si aggiornano per tutti."
+        },
+        {
+          "title": "Schede clienti e anagrafiche",
+          "text": "Una pagina per ogni cliente, immobile, paziente o atleta, con note, documenti, storico e referente. Nel CRM di ALProperty ogni agente vede quali immobili corrispondono al budget e alle zone di un acquirente."
+        },
+        {
+          "title": "Pannelli di amministrazione",
+          "text": "Un back office per gestire utenti, piani, pagamenti e contenuti. Per CircleOn.me ho realizzato un pannello con schede per utenti, pagamenti, provenienza delle iscrizioni e attività."
+        },
+        {
+          "title": "Dashboard",
+          "text": "I numeri che oggi metti insieme a mano, calcolati sui dati aggiornati: valore del portafoglio, immobili per agente, ricavi per piano, richieste aperte."
+        },
+        {
+          "title": "Ruoli e permessi",
+          "text": "Amministratori, agenti, medici, allenatori o staff vedono e modificano solo quello che li riguarda. I nuovi account possono restare in attesa di approvazione."
+        },
+        {
+          "title": "Automazioni e integrazioni",
+          "text": "Le richieste dal sito entrano nel CRM, gli annunci si traducono in automatico, i pagamenti passano da Stripe, locandine e post Instagram si esportano con il tuo marchio. Le parti ripetitive girano da sole."
+        }
+      ],
+      "processTitle": "Come lavoriamo",
+      "process": [
+        {
+          "title": "Capisco come lavora il tuo team",
+          "text": "Guardiamo insieme fogli Excel, chat e moduli con le persone che li usano ogni giorno. Annoto i passaggi, i ruoli e chi deve vedere cosa."
+        },
+        {
+          "title": "Una prima versione con i tuoi dati",
+          "text": "Parto dalle schermate principali, di solito la pipeline e le schede clienti, e carico una parte dei tuoi dati reali. La provi con il team e mi dici cosa non torna."
+        },
+        {
+          "title": "Il passaggio",
+          "text": "Importo i file Excel e la rubrica, creo account e ruoli e seguo da vicino il team durante il cambio. Il vecchio foglio può restare in sola lettura per un po'."
+        },
+        {
+          "title": "Uso quotidiano e miglioramenti",
+          "text": "Quando il team lo usa ogni giorno arrivano nuove richieste: un report, un export, uno stato in più. Le aggiungo con piccoli rilasci."
+        }
+      ],
+      "proofTitle": "Gestionali che ho sviluppato",
+      "proofText": "Quattro sistemi in cui lo staff gestisce clienti, prenotazioni, atleti o pagamenti dietro un prodotto pubblico: il CRM di un'agenzia immobiliare a Durazzo, l'area per cliniche di Saneo, il percorso degli atleti di USA College Sport e il pannello admin di CircleOn.me.",
+      "faqTitle": "Domande sul CRM su misura",
+      "faq": [
+        {
+          "q": "Perché un CRM su misura invece di HubSpot, Salesforce o Pipedrive?",
+          "a": "I CRM pronti funzionano bene quando il tuo processo somiglia al loro. Quando non è così, il team torna su Excel e il CRM resta mezzo vuoto. Un CRM su misura ha i tuoi stati, i tuoi campi e la tua lingua, e niente che non usi."
+        },
+        {
+          "q": "Puoi importare i nostri file Excel e la rubrica clienti?",
+          "a": "Sì, l'importazione dei dati che hai già fa parte del lavoro. Collego le tue colonne ai nuovi campi, segnalo i doppioni e controlliamo insieme il risultato prima del passaggio."
+        },
+        {
+          "q": "Il CRM funziona anche da smartphone?",
+          "a": "Sì, ogni schermata è pensata per il telefono oltre che per il computer. Gli agenti di ALProperty filtrano gli immobili per stato e usano le azioni rapide su ogni scheda direttamente dal telefono."
+        },
+        {
+          "q": "Si possono dare permessi diversi a persone diverse?",
+          "a": "Sì, ruoli e permessi si definiscono dall'inizio. Il CRM di ALProperty ha i ruoli amministratore e agente con approvazione degli account, e la piattaforma di USA College Sport separa giocatori, allenatori e amministratori."
+        },
+        {
+          "q": "Di chi sono il codice e i dati?",
+          "a": "Di base il codice sta in un repository tuo e i dati in un tuo account cloud, per esempio Firebase o Postgres. Se smettiamo di lavorare insieme tieni tutto, e un altro sviluppatore può continuare."
+        }
+      ],
+      "ctaTitle": "Raccontami come lavora oggi il tuo team",
+      "ctaText": "Scrivimi due righe sul tuo processo e su dove vive adesso: Excel, WhatsApp, un quaderno. Ti rispondo con come lo imposterei, in italiano."
+    },
+    "sq": {
+      "slug": "zhvillim-crm",
+      "navLabel": "CRM me porosi",
+      "metaTitle": "Zhvillim CRM dhe softuer me porosi | Redon Cela",
+      "metaDescription": "Zhvillim CRM me porosi për agjenci, klinika dhe biznese të vogla: pipeline shitjesh, kartela klientësh, panele administrimi dhe role, në vend të Excel-it.",
+      "eyebrow": "CRM dhe mjete të brendshme",
+      "h1": "Zhvillim CRM me porosi për biznese që punojnë ende në Excel",
+      "lead": "Ndërtoj CRM, panele administrimi dhe mjete të brendshme që ndjekin mënyrën si punon tashmë ekipi yt. Kontaktet, klientët, pronat dhe detyrat dalin nga tabelat Excel dhe bisedat në WhatsApp dhe mblidhen në një vend të vetëm, të hapur për gjithë ekipin.",
+      "problemsTitle": "A të duken të njohura?",
+      "problems": [
+        "Kërkesat vijnë në WhatsApp, Instagram dhe me telefon, dhe askush nuk e di kush e ka kthyer telefonatën.",
+        "Lista e klientëve është një skedar Excel që e ndryshojnë tre veta, dhe çdo kopje është pak ndryshe.",
+        "Kur një agjent del me pushime, klientët dhe shënimet e tij mbeten në telefonin e tij.",
+        "Paguan për një CRM të huaj, në anglisht, dhe përdor vetëm një pjesë të vogël të tij.",
+        "Çdo të hënë dikush harxhon gjithë mëngjesin duke mbledhur shifrat për një raport."
+      ],
+      "buildTitle": "Çfarë ndërtoj",
+      "build": [
+        {
+          "title": "Pipeline shitjesh",
+          "text": "Një tabelë Kanban ku çdo kontakt kalon nga mesazhi i parë te marrëveshja e mbyllur. Zhvendos kartën dhe statusi, data dhe përgjegjësi përditësohen për të gjithë."
+        },
+        {
+          "title": "Kartela klientësh dhe pronash",
+          "text": "Një faqe për çdo klient, pronë, pacient ose atlet, me shënime, dokumente, historik dhe personin përgjegjës. Në CRM-në e ALProperty çdo agjent sheh cilat prona përputhen me buxhetin dhe zonat e një blerësi."
+        },
+        {
+          "title": "Panele administrimi",
+          "text": "Një panel për të menaxhuar përdoruesit, planet, pagesat dhe përmbajtjen. Për CircleOn.me ndërtova një panel me skeda për përdoruesit, pagesat, burimin e regjistrimeve dhe aktivitetin."
+        },
+        {
+          "title": "Panele me shifra",
+          "text": "Shifrat që sot i mbledh me dorë, të llogaritura nga të dhënat e përditësuara: vlera e portofolit, pronat sipas agjentit, të ardhurat sipas planit, kërkesat e hapura."
+        },
+        {
+          "title": "Role dhe leje",
+          "text": "Administratorët, agjentët, mjekët, trajnerët ose stafi shohin dhe ndryshojnë vetëm atë që u takon. Llogaritë e reja mund të presin miratimin para se të hyjnë."
+        },
+        {
+          "title": "Automatizime dhe integrime",
+          "text": "Kërkesat nga faqja hyjnë direkt në CRM, pronat përkthehen automatikisht, pagesat kalojnë përmes Stripe, posterat dhe postimet për Instagram eksportohen me logon tënde. Punët e përsëritura bëhen vetë."
+        }
+      ],
+      "processTitle": "Si ecën një projekt",
+      "process": [
+        {
+          "title": "Mësoj si punon ekipi yt",
+          "text": "Shohim bashkë tabelat Excel, bisedat dhe formularët me njerëzit që i përdorin çdo ditë. Shënoj hapat, rolet dhe kush duhet të shohë çfarë."
+        },
+        {
+          "title": "Versioni i parë me të dhënat e tua",
+          "text": "Nis me ekranet kryesore, zakonisht pipeline-n dhe kartelat e klientëve, dhe ngarkoj një pjesë të të dhënave të tua reale. E provon me ekipin dhe më thua çfarë nuk shkon."
+        },
+        {
+          "title": "Kalimi në sistemin e ri",
+          "text": "Importoj skedarët Excel dhe kontaktet, krijoj llogaritë dhe rolet, dhe i qëndroj pranë ekipit gjatë kalimit. Tabela e vjetër mund të mbetet vetëm për lexim për ca kohë."
+        },
+        {
+          "title": "Përdorimi i përditshëm dhe përmirësimet",
+          "text": "Kur ekipi e përdor çdo ditë, dalin kërkesat e reja: një raport, një eksport, një status më shumë. I shtoj me përditësime të vogla."
+        }
+      ],
+      "proofTitle": "Sisteme që kam ndërtuar",
+      "proofText": "Katër sisteme ku stafi menaxhon klientë, rezervime, atletë ose pagesa pas një produkti publik: CRM-ja e një agjencie imobiliare në Durrës, hapësira e klinikave në Saneo, ndjekja e atletëve në USA College Sport dhe paneli i administrimit të CircleOn.me.",
+      "faqTitle": "Pyetje për zhvillimin e CRM-së",
+      "faq": [
+        {
+          "q": "Pse një CRM me porosi dhe jo HubSpot, Salesforce ose Pipedrive?",
+          "a": "CRM-të e gatshme funksionojnë mirë kur procesi yt u ngjan atyre. Kur nuk u ngjan, ekipi kthehet te Excel-i dhe CRM-ja mbetet gjysmë bosh. Një CRM me porosi ka statuset, fushat dhe gjuhën tënde, pa asgjë që nuk e përdor."
+        },
+        {
+          "q": "A mund t'i importosh skedarët tanë Excel dhe kontaktet ekzistuese?",
+          "a": "Po, importimi i të dhënave që ke tashmë është pjesë e punës. Lidh kolonat e tua me fushat e reja, shënoj dublikatat dhe e kontrollojmë bashkë rezultatin para kalimit."
+        },
+        {
+          "q": "A funksionon CRM-ja edhe në celular?",
+          "a": "Po, çdo ekran ndërtohet për celular dhe për kompjuter. Agjentët e ALProperty filtrojnë pronat sipas statusit dhe përdorin veprimet e shpejta në çdo kartë direkt nga telefoni."
+        },
+        {
+          "q": "A mund të kenë persona të ndryshëm leje të ndryshme?",
+          "a": "Po, rolet dhe lejet përcaktohen që në fillim. CRM-ja e ALProperty ka rolet administrator dhe agjent me miratim të llogarive, ndërsa platforma e USA College Sport ndan lojtarët, trajnerët dhe administratorët."
+        },
+        {
+          "q": "Kujt i përkasin kodi dhe të dhënat?",
+          "a": "Si parazgjedhje, kodi qëndron në repository-n tënde dhe të dhënat në llogarinë tënde në cloud, për shembull Firebase ose Postgres. Nëse e ndërpresim bashkëpunimin, gjithçka mbetet e jotja dhe një zhvillues tjetër mund ta vazhdojë punën."
+        }
+      ],
+      "ctaTitle": "Më trego si punon ekipi yt sot",
+      "ctaText": "Më shkruaj shkurt si e ndiqni punën tani: në Excel, në WhatsApp apo në një fletore. Të kthej përgjigje me mënyrën si do ta ndërtoja, në shqip."
+    }
+  }
+}

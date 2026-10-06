@@ -1,0 +1,278 @@
+{
+  "id": "web-platforms",
+  "icon": "booking",
+  "related": ["saneo", "alproperty", "ucs", "pushim"],
+  "heroShot": "projects/saneo/patient-search-map.webp",
+  "i18n": {
+    "en": {
+      "slug": "web-platform-development",
+      "navLabel": "Web platforms",
+      "metaTitle": "Web platform and booking system development | Redon Cela",
+      "metaDescription": "Web platform development: booking systems, marketplaces and multi-role portals with calendars, map search, payments and multilingual SEO, built in Nuxt.",
+      "eyebrow": "Platforms and booking",
+      "h1": "Web platform development for booking systems and marketplaces",
+      "lead": "I build web platforms where different kinds of users meet: patients and doctors, players and coaches, agents and clients. Booking, calendars, map search, payments and multilingual pages that search engines index, in one codebase I write end to end.",
+      "problemsTitle": "Where things usually break",
+      "problems": [
+        "Bookings come in by phone and WhatsApp, and someone copies them into a paper diary or a spreadsheet.",
+        "You need two products in one: a public side for customers and a working side for your staff, with different permissions.",
+        "Your listings are on the website, but people can't filter them by area or see them on a map.",
+        "Your site is in one language, while your customers search in Albanian, Italian and English.",
+        "A ready-made platform takes a cut of every booking and doesn't fit how your business actually schedules work."
+      ],
+      "buildTitle": "What I build",
+      "build": [
+        {
+          "title": "Multi-role portals",
+          "text": "A separate area for each type of user on one database, with role checks on the server. Saneo has a patient side and a doctor workspace, and USA College Sport has a player portal and a coach portal on its own domain."
+        },
+        {
+          "title": "Online booking and calendars",
+          "text": "Free slots computed from opening hours, services and existing appointments, so a slot on screen is actually free. New bookings reach the staff calendar live."
+        },
+        {
+          "title": "Listings with map search",
+          "text": "Filters by area, type and price, with a map that updates the results as you move it. ALProperty uses MapLibre with clustered price pins, a satellite layer and a 3D view."
+        },
+        {
+          "title": "Payments and plans",
+          "text": "Stripe checkout, subscriptions, one-time credits and webhooks that update the account. On CircleOn the server enforces plan limits, credits and refunds."
+        },
+        {
+          "title": "Server rendering and multilingual SEO",
+          "text": "Public pages rendered on the server or pre-rendered, so search engines index every listing, doctor or destination. ALProperty runs in 6 languages, and Pushim has a page for each destination and month."
+        },
+        {
+          "title": "Back office and data imports",
+          "text": "The screens your team uses every day: pipelines, approvals, reports. Pushim collects offers from agency websites and social posts every day, with no manual entry."
+        }
+      ],
+      "processTitle": "How a project runs",
+      "process": [
+        {
+          "title": "Map the roles and flows",
+          "text": "We list each type of user and what they need to do, from the first visit to the finished booking or deal. This becomes the data model."
+        },
+        {
+          "title": "Build the core flow first",
+          "text": "I build the one path that brings in money or saves time, like search to booking, with real data. You click through it before anything else gets added."
+        },
+        {
+          "title": "Add roles and features in releases",
+          "text": "Staff tools, payments, languages and notifications arrive in small releases on a test site you can use. Each one goes live when you approve it."
+        },
+        {
+          "title": "Launch and look after it",
+          "text": "I set up hosting, domains, analytics and Search Console, then watch the first real traffic. The code stays in your repository."
+        }
+      ],
+      "proofTitle": "Platforms I have built",
+      "proofText": "Four platforms I built end to end: doctor booking in Albania, a real-estate site with its agency CRM, a sports recruiting platform with player and coach portals, and a holiday offer comparison site.",
+      "faqTitle": "Questions about web platforms",
+      "faq": [
+        {
+          "q": "Can you build a booking system for my business instead of using a ready-made one?",
+          "a": "Yes. I build booking around how you really work: your services, opening hours, staff and rules for confirming. Saneo, for example, works for a single doctor and for a clinic with a shared calendar. The system is yours, so no platform takes a commission on each booking."
+        },
+        {
+          "q": "What is the difference between a website and a web platform?",
+          "a": "A website shows information. A platform has accounts, roles and data that change all the time: bookings, listings, messages, payments. That needs a database, permissions and admin tools, which is where I spend most of the work."
+        },
+        {
+          "q": "Can the platform take payments online?",
+          "a": "Yes, usually with Stripe: one-time payments, subscriptions or credits. The server listens to Stripe's webhooks, so an account only changes once the payment is confirmed. For businesses in Albania and Kosovo I first check which payment providers work for your company and your customers."
+        },
+        {
+          "q": "Will the platform rank on Google in several languages?",
+          "a": "I build public pages with server-side rendering or pre-rendering, a separate URL for each language and hreflang tags, so every language can be indexed. Ranking also depends on your content and your competitors, so I don't promise positions."
+        },
+        {
+          "q": "Which technologies do you use?",
+          "a": "Mostly Vue 3 and Nuxt with TypeScript, with Firebase or a TypeScript API on Postgres behind it. I choose based on the data: appointments and patient charts fit Postgres, simpler content fits Firestore. By default everything lives in your own accounts and repository."
+        }
+      ],
+      "ctaTitle": "Have a platform in mind?",
+      "ctaText": "Tell me who the users are and what they need to do. I will reply with how I would structure it and where I would start."
+    },
+    "it": {
+      "slug": "sviluppo-piattaforme-web",
+      "navLabel": "Piattaforme web",
+      "metaTitle": "Sviluppo piattaforme web e prenotazioni online | Redon Cela",
+      "metaDescription": "Sviluppo piattaforme web su misura: prenotazioni online, marketplace e portali con più ruoli, con calendari, ricerca su mappa, pagamenti e SEO multilingua.",
+      "eyebrow": "Piattaforme e prenotazioni",
+      "h1": "Sviluppo piattaforme web, marketplace e sistemi di prenotazione",
+      "lead": "Sviluppo piattaforme web dove si incontrano utenti diversi: pazienti e medici, giocatori e allenatori, agenti e clienti. Prenotazioni, calendari, ricerca su mappa, pagamenti e pagine in più lingue indicizzate dai motori di ricerca, in un unico codice che scrivo dall'inizio alla fine.",
+      "problemsTitle": "Dove di solito qualcosa si inceppa",
+      "problems": [
+        "Le prenotazioni arrivano per telefono e WhatsApp, e qualcuno le ricopia su un'agenda di carta o su Excel.",
+        "Ti servono due prodotti in uno: una parte pubblica per i clienti e un gestionale per lo staff, con permessi diversi.",
+        "Gli annunci sono sul sito, ma non si possono filtrare per zona né vedere su una mappa.",
+        "Il sito è solo in italiano, mentre una parte dei tuoi clienti cerca in inglese.",
+        "Una piattaforma già pronta prende una commissione su ogni prenotazione e non si adatta a come organizzi davvero il lavoro."
+      ],
+      "buildTitle": "Cosa sviluppo",
+      "build": [
+        {
+          "title": "Portali con più ruoli",
+          "text": "Un'area separata per ogni tipo di utente su un unico database, con i controlli dei ruoli sul server. Saneo ha la parte pazienti e lo spazio di lavoro dei medici, USA College Sport ha il portale giocatori e un portale coach su un dominio separato."
+        },
+        {
+          "title": "Prenotazioni online e calendari",
+          "text": "Orari liberi calcolati da orari di apertura, servizi e appuntamenti già fissati, così uno slot sullo schermo è davvero libero. Le nuove prenotazioni arrivano in diretta nel calendario dello staff."
+        },
+        {
+          "title": "Annunci con ricerca su mappa",
+          "text": "Filtri per zona, tipologia e prezzo, con una mappa che aggiorna i risultati mentre la sposti. ALProperty usa MapLibre con i prezzi raggruppati, la vista satellitare e quella 3D."
+        },
+        {
+          "title": "Pagamenti e abbonamenti",
+          "text": "Checkout Stripe, abbonamenti, crediti singoli e webhook che aggiornano l'account. Su CircleOn è il server a far rispettare limiti dei piani, crediti e rimborsi."
+        },
+        {
+          "title": "Rendering lato server e SEO multilingua",
+          "text": "Pagine pubbliche generate sul server o pre-renderizzate, così i motori di ricerca indicizzano ogni annuncio, medico o destinazione. ALProperty è in 6 lingue, e Pushim ha una pagina per ogni destinazione e mese."
+        },
+        {
+          "title": "Gestionale e import dei dati",
+          "text": "Le schermate che il tuo team usa ogni giorno: pipeline, approvazioni, report. Pushim raccoglie ogni giorno le offerte dai siti e dai post social delle agenzie, senza inserimento a mano."
+        }
+      ],
+      "processTitle": "Come lavoriamo",
+      "process": [
+        {
+          "title": "Ruoli e flussi",
+          "text": "Elenchiamo ogni tipo di utente e cosa deve fare, dalla prima visita alla prenotazione o al contratto chiuso. Da qui nasce il modello dei dati."
+        },
+        {
+          "title": "Prima il flusso principale",
+          "text": "Sviluppo il percorso che porta incassi o fa risparmiare tempo, per esempio dalla ricerca alla prenotazione, con dati veri. Lo provi tu prima che si aggiunga altro."
+        },
+        {
+          "title": "Ruoli e funzioni a rilasci",
+          "text": "Strumenti per lo staff, pagamenti, lingue e notifiche arrivano in piccoli rilasci su un sito di prova che puoi usare. Ognuno va online quando lo approvi."
+        },
+        {
+          "title": "Lancio e assistenza",
+          "text": "Configuro hosting, domini, analytics e Search Console, poi seguo il primo traffico reale. Il codice resta nel tuo repository."
+        }
+      ],
+      "proofTitle": "Piattaforme che ho sviluppato",
+      "proofText": "Quattro piattaforme che ho sviluppato dall'inizio alla fine: prenotazione di visite mediche in Albania, un sito immobiliare con il CRM dell'agenzia, una piattaforma di reclutamento sportivo con portali per giocatori e coach, e un comparatore di offerte vacanza.",
+      "faqTitle": "Domande frequenti sulle piattaforme web",
+      "faq": [
+        {
+          "q": "Puoi sviluppare un gestionale di prenotazioni online su misura per il mio studio?",
+          "a": "Sì. Costruisco le prenotazioni intorno a come lavori davvero: servizi, orari, personale e regole di conferma. Saneo, per esempio, funziona sia per il medico che lavora da solo sia per la clinica con un calendario condiviso. Il sistema è tuo, quindi nessuna piattaforma prende una commissione su ogni prenotazione."
+        },
+        {
+          "q": "Che differenza c'è tra un sito web e una piattaforma web?",
+          "a": "Un sito mostra informazioni. Una piattaforma ha account, ruoli e dati che cambiano di continuo: prenotazioni, annunci, messaggi, pagamenti. Servono un database, permessi e strumenti di gestione, ed è lì che va la maggior parte del lavoro."
+        },
+        {
+          "q": "La piattaforma può accettare pagamenti online?",
+          "a": "Sì, di solito con Stripe: pagamenti singoli, abbonamenti o crediti. Il server ascolta i webhook di Stripe, così l'account cambia solo quando il pagamento è confermato. Se ti serve un altro provider, verifichiamo insieme quale funziona meglio per la tua azienda."
+        },
+        {
+          "q": "La piattaforma sarà indicizzata su Google in più lingue?",
+          "a": "Le pagine pubbliche sono generate sul server o pre-renderizzate, con un URL per ogni lingua e i tag hreflang, così ogni lingua può essere indicizzata. Il posizionamento dipende anche dai contenuti e dalla concorrenza, quindi non prometto posizioni."
+        },
+        {
+          "q": "Quali tecnologie usi?",
+          "a": "Soprattutto Vue 3 e Nuxt con TypeScript, con dietro Firebase oppure un'API TypeScript su Postgres. Scelgo in base ai dati: appuntamenti e cartelle cliniche stanno bene in Postgres, contenuti più semplici in Firestore. Di norma tutto resta sui tuoi account e nel tuo repository."
+        }
+      ],
+      "ctaTitle": "Hai in mente una piattaforma?",
+      "ctaText": "Raccontami chi sono gli utenti e cosa devono fare. Ti rispondo con come la strutturerei e da dove partirei."
+    },
+    "sq": {
+      "slug": "zhvillim-platformash-web",
+      "navLabel": "Platforma web",
+      "metaTitle": "Zhvillim platformash web dhe sisteme rezervimi | Redon Cela",
+      "metaDescription": "Zhvillim platformash web: sisteme rezervimi online, marketplace dhe portale me disa role, me kalendarë, kërkim në hartë, pagesa dhe SEO në disa gjuhë.",
+      "eyebrow": "Platforma dhe rezervime",
+      "h1": "Zhvillim platformash web, marketplace dhe sistemesh rezervimi",
+      "lead": "Ndërtoj platforma web ku takohen përdorues të ndryshëm: pacientë dhe mjekë, lojtarë dhe trajnerë, agjentë dhe klientë. Rezervime, kalendarë, kërkim në hartë, pagesa dhe faqe në disa gjuhë që i gjejnë motorët e kërkimit, në një kod të vetëm që e shkruaj nga fillimi në fund.",
+      "problemsTitle": "Ku zakonisht ngecin gjërat",
+      "problems": [
+        "Rezervimet vijnë me telefon dhe në WhatsApp, dhe dikush i shkruan në një fletore ose në Excel.",
+        "Të duhen dy produkte në një: një faqe publike për klientët dhe një panel pune për stafin, me të drejta të ndryshme.",
+        "Pronat ose shërbimet janë në faqe, por njerëzit nuk i filtrojnë dot sipas zonës dhe nuk i shohin në hartë.",
+        "Faqja është vetëm në shqip, ndërsa diaspora dhe turistët kërkojnë në anglisht dhe italisht.",
+        "Një platformë e gatshme merr komision për çdo rezervim dhe nuk i përshtatet mënyrës si punon biznesi yt."
+      ],
+      "buildTitle": "Çfarë ndërtoj",
+      "build": [
+        {
+          "title": "Portale me disa role",
+          "text": "Një hapësirë më vete për çdo lloj përdoruesi mbi të njëjtën databazë, me kontroll rolesh në server. Saneo ka anën e pacientëve dhe hapësirën e punës së mjekëve, ndërsa USA College Sport ka portalin e lojtarëve dhe një portal për trajnerët në domen më vete."
+        },
+        {
+          "title": "Rezervime online dhe kalendarë",
+          "text": "Oraret e lira llogariten nga orari i punës, shërbimet dhe takimet e caktuara, ndaj një orar që shfaqet është vërtet i lirë. Rezervimet e reja hyjnë menjëherë në kalendarin e stafit."
+        },
+        {
+          "title": "Njoftime me kërkim në hartë",
+          "text": "Filtra sipas zonës, llojit dhe çmimit, me një hartë që përditëson rezultatet kur e lëviz. ALProperty në Durrës përdor MapLibre me çmimet e grupuara, pamje satelitore dhe pamje 3D."
+        },
+        {
+          "title": "Pagesa dhe abonime",
+          "text": "Pagesa me Stripe, abonime, kredite një herëshe dhe webhook-e që përditësojnë llogarinë. Te CircleOn serveri zbaton kufijtë e planeve, kreditet dhe rimbursimet."
+        },
+        {
+          "title": "Renderim në server dhe SEO në disa gjuhë",
+          "text": "Faqe publike të renderuara në server ose të para-renderuara, që motorët e kërkimit të indeksojnë çdo pronë, mjek ose destinacion. ALProperty është në 6 gjuhë, ndërsa Pushim ka një faqe për çdo destinacion dhe muaj."
+        },
+        {
+          "title": "Panel administrimi dhe import të dhënash",
+          "text": "Ekranet që ekipi yt përdor çdo ditë: pipeline, aprovime, raporte. Pushim mbledh çdo ditë ofertat nga faqet dhe postimet sociale të agjencive të udhëtimit, pa i futur kush me dorë."
+        }
+      ],
+      "processTitle": "Si ecën një projekt",
+      "process": [
+        {
+          "title": "Rolet dhe rrjedhat",
+          "text": "Rendisim çdo lloj përdoruesi dhe çfarë duhet të bëjë, nga vizita e parë deri te rezervimi ose marrëveshja e mbyllur. Nga kjo del modeli i të dhënave."
+        },
+        {
+          "title": "Fillimisht rruga kryesore",
+          "text": "Ndërtoj rrugën që sjell të ardhura ose kursen kohë, për shembull nga kërkimi te rezervimi, me të dhëna reale. E provon ti para se të shtohet diçka tjetër."
+        },
+        {
+          "title": "Role dhe funksione me publikime të vogla",
+          "text": "Mjetet për stafin, pagesat, gjuhët dhe njoftimet vijnë me publikime të vogla në një faqe testimi që mund ta përdorësh. Secila del live kur e aprovon."
+        },
+        {
+          "title": "Lançimi dhe mirëmbajtja",
+          "text": "Konfiguroj hostimin, domenet, analitikën dhe Search Console, pastaj ndjek trafikun e parë real. Kodi mbetet në repository-n tënd."
+        }
+      ],
+      "proofTitle": "Platforma që kam ndërtuar",
+      "proofText": "Katër platforma që i kam ndërtuar nga fillimi në fund: rezervime te mjeku në Shqipëri, një faqe pronash me CRM-në e agjencisë në Durrës, një platformë rekrutimi sportiv me portale për lojtarët dhe trajnerët, dhe një krahasues ofertash pushimesh për agjencitë e Tiranës dhe Durrësit.",
+      "faqTitle": "Pyetje për platformat web",
+      "faq": [
+        {
+          "q": "Mund të më ndërtosh një sistem rezervimesh online për klinikën ose biznesin tim?",
+          "a": "Po. E ndërtoj rezervimin sipas mënyrës si punon realisht: shërbimet, oraret, stafi dhe rregullat e konfirmimit. Saneo, për shembull, punon si për mjekun që punon vetëm, ashtu edhe për klinikën me kalendar të përbashkët. Sistemi është yti, prandaj asnjë platformë nuk merr komision për çdo rezervim."
+        },
+        {
+          "q": "Cili është ndryshimi mes një faqeje web dhe një platforme web?",
+          "a": "Një faqe web tregon informacion. Një platformë ka llogari, role dhe të dhëna që ndryshojnë gjithë kohën: rezervime, prona, mesazhe, pagesa. Kjo kërkon databazë, të drejta aksesi dhe mjete administrimi, dhe aty shkon pjesa më e madhe e punës."
+        },
+        {
+          "q": "A mund të pranojë platforma pagesa online?",
+          "a": "Po, por në Shqipëri dhe Kosovë fillimisht kontrollojmë cilët ofrues pagesash funksionojnë për kompaninë tënde, sepse jo të gjithë janë të disponueshëm këtu. Ku mundet, përdor Stripe për pagesa një herëshe, abonime ose kredite. Serveri pret konfirmimin e pagesës para se të ndryshojë llogarinë."
+        },
+        {
+          "q": "A do të dalë platforma në Google në disa gjuhë?",
+          "a": "Faqet publike renderohen në server ose para-renderohen, me një URL për çdo gjuhë dhe etiketat hreflang, që çdo gjuhë të mund të indeksohet. Renditja varet edhe nga përmbajtja dhe konkurrenca, prandaj nuk premtoj pozicione."
+        },
+        {
+          "q": "Çfarë teknologjish përdor?",
+          "a": "Kryesisht Vue 3 dhe Nuxt me TypeScript, me Firebase ose një API TypeScript mbi Postgres pas tyre. Zgjedh sipas të dhënave: takimet dhe kartelat e pacientëve shkojnë mirë në Postgres, përmbajtja më e thjeshtë në Firestore. Si parazgjedhje, gjithçka mbetet në llogaritë dhe repository-n tënd."
+        }
+      ],
+      "ctaTitle": "Ke në mendje një platformë?",
+      "ctaText": "Më trego kush janë përdoruesit dhe çfarë duhet të bëjnë. Punoj në shqip me biznese në Shqipëri dhe Kosovë, dhe të përgjigjem si do ta strukturoja dhe nga do të nisja."
+    }
+  }
+}

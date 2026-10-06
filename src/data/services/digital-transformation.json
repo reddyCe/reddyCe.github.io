@@ -1,0 +1,278 @@
+{
+  "id": "digital-transformation",
+  "icon": "browser",
+  "related": ["saneo", "alproperty", "pushim"],
+  "heroShot": "projects/saneo/doctor-calendar-day.webp",
+  "i18n": {
+    "en": {
+      "slug": "digital-transformation-small-business",
+      "navLabel": "Digital transformation",
+      "metaTitle": "Digital transformation for small businesses | Redon Cela",
+      "metaDescription": "Digital transformation for small businesses in Albania and Italy: online booking, customer portals, internal tools and multilingual websites that rank.",
+      "eyebrow": "Small and mid-size businesses",
+      "h1": "Digital transformation for small businesses, one process at a time",
+      "lead": "Many clinics, agencies and offices still run on the phone, a paper diary and a WhatsApp group. I move one process at a time online, from bookings to client records to the website people find on Google.",
+      "problemsTitle": "Where many small businesses are today",
+      "problems": [
+        "The receptionist spends the day on the phone booking visits, and patients who call after hours book somewhere else.",
+        "Appointments live in a paper diary, so only the person at the desk knows who is coming tomorrow.",
+        "Your offers go out on Instagram and Facebook, but nobody finds them on Google.",
+        "Foreign clients land on a website in one language that hasn't changed in years.",
+        "Data sits in spreadsheets, chats and email, and nobody can say how last month went."
+      ],
+      "buildTitle": "What I build",
+      "build": [
+        {
+          "title": "Online booking",
+          "text": "Patients or customers see the slots that are really free and book from their phone, without calling. On Saneo, slots come from opening hours, services and existing visits, so a free slot on screen is actually free."
+        },
+        {
+          "title": "Customer portals",
+          "text": "A private area where your clients see their bookings, documents and progress. In the USA College Sport portal, each athlete follows their own path from profile to visa."
+        },
+        {
+          "title": "Internal tools",
+          "text": "A shared calendar, a client pipeline or a staff dashboard in place of the paper diary and the spreadsheet. In Saneo, a clinic sees every doctor's day side by side."
+        },
+        {
+          "title": "Multilingual websites that rank",
+          "text": "Server-rendered pages in the languages your clients speak, built to be indexed by Google. The ALProperty site runs in six languages, and each listing is translated automatically when an agent saves it."
+        },
+        {
+          "title": "Integrations",
+          "text": "Website forms feed the CRM, payments go through Stripe, reminders go out by themselves and data comes in from other sources. Pushim reads travel agency websites and social posts every day and turns them into one catalogue."
+        },
+        {
+          "title": "Mobile apps",
+          "text": "When your customers or staff need an app, I build iOS and Android apps from the same codebase as the website, as I did for Saneo and Saneo Pro."
+        }
+      ],
+      "processTitle": "How we get there",
+      "process": [
+        {
+          "title": "Pick the process that hurts most",
+          "text": "We start with one thing: bookings, client follow-up or the website. I look at how it works today, phone calls and paper included."
+        },
+        {
+          "title": "Build the first piece",
+          "text": "I build that one piece and put it in front of the people who will use it, staff and customers. We change what doesn't work for them."
+        },
+        {
+          "title": "Switch over",
+          "text": "I move the existing data, set up accounts and help the team through the change. The phone and the diary can keep running alongside until everyone is comfortable."
+        },
+        {
+          "title": "Take the next step",
+          "text": "Once the first piece is in daily use, we decide what to move online next. Each step builds on the same system instead of adding another tool."
+        }
+      ],
+      "proofTitle": "Projects that move real work online",
+      "proofText": "Saneo moves doctor bookings in Albania from phone calls to an online calendar, ALProperty runs a Durrës agency's listings and clients in one system, and Pushim turns travel agency posts into a catalogue you can search.",
+      "faqTitle": "Questions about digital transformation",
+      "faq": [
+        {
+          "q": "Where should a small business start with digital transformation?",
+          "a": "With the process that costs you the most time or customers today. For a clinic that is usually phone bookings, for an agency it is leads scattered across chats. Starting small means the team sees the benefit early and the next step is easier."
+        },
+        {
+          "q": "My staff are not technical. Will they manage?",
+          "a": "I design the screens for the people who will use them, not for developers. We test them with your staff before the switch, and the old way can keep running alongside until everyone is comfortable."
+        },
+        {
+          "q": "Do I need a new website, an app, or both?",
+          "a": "It depends on who uses it and how often. Most businesses start with a fast website that works well on phones. An app makes sense when people come back often, like patients booking visits or doctors checking their agenda in the Saneo Pro app."
+        },
+        {
+          "q": "Can the website be in Albanian, Italian and English?",
+          "a": "Yes. I build multilingual sites with separate pages for each language, so Google can show the right one to each visitor. On ALProperty, agents write a listing in Albanian and it is translated into five more languages automatically."
+        },
+        {
+          "q": "Who owns the system once it is built?",
+          "a": "By default the code lives in your own repository and the data in your own cloud account. You are not tied to me: another developer can take over, and you can export your data whenever you want."
+        }
+      ],
+      "ctaTitle": "Start with one process",
+      "ctaText": "Tell me which part of your business still runs on the phone, paper or WhatsApp. I'll suggest where to start and what a first version could look like."
+    },
+    "it": {
+      "slug": "digitalizzazione-pmi",
+      "navLabel": "Digitalizzazione PMI",
+      "metaTitle": "Digitalizzazione PMI: prenotazioni e gestionali | Redon Cela",
+      "metaDescription": "Digitalizzazione per PMI, studi medici e agenzie: prenotazioni online, area clienti, gestionali su misura e siti multilingua che si posizionano su Google.",
+      "eyebrow": "Per piccole e medie imprese",
+      "h1": "Digitalizzazione delle PMI, un processo alla volta",
+      "lead": "Molti studi medici, agenzie e uffici lavorano ancora con il telefono, l'agenda di carta e un gruppo WhatsApp. Porto online un processo alla volta: le prenotazioni, le schede clienti, il sito che la gente trova su Google.",
+      "problemsTitle": "Dove sono oggi molte piccole imprese",
+      "problems": [
+        "La segreteria passa la giornata al telefono a fissare appuntamenti, e chi chiama fuori orario prenota altrove.",
+        "Gli appuntamenti stanno su un'agenda di carta, e solo chi è al banco sa chi arriva domani.",
+        "Le offerte escono su Instagram e Facebook, ma su Google non le trova nessuno.",
+        "I clienti stranieri arrivano su un sito solo in italiano, fermo da anni.",
+        "I dati sono sparsi tra Excel, chat ed email, e nessuno sa dire com'è andato il mese scorso."
+      ],
+      "buildTitle": "Cosa realizzo",
+      "build": [
+        {
+          "title": "Prenotazioni online",
+          "text": "Pazienti e clienti vedono gli orari davvero liberi e prenotano dal telefono, senza chiamare. In Saneo gli orari nascono da orari di apertura, servizi e visite già fissate, quindi uno slot libero sullo schermo è libero davvero."
+        },
+        {
+          "title": "Area clienti",
+          "text": "Uno spazio riservato dove i tuoi clienti vedono prenotazioni, documenti e avanzamento. Nel portale di USA College Sport ogni atleta segue il proprio percorso, dal profilo fino al visto."
+        },
+        {
+          "title": "Gestionali interni",
+          "text": "Un calendario condiviso, una pipeline clienti o una dashboard per lo staff al posto dell'agenda di carta e del foglio Excel. In Saneo la clinica vede la giornata di ogni medico affiancata."
+        },
+        {
+          "title": "Siti multilingua che si posizionano",
+          "text": "Pagine generate lato server nelle lingue dei tuoi clienti, pensate per essere indicizzate da Google. Il sito di ALProperty è in sei lingue e ogni annuncio viene tradotto in automatico quando l'agente lo salva."
+        },
+        {
+          "title": "Integrazioni",
+          "text": "Il modulo del sito entra nel gestionale, i pagamenti passano da Stripe, i promemoria partono da soli e i dati arrivano da altre fonti. Pushim legge ogni giorno i siti e i post social delle agenzie di viaggio e li unisce in un unico catalogo."
+        },
+        {
+          "title": "App per smartphone",
+          "text": "Quando clienti o staff hanno bisogno di un'app, sviluppo app iOS e Android dallo stesso codice del sito, come ho fatto per Saneo e Saneo Pro."
+        }
+      ],
+      "processTitle": "Come procediamo",
+      "process": [
+        {
+          "title": "Scegliamo il processo che pesa di più",
+          "text": "Partiamo da una cosa sola: prenotazioni, gestione clienti o sito. Guardo come funziona oggi, telefonate e carta comprese."
+        },
+        {
+          "title": "Sviluppo il primo pezzo",
+          "text": "Realizzo quella parte e la metto in mano a chi la userà, staff e clienti. Cambiamo quello che per loro non funziona."
+        },
+        {
+          "title": "Il passaggio",
+          "text": "Sposto i dati esistenti, creo gli account e accompagno il team nel cambio. Telefono e agenda possono restare in parallelo finché tutti si sentono a loro agio."
+        },
+        {
+          "title": "Il passo successivo",
+          "text": "Quando il primo pezzo è in uso ogni giorno, decidiamo cosa portare online dopo. Ogni passo si aggiunge allo stesso sistema, invece di aggiungere un altro programma."
+        }
+      ],
+      "proofTitle": "Progetti che portano online il lavoro vero",
+      "proofText": "Saneo porta le prenotazioni dei medici in Albania dal telefono a un'agenda online, ALProperty gestisce in un solo sistema annunci e clienti di un'agenzia di Durazzo, e Pushim trasforma i post delle agenzie di viaggio in un catalogo consultabile.",
+      "faqTitle": "Domande sulla digitalizzazione",
+      "faq": [
+        {
+          "q": "Da dove deve partire una piccola impresa per digitalizzarsi?",
+          "a": "Dal processo che oggi ti costa più tempo o più clienti. Per uno studio medico di solito sono le prenotazioni al telefono, per un'agenzia i contatti sparsi tra le chat. Partire in piccolo fa vedere presto il beneficio al team e rende più facile il passo dopo."
+        },
+        {
+          "q": "Il mio personale non è pratico di tecnologia. Ce la farà?",
+          "a": "Disegno le schermate per chi le userà, non per gli sviluppatori. Le proviamo con il tuo staff prima del passaggio, e il vecchio metodo può restare attivo in parallelo finché tutti sono a loro agio."
+        },
+        {
+          "q": "Mi serve un sito nuovo, un'app o entrambi?",
+          "a": "Dipende da chi lo usa e quanto spesso. Quasi tutte le attività partono da un sito veloce che funzioni bene da smartphone. L'app ha senso quando le persone tornano spesso, come i pazienti che prenotano o i medici che controllano l'agenda nell'app Saneo Pro."
+        },
+        {
+          "q": "Il sito può essere in italiano, inglese e altre lingue?",
+          "a": "Sì. Realizzo siti multilingua con pagine separate per ogni lingua, così Google mostra quella giusta a ogni visitatore. Su ALProperty gli annunci scritti in albanese vengono tradotti in automatico in altre cinque lingue."
+        },
+        {
+          "q": "Di chi è il sistema una volta finito?",
+          "a": "Di base il codice sta in un repository tuo e i dati in un tuo account cloud. Non resti legato a me: un altro sviluppatore può subentrare e puoi esportare i tuoi dati quando vuoi."
+        }
+      ],
+      "ctaTitle": "Partiamo da un processo",
+      "ctaText": "Dimmi quale parte della tua attività gira ancora su telefono, carta o WhatsApp, e ti propongo da dove partire. Ho lavorato per anni a Genova, quindi possiamo parlarne in italiano."
+    },
+    "sq": {
+      "slug": "digjitalizimi-i-biznesit",
+      "navLabel": "Digjitalizimi i biznesit",
+      "metaTitle": "Digjitalizimi i biznesit: rezervime online | Redon Cela",
+      "metaDescription": "Digjitalizimi i biznesit për klinika, agjenci imobiliare dhe agjenci udhëtimi: rezervime online, portal klientësh, CRM dhe faqe shumëgjuhëshe në Google.",
+      "eyebrow": "Për biznese të vogla dhe të mesme",
+      "h1": "Digjitalizimi i biznesit tënd, hap pas hapi",
+      "lead": "Shumë klinika, agjenci dhe zyra në Shqipëri dhe Kosovë punojnë ende me telefon, axhendë letre dhe një grup në WhatsApp. I kaloj online proceset një nga një: rezervimet, kartelat e klientëve dhe faqen që njerëzit gjejnë në Google.",
+      "problemsTitle": "Ku ndodhen sot shumë biznese të vogla",
+      "problems": [
+        "Sekretaria rri gjithë ditën në telefon për të lënë takime, dhe kush telefonon pas orarit shkon diku tjetër.",
+        "Takimet shënohen në një axhendë letre, dhe vetëm kush rri në recepsion e di kush vjen nesër.",
+        "Ofertat i poston në Instagram dhe Facebook, por në Google nuk i gjen askush.",
+        "Klientët nga diaspora dhe turistët hapin një faqe vetëm në shqip, që nuk është prekur prej vitesh.",
+        "Të dhënat janë të shpërndara në Excel, WhatsApp dhe email, dhe askush nuk e di si shkoi muaji i kaluar."
+      ],
+      "buildTitle": "Çfarë ndërtoj",
+      "build": [
+        {
+          "title": "Rezervime online",
+          "text": "Pacientët dhe klientët shohin oraret që janë vërtet të lira dhe rezervojnë nga celulari, pa telefonuar. Në Saneo oraret llogariten nga orari i punës, shërbimet dhe vizitat ekzistuese, ndaj një orar i lirë në ekran është i lirë vërtet."
+        },
+        {
+          "title": "Portal klientësh",
+          "text": "Një hapësirë private ku klientët e tu shohin rezervimet, dokumentet dhe ecurinë. Në portalin e USA College Sport çdo atlet ndjek rrugëtimin e vet, nga profili deri te viza."
+        },
+        {
+          "title": "Mjete të brendshme",
+          "text": "Një kalendar i përbashkët, një pipeline klientësh ose një panel për stafin, në vend të axhendës dhe tabelës Excel. Në Saneo klinika sheh ditën e çdo mjeku krah për krah."
+        },
+        {
+          "title": "Faqe shumëgjuhëshe që dalin në Google",
+          "text": "Faqe të gjeneruara në server, në gjuhët që flasin klientët e tu, të ndërtuara që Google t'i indeksojë. Faqja e ALProperty është në gjashtë gjuhë dhe çdo pronë përkthehet automatikisht kur agjenti e ruan."
+        },
+        {
+          "title": "Integrime",
+          "text": "Formulari i faqes hyn direkt në CRM, pagesat kalojnë përmes Stripe, kujtesat dërgohen vetë dhe të dhënat vijnë nga burime të tjera. Pushim lexon çdo ditë faqet dhe postimet e agjencive të udhëtimit në Tiranë dhe Durrës dhe i bashkon në një katalog të vetëm."
+        },
+        {
+          "title": "Aplikacione celulari",
+          "text": "Kur klientët ose stafi kanë nevojë për aplikacion, ndërtoj aplikacione për iOS dhe Android nga i njëjti kod si faqja, siç bëra për Saneo dhe Saneo Pro."
+        }
+      ],
+      "processTitle": "Si ecim përpara",
+      "process": [
+        {
+          "title": "Zgjedhim procesin që të rëndon më shumë",
+          "text": "Nisim me një gjë të vetme: rezervimet, ndjekjen e klientëve ose faqen. Shoh si funksionon sot, bashkë me telefonatat dhe letrat."
+        },
+        {
+          "title": "Ndërtoj pjesën e parë",
+          "text": "E ndërtoj atë pjesë dhe ua jap në dorë atyre që do ta përdorin, stafit dhe klientëve. Ndryshojmë atë që nuk u shkon atyre."
+        },
+        {
+          "title": "Kalimi",
+          "text": "Kaloj të dhënat ekzistuese, krijoj llogaritë dhe e shoqëroj ekipin gjatë ndryshimit. Telefoni dhe axhenda mund të vazhdojnë paralelisht derisa të gjithë të ndihen rehat."
+        },
+        {
+          "title": "Hapi tjetër",
+          "text": "Kur pjesa e parë përdoret çdo ditë, vendosim çfarë të kalojmë online më pas. Çdo hap i shtohet të njëjtit sistem, në vend që të shtojmë një program tjetër."
+        }
+      ],
+      "proofTitle": "Projekte që e kalojnë punën online",
+      "proofText": "Saneo i kalon rezervimet te mjeku nga telefonata në një kalendar online, ALProperty mban në një sistem të vetëm pronat dhe klientët e një agjencie në Durrës, dhe Pushim i kthen postimet e agjencive të udhëtimit në një katalog ku mund të kërkosh.",
+      "faqTitle": "Pyetje për digjitalizimin e biznesit",
+      "faq": [
+        {
+          "q": "Nga duhet të nisë një biznes i vogël me digjitalizimin?",
+          "a": "Nga procesi që sot të kushton më shumë kohë ose më shumë klientë. Për një klinikë zakonisht janë rezervimet me telefon, për një agjenci kërkesat e shpërndara nëpër biseda. Kur nis me pak, ekipi e sheh shpejt dobinë dhe hapi tjetër bëhet më i lehtë."
+        },
+        {
+          "q": "Stafi im nuk merret me teknologji. A do t'ia dalë?",
+          "a": "Ekranet i projektoj për njerëzit që do t'i përdorin, jo për programues. I provojmë me stafin tënd para kalimit, dhe mënyra e vjetër mund të vazhdojë paralelisht derisa të gjithë të ndihen rehat."
+        },
+        {
+          "q": "Më duhet faqe e re, aplikacion apo të dyja?",
+          "a": "Varet nga kush e përdor dhe sa shpesh. Shumica e bizneseve nisin me një faqe të shpejtë që punon mirë në celular. Aplikacioni ka kuptim kur njerëzit kthehen shpesh, si pacientët që rezervojnë vizita ose mjekët që shohin axhendën në aplikacionin Saneo Pro."
+        },
+        {
+          "q": "A mund të jetë faqja në shqip, anglisht dhe italisht?",
+          "a": "Po. Ndërtoj faqe shumëgjuhëshe me faqe të veçanta për çdo gjuhë, që Google t'i tregojë secilit vizitor gjuhën e duhur. Në ALProperty agjentët e shkruajnë pronën në shqip dhe ajo përkthehet automatikisht në pesë gjuhë të tjera."
+        },
+        {
+          "q": "Kujt i përket sistemi kur përfundon?",
+          "a": "Si parazgjedhje, kodi qëndron në repository-n tënde dhe të dhënat në llogarinë tënde në cloud. Nuk mbetesh i lidhur me mua: një zhvillues tjetër mund të vazhdojë punën dhe të dhënat mund t'i eksportosh kur të duash."
+        }
+      ],
+      "ctaTitle": "Nis me një proces",
+      "ctaText": "Më trego cila pjesë e biznesit tënd ecën ende me telefon, letër ose WhatsApp, dhe të propozoj nga t'ia nisim. Flasim në shqip."
+    }
+  }
+}

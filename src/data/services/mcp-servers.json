@@ -1,0 +1,280 @@
+{
+  "id": "mcp-servers",
+  "icon": "plug",
+  "related": [
+    "quizmaster"
+  ],
+  "heroShot": "projects/quizmaster/mcp-tools.webp",
+  "i18n": {
+    "en": {
+      "slug": "mcp-server-development",
+      "navLabel": "MCP servers",
+      "metaTitle": "MCP server development | Redon Cela",
+      "metaDescription": "MCP server development: make your product usable from Claude, ChatGPT and other AI assistants, with clear tools, OAuth sign-in and per-user permissions.",
+      "eyebrow": "Model Context Protocol",
+      "h1": "MCP server development for Claude, ChatGPT and other assistants",
+      "lead": "An MCP server lets AI assistants such as Claude and ChatGPT read and write in your product on behalf of a signed-in user. I design the tools, the sign-in and the permissions, and run it as a remote server your users connect with one URL.",
+      "problemsTitle": "Why companies ask for one",
+      "problems": [
+        "Your customers already work in Claude or ChatGPT and ask why your product is not there.",
+        "People copy data from your app into a chat window and paste the answer back by hand.",
+        "You have an API, but it was written for developers, not for an assistant that has to pick the right call.",
+        "You want AI access to your data, but not an assistant that can delete records or see other customers' data.",
+        "Connecting today means creating API keys and editing config files, so almost nobody does it."
+      ],
+      "buildTitle": "What I build",
+      "build": [
+        {
+          "title": "Tool design",
+          "text": "A focused set of tools, named and described so the assistant picks the right one, with typed inputs checked on the server. In The Quiz Master a guide tool explains how a good quiz is structured before the assistant writes anything."
+        },
+        {
+          "title": "OAuth sign-in",
+          "text": "Users add your server URL and sign in with their usual account. The Quiz Master runs its own OAuth 2.1 server with dynamic client registration and PKCE, so nobody handles API keys."
+        },
+        {
+          "title": "Read-only and write tools",
+          "text": "Tools that read are kept apart from tools that change data, and destructive actions stay out unless you really need them. The Quiz Master has no delete tools, and Bekki's MCP server at Bettermile is read-only."
+        },
+        {
+          "title": "Per-user permissions",
+          "text": "Every tool call runs as the signed-in user and only touches what that user may see or edit. Personal data can be filtered out before it reaches the model."
+        },
+        {
+          "title": "Remote HTTP servers",
+          "text": "Servers hosted over HTTP that work from web and desktop AI assistants, not only as a local script on one developer's laptop."
+        },
+        {
+          "title": "Files and media",
+          "text": "Tools that bring files into your product safely. The Quiz Master's import_media copies images, audio and video into the app's own storage, with a size cap and SVG rejected."
+        }
+      ],
+      "processTitle": "How a project runs",
+      "process": [
+        {
+          "title": "Decide what the assistant should do",
+          "text": "We list the jobs a user would ask an assistant to do in your product and decide which ones need reading and which need writing."
+        },
+        {
+          "title": "Design the tools",
+          "text": "I write the tool names, inputs and descriptions, then try them with real prompts before building out the full set."
+        },
+        {
+          "title": "Sign-in and permissions",
+          "text": "I add OAuth sign-in and make sure every call is scoped to the signed-in user and their role."
+        },
+        {
+          "title": "Test in real assistants and publish",
+          "text": "I test the server in Claude and the other clients your users have, deploy it, and write a connect page that explains how to add it."
+        }
+      ],
+      "proofTitle": "MCP servers in production",
+      "proofText": "The Quiz Master has a remote MCP server with 17 tools, so assistants write quizzes straight into a host's library. At Bettermile, part of GLS, I am the main contributor to a read-only MCP server that lets Claude query Back Office data with each user's own permissions.",
+      "faqTitle": "Questions about MCP",
+      "faq": [
+        {
+          "q": "What is an MCP server?",
+          "a": "MCP, the Model Context Protocol, is an open standard for connecting AI assistants to other software. An MCP server offers a set of tools, such as search a list or create a record, that the assistant can call for the user. It is how your product becomes usable from inside Claude, ChatGPT and other assistants."
+        },
+        {
+          "q": "Does it work with ChatGPT as well as Claude?",
+          "a": "Yes, both support remote MCP servers, and so do a growing number of other assistants and developer tools. Setup and supported features differ a little between clients, so I test the server in the ones your users actually use."
+        },
+        {
+          "q": "Do my users need an API key?",
+          "a": "Not if the server uses OAuth. Users paste the server URL into their assistant, sign in with their usual account and approve access. The Quiz Master works this way."
+        },
+        {
+          "q": "Can the AI delete or change our data?",
+          "a": "Only if you give it a tool that does that. I keep read and write tools separate, leave out destructive actions by default, and limit every call to what the signed-in user may do. A server can also be fully read-only, like the one at Bettermile."
+        },
+        {
+          "q": "Do we need to rebuild our backend?",
+          "a": "No. The MCP server usually sits next to your existing API or database and calls it, as a small separate service or as part of your backend. I have built them in TypeScript with the MCP SDK and in Kotlin with Spring AI."
+        }
+      ],
+      "ctaTitle": "Want your product inside Claude and ChatGPT?",
+      "ctaText": "Send me a short description of your product and what users would ask an assistant to do in it. I will reply with a first list of tools and how sign-in could work."
+    },
+    "it": {
+      "slug": "sviluppo-server-mcp",
+      "navLabel": "Server MCP",
+      "metaTitle": "Sviluppo server MCP | Redon Cela",
+      "metaDescription": "Sviluppo server MCP: il vostro prodotto usabile da Claude, ChatGPT e altri assistenti AI, con strumenti chiari, accesso OAuth e permessi per ogni utente.",
+      "eyebrow": "Model Context Protocol",
+      "h1": "Sviluppo server MCP per Claude, ChatGPT e altri assistenti AI",
+      "lead": "Un server MCP permette ad assistenti AI come Claude e ChatGPT di leggere e scrivere nel vostro prodotto per conto di un utente autenticato. Progetto gli strumenti, l'accesso e i permessi, e lo pubblico come server remoto che gli utenti collegano con un solo URL.",
+      "problemsTitle": "Perché le aziende lo chiedono",
+      "problems": [
+        "I vostri clienti lavorano già in Claude o ChatGPT e chiedono perché il vostro prodotto non ci sia.",
+        "Le persone copiano i dati dalla vostra app in una chat e poi riportano la risposta a mano.",
+        "Avete un'API, ma è pensata per sviluppatori, non per un assistente che deve scegliere la chiamata giusta.",
+        "Volete dare all'AI accesso ai dati, ma non a un assistente che possa cancellare record o vedere i dati di altri clienti.",
+        "Oggi per collegarsi servono chiavi API e file di configurazione, e quasi nessuno lo fa."
+      ],
+      "buildTitle": "Cosa realizzo",
+      "build": [
+        {
+          "title": "Progettazione degli strumenti",
+          "text": "Un insieme mirato di strumenti, con nomi e descrizioni che aiutano l'assistente a scegliere quello giusto e input tipizzati controllati sul server. In The Quiz Master uno strumento guida spiega com'è fatto un buon quiz prima che l'assistente scriva qualcosa."
+        },
+        {
+          "title": "Accesso con OAuth",
+          "text": "L'utente aggiunge l'URL del server ed entra con il suo account abituale. The Quiz Master ha un proprio server OAuth 2.1 con registrazione dinamica del client e PKCE, quindi nessuno deve gestire chiavi API."
+        },
+        {
+          "title": "Strumenti di lettura e di scrittura",
+          "text": "Gli strumenti che leggono restano separati da quelli che modificano i dati, e le azioni distruttive restano fuori se non servono davvero. The Quiz Master non ha strumenti di cancellazione, e il server MCP di Bekki in Bettermile è in sola lettura."
+        },
+        {
+          "title": "Permessi per ogni utente",
+          "text": "Ogni chiamata gira come l'utente autenticato e tocca solo ciò che quell'utente può vedere o modificare. I dati personali si possono filtrare prima che arrivino al modello."
+        },
+        {
+          "title": "Server remoti via HTTP",
+          "text": "Server ospitati via HTTP che funzionano dagli assistenti AI web e desktop, non solo come script locale sul portatile di uno sviluppatore."
+        },
+        {
+          "title": "File e media",
+          "text": "Strumenti che portano file nel vostro prodotto in modo sicuro. In The Quiz Master, import_media copia immagini, audio e video nello storage dell'app, con un limite di dimensione e i file SVG rifiutati."
+        }
+      ],
+      "processTitle": "Come lavoriamo",
+      "process": [
+        {
+          "title": "Cosa deve fare l'assistente",
+          "text": "Elenchiamo le attività che un utente chiederebbe all'assistente nel vostro prodotto e decidiamo quali richiedono lettura e quali scrittura."
+        },
+        {
+          "title": "Progetto degli strumenti",
+          "text": "Scrivo nomi, input e descrizioni degli strumenti e li provo con richieste reali prima di sviluppare l'insieme completo."
+        },
+        {
+          "title": "Accesso e permessi",
+          "text": "Aggiungo l'accesso OAuth e verifico che ogni chiamata sia limitata all'utente autenticato e al suo ruolo."
+        },
+        {
+          "title": "Test negli assistenti e pubblicazione",
+          "text": "Provo il server in Claude e negli altri client che usano i vostri utenti, lo metto online e scrivo una pagina che spiega come collegarlo."
+        }
+      ],
+      "proofTitle": "Server MCP in produzione",
+      "proofText": "The Quiz Master ha un server MCP remoto con 17 strumenti, così gli assistenti scrivono i quiz direttamente nella libreria del presentatore. In Bettermile, parte del gruppo GLS, sono il principale sviluppatore di un server MCP in sola lettura che permette a Claude di interrogare i dati del Back Office con i permessi di ciascun utente.",
+      "faqTitle": "Domande frequenti sui server MCP",
+      "faq": [
+        {
+          "q": "Cos'è un server MCP?",
+          "a": "MCP, Model Context Protocol, è uno standard aperto per collegare gli assistenti AI ad altri software. Un server MCP offre una serie di strumenti, come cercare in un elenco o creare un record, che l'assistente può usare per conto dell'utente. È il modo per rendere il vostro prodotto utilizzabile da dentro Claude, ChatGPT e altri assistenti."
+        },
+        {
+          "q": "Funziona anche con ChatGPT, oltre che con Claude?",
+          "a": "Sì, entrambi supportano i server MCP remoti, come un numero crescente di altri assistenti e strumenti per sviluppatori. Configurazione e funzioni supportate cambiano un po' da un client all'altro, per questo provo il server in quelli che i vostri utenti usano davvero."
+        },
+        {
+          "q": "I miei utenti devono creare una chiave API?",
+          "a": "No, se il server usa OAuth. L'utente incolla l'URL del server nel suo assistente, entra con il suo account abituale e autorizza l'accesso. The Quiz Master funziona così."
+        },
+        {
+          "q": "L'AI può cancellare o modificare i nostri dati?",
+          "a": "Solo se le date uno strumento che lo fa. Tengo separati gli strumenti di lettura e di scrittura, lascio fuori le azioni distruttive come impostazione predefinita e limito ogni chiamata a ciò che l'utente autenticato può fare. Un server può anche essere del tutto in sola lettura, come quello in Bettermile."
+        },
+        {
+          "q": "Dobbiamo rifare il nostro backend?",
+          "a": "No. Di solito il server MCP sta accanto alla vostra API o al database esistente e li richiama, come piccolo servizio separato o come parte del backend. Ne ho sviluppati in TypeScript con l'SDK MCP e in Kotlin con Spring AI."
+        }
+      ],
+      "ctaTitle": "Volete il vostro prodotto dentro Claude e ChatGPT?",
+      "ctaText": "Mandatemi una breve descrizione del prodotto e di cosa gli utenti chiederebbero di fare a un assistente. Vi rispondo con una prima lista di strumenti e un'idea di come gestire l'accesso."
+    },
+    "sq": {
+      "slug": "zhvillim-server-mcp",
+      "navLabel": "Servera MCP",
+      "metaTitle": "Zhvillim serveri MCP | Redon Cela",
+      "metaDescription": "Zhvillim serveri MCP: produkti juaj i përdorshëm nga Claude, ChatGPT dhe asistentë AI, me mjete të qarta, hyrje me OAuth dhe leje për çdo përdorues.",
+      "eyebrow": "Model Context Protocol",
+      "h1": "Zhvillim serveri MCP për Claude, ChatGPT dhe asistentë të tjerë AI",
+      "lead": "Një server MCP u lejon asistentëve AI si Claude dhe ChatGPT të lexojnë dhe të shkruajnë në produktin tuaj në emër të një përdoruesi të identifikuar. Unë projektoj mjetet, hyrjen dhe lejet, dhe e vë në punë si server në distancë që përdoruesit e lidhin me një URL të vetme.",
+      "problemsTitle": "Pse kompanitë e kërkojnë",
+      "problems": [
+        "Klientët tuaj punojnë tashmë në Claude ose ChatGPT dhe pyesin pse produkti juaj nuk është aty.",
+        "Njerëzit kopjojnë të dhëna nga aplikacioni juaj në një chat dhe e kthejnë përgjigjen me dorë.",
+        "Keni një API, por është shkruar për programues, jo për një asistent që duhet të zgjedhë thirrjen e duhur.",
+        "Doni që AI të ketë qasje te të dhënat, por jo një asistent që fshin regjistrime ose sheh të dhënat e klientëve të tjerë.",
+        "Sot lidhja kërkon çelësa API dhe skedarë konfigurimi, ndaj pothuajse askush nuk e bën."
+      ],
+      "buildTitle": "Çfarë ndërtoj",
+      "build": [
+        {
+          "title": "Projektimi i mjeteve",
+          "text": "Një grup i kufizuar mjetesh, me emra dhe përshkrime që e ndihmojnë asistentin të zgjedhë të duhurin, dhe me të dhëna hyrëse të kontrolluara në server. Te The Quiz Master një mjet udhëzues i shpjegon asistentit si ndërtohet një kuiz i mirë para se të shkruajë diçka."
+        },
+        {
+          "title": "Hyrje me OAuth",
+          "text": "Përdoruesi shton URL-në e serverit dhe hyn me llogarinë e zakonshme. The Quiz Master ka serverin e vet OAuth 2.1 me regjistrim dinamik të klientit dhe PKCE, kështu askush nuk merret me çelësa API."
+        },
+        {
+          "title": "Mjete për lexim dhe për shkrim",
+          "text": "Mjetet që lexojnë mbahen të ndara nga ato që ndryshojnë të dhënat, dhe veprimet shkatërruese lihen jashtë nëse nuk duhen vërtet. The Quiz Master nuk ka mjete fshirjeje, dhe serveri MCP i Bekki te Bettermile është vetëm për lexim."
+        },
+        {
+          "title": "Leje për çdo përdorues",
+          "text": "Çdo thirrje kryhet si përdoruesi i identifikuar dhe prek vetëm atë që ai mund të shohë ose të ndryshojë. Të dhënat personale mund të filtrohen para se të arrijnë te modeli."
+        },
+        {
+          "title": "Servera në distancë përmes HTTP",
+          "text": "Servera të vendosur online përmes HTTP që punojnë nga asistentët AI në web dhe desktop, jo vetëm si skript lokal në laptopin e një programuesi."
+        },
+        {
+          "title": "Skedarë dhe media",
+          "text": "Mjete që sjellin skedarë në produktin tuaj në mënyrë të sigurt. Te The Quiz Master, import_media kopjon foto, audio dhe video në hapësirën e vetë aplikacionit, me kufi madhësie dhe pa pranuar SVG."
+        }
+      ],
+      "processTitle": "Si punojmë",
+      "process": [
+        {
+          "title": "Çfarë duhet të bëjë asistenti",
+          "text": "Rendisim punët që një përdorues do t'i kërkonte asistentit në produktin tuaj dhe vendosim cilat kërkojnë lexim e cilat shkrim."
+        },
+        {
+          "title": "Projektimi i mjeteve",
+          "text": "Shkruaj emrat, të dhënat hyrëse dhe përshkrimet e mjeteve, dhe i provoj me kërkesa reale para se të ndërtoj gjithë grupin."
+        },
+        {
+          "title": "Hyrja dhe lejet",
+          "text": "Shtoj hyrjen me OAuth dhe sigurohem që çdo thirrje të kufizohet te përdoruesi i identifikuar dhe roli i tij."
+        },
+        {
+          "title": "Prova në asistentë realë dhe publikimi",
+          "text": "E provoj serverin në Claude dhe në klientët e tjerë që përdorin përdoruesit tuaj, e vë online dhe shkruaj një faqe që shpjegon si lidhet."
+        }
+      ],
+      "proofTitle": "Servera MCP në prodhim",
+      "proofText": "The Quiz Master ka një server MCP në distancë me 17 mjete, kështu asistentët i shkruajnë kuizet direkt në bibliotekën e organizatorit. Te Bettermile, pjesë e GLS, jam kontribuuesi kryesor i një serveri MCP vetëm për lexim që i lejon Claude-it të lexojë të dhënat e Back Office-it me lejet e çdo përdoruesi.",
+      "faqTitle": "Pyetje për serverat MCP",
+      "faq": [
+        {
+          "q": "Çfarë është një server MCP?",
+          "a": "MCP, Model Context Protocol, është një standard i hapur për të lidhur asistentët AI me programe të tjera. Një server MCP ofron disa mjete, si kërkimi në një listë ose krijimi i një regjistrimi, që asistenti i përdor për llogari të përdoruesit. Kështu produkti juaj bëhet i përdorshëm brenda Claude, ChatGPT dhe asistentëve të tjerë."
+        },
+        {
+          "q": "A punon edhe me ChatGPT, jo vetëm me Claude?",
+          "a": "Po, të dyja i mbështetin serverat MCP në distancë, ashtu si një numër në rritje asistentësh dhe mjetesh të tjera për programues. Konfigurimi dhe funksionet ndryshojnë pak nga një klient te tjetri, ndaj e provoj serverin në ato që përdoruesit tuaj përdorin realisht."
+        },
+        {
+          "q": "A u duhet përdoruesve të mi një çelës API?",
+          "a": "Jo, nëse serveri përdor OAuth. Përdoruesi ngjit URL-në e serverit te asistenti, hyn me llogarinë e zakonshme dhe e miraton qasjen. The Quiz Master punon pikërisht kështu."
+        },
+        {
+          "q": "A mund t'i fshijë ose t'i ndryshojë AI të dhënat tona?",
+          "a": "Vetëm nëse i jepni një mjet që e bën këtë. I mbaj të ndara mjetet e leximit dhe të shkrimit, i lë jashtë veprimet shkatërruese si parazgjedhje dhe e kufizoj çdo thirrje te ajo që lejohet të bëjë përdoruesi i identifikuar. Një server mund të jetë edhe tërësisht vetëm për lexim, si ai te Bettermile."
+        },
+        {
+          "q": "A duhet ta rindërtojmë backend-in tonë?",
+          "a": "Jo. Zakonisht serveri MCP qëndron pranë API-së ose databazës ekzistuese dhe i thërret ato, si shërbim i vogël më vete ose si pjesë e backend-it. I kam ndërtuar në TypeScript me SDK-në e MCP dhe në Kotlin me Spring AI."
+        }
+      ],
+      "ctaTitle": "Doni produktin tuaj brenda Claude dhe ChatGPT?",
+      "ctaText": "Më dërgoni një përshkrim të shkurtër të produktit dhe çfarë do t'i kërkonin përdoruesit një asistenti në të. Do t'ju kthej përgjigje me një listë të parë mjetesh dhe si mund të funksionojë hyrja."
+    }
+  }
+}

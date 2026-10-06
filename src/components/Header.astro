@@ -1,17 +1,18 @@
 ---
 import Logo from './Logo.astro';
 import Icon from './Icon.astro';
-import { langs, languages, prefix, homeHref, useT, type Lang } from '../i18n/ui';
+import { langs, languages, homeHref, useT, type Lang } from '../i18n/ui';
 import { EMAIL, profile } from '../data/profile';
-interface Props { lang: Lang; path: string }
-const { lang, path } = Astro.props;
+import { servicesIndexHref } from '../data/services';
+interface Props { lang: Lang; alts: Record<Lang, string> }
+const { lang, alts } = Astro.props;
 const t = useT(lang);
 const home = homeHref(lang);
 const links = [
-  ['work', t('nav.work')],
-  ['ai', t('nav.ai')],
-  ['services', t('nav.services')],
-  ['about', t('nav.about')],
+  [`${home}#work`, t('nav.work')],
+  [`${home}#ai`, t('nav.ai')],
+  [servicesIndexHref(lang), t('nav.services')],
+  [`${home}#about`, t('nav.about')],
 ] as const;
 ---
 <aside class="topbar" aria-label="Availability and language">
@@ -24,7 +25,7 @@ const links = [
       <div class="lang-switch" role="group" aria-label="Language">
         <Icon name="globe" />
         {langs.map((l) => (
-          <a href={`${prefix(l)}${path}`} hreflang={l} lang={l} aria-current={l === lang ? 'true' : undefined} title={languages[l]}>
+          <a href={alts[l]} hreflang={l} lang={l} aria-current={l === lang ? 'true' : undefined} title={languages[l]}>
             {l.toUpperCase()}
           </a>
         ))}
@@ -42,7 +43,7 @@ const links = [
       <span class="logo-text"><strong>Redon Cela</strong><span>{t('hero.eyebrow')}</span></span>
     </a>
     <nav class="nav" aria-label="Primary">
-      {links.map(([id, label]) => <a href={`${home}#${id}`}>{label}</a>)}
+      {links.map(([href, label]) => <a href={href}>{label}</a>)}
     </nav>
     <a class="btn btn-accent" href={`${home}#contact`}>{t('nav.cta')}</a>
   </div>

@@ -5,7 +5,8 @@ import ProjectCase from './ProjectCase.astro';
 import ChatDemo from './ChatDemo.astro';
 import Contact from './Contact.astro';
 import Icon from './Icon.astro';
-import { projects, getProject } from '../data/projects';
+import { projects } from '../data/projects';
+import { services, serviceHref, servicesIndexHref } from '../data/services';
 import { profile } from '../data/profile';
 import { about } from '../data/about';
 import { projectHref, useT, type Lang } from '../i18n/ui';
@@ -42,14 +43,6 @@ const numbers = [
   [t('numbers.langs'), '3', t('numbers.langs.sub')],
 ];
 
-const seen = (slugs: string[]) =>
-  slugs.map((s) => getProject(s)).filter((p): p is NonNullable<typeof p> => Boolean(p));
-const services = [
-  { n: 1, icon: 'browser', ex: seen(['saneo', 'alproperty', 'pushim']) },
-  { n: 2, icon: 'phone', ex: seen(['tdown', 'saneo']) },
-  { n: 3, icon: 'plug', ex: seen(['quizmaster']) },
-  { n: 4, icon: 'kanban', ex: seen(['alproperty', 'ucs', 'circleon']) },
-] as const;
 ---
 
 <section class="hero wrap" aria-labelledby="hero-title">
@@ -134,15 +127,17 @@ const services = [
     {services.map((s) => (
       <div class="service">
         <Icon name={s.icon} />
-        <h3>{t(`services.${s.n}.t`)}</h3>
-        <p>{t(`services.${s.n}.d`)}</p>
+        <h3><a href={serviceHref(lang, s)}>{s.i18n[lang].navLabel}</a></h3>
+        <p>{s.i18n[lang].lead}</p>
         <p class="service-seen">
           {t('services.seen')}{' '}
-          {s.ex.map((p, i) => <>{i > 0 && ', '}<a href={projectHref(lang, p.slug)}>{p.name}</a></>)}
+          {s.related.map((p, i) => <>{i > 0 && ', '}<a href={projectHref(lang, p.slug)}>{p.name}</a></>)}
         </p>
+        <a class="more" href={serviceHref(lang, s)}>{t('svc.read', { name: s.i18n[lang].navLabel })} <Icon name="chevron" /></a>
       </div>
     ))}
   </div>
+  <p class="btn-row" style="margin-top: 32px"><a class="btn btn-outline" href={servicesIndexHref(lang)}>{t('svc.all')}</a></p>
 </section>
 
 <section class="section wrap about" id="about" aria-labelledby="about-title">

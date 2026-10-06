@@ -1,0 +1,12 @@
+---
+import Base from '../../../layouts/Base.astro';
+import ServicesIndex from '../../../components/ServicesIndex.astro';
+import { indexAlternates } from '../../../data/services';
+import { servicesIndexJsonLd } from '../../../data/seo';
+import { useT } from '../../../i18n/ui';
+const lang = 'it';
+const t = useT(lang);
+---
+<Base lang={lang} title={t('svc.index.title')} description={t('svc.index.desc')} path="/services/" alternates={indexAlternates()} jsonLd={servicesIndexJsonLd(lang, Astro.site!)}>
+  <ServicesIndex lang={lang} />
+</Base>

@@ -80,4 +80,23 @@ for (const lang of LANGS) {
     );
   }
 }
+// Service landing pages
+const svcDir = path.join(root, 'src/data/services');
+for (const f of existsSync(svcDir) ? (await import('node:fs')).readdirSync(svcDir).filter((f) => f.endsWith('.json')) : []) {
+  const sv = JSON.parse(readFileSync(path.join(svcDir, f), 'utf8'));
+  const file = sv.heroShot?.replace(/\.(png|jpe?g)$/i, '.webp');
+  if (!file || !existsSync(path.join(root, 'src/assets', file))) continue;
+  const phone = /mobile/.test(file);
+  const slug = file.split('/')[1];
+  const rf = path.join(root, 'research', `${slug}.json`);
+  const host = existsSync(rf) ? (JSON.parse(readFileSync(rf, 'utf8')).url || '').replace(/^https?:\/\/(www\.)?/, '').replace(/\/$/, '') : '';
+  const img = await dataUri(`src/assets/${file}`, phone ? 500 : 1100);
+  for (const lang of LANGS) {
+    const c = sv.i18n[lang];
+    await shoot(
+      page({ eyebrow: c.eyebrow, title: c.navLabel, sub: c.h1, open: home[lang].open, image: img, host, phone }),
+      `service-${sv.id}-${lang}.png`,
+    );
+  }
+}
 await browser.close();

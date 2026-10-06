@@ -1,0 +1,278 @@
+{
+  "id": "ai-transformation",
+  "icon": "ai",
+  "related": ["quizmaster", "alproperty", "pushim"],
+  "heroShot": "projects/quizmaster/mcp-chat.webp",
+  "i18n": {
+    "en": {
+      "slug": "ai-integration-for-business",
+      "navLabel": "AI integration",
+      "metaTitle": "AI integration for business | Redon Cela",
+      "metaDescription": "AI integration for business: assistants that answer from your company data, chat in your back office, AI translation and extraction, with permissions kept.",
+      "eyebrow": "AI for companies",
+      "h1": "AI integration for business, built on your own data",
+      "lead": "I add AI to the tools your team already uses: assistants that answer from company data, chat inside the back office and AI features inside your product. Every answer respects who is asking, and personal data stays where it belongs.",
+      "problemsTitle": "Sounds familiar?",
+      "problems": [
+        "Your team asks the same data questions every week and waits for someone to build a report.",
+        "You tried ChatGPT, but it cannot see your systems, so people copy and paste data into it.",
+        "Nobody can say which data an AI would be allowed to see, so IT or legal keeps the project on hold.",
+        "Listings, product pages or emails are needed in several languages and someone translates them by hand.",
+        "Useful information arrives as social posts, PDFs or emails, and someone types it into a spreadsheet."
+      ],
+      "buildTitle": "What I build",
+      "build": [
+        {
+          "title": "Assistants that answer from company data",
+          "text": "Staff ask in plain language and get answers with tables and charts from live data. The source and how fresh it is are shown next to each answer."
+        },
+        {
+          "title": "Chat inside your back office",
+          "text": "A chat panel in the internal tool people already open every day, so nobody switches to another app or copies data around."
+        },
+        {
+          "title": "AI translation in your product",
+          "text": "Content written once appears in the other languages automatically. On ALProperty, Gemini on Vertex AI translates each listing whenever an agent changes it."
+        },
+        {
+          "title": "Extraction from messy content",
+          "text": "Posts, web pages and documents turned into clean records. Pushim reads travel agency websites and social posts every day and turns them into offers with dates and prices."
+        },
+        {
+          "title": "Your product inside Claude and ChatGPT",
+          "text": "An MCP server so people can work with your product from the AI assistant they already use, as hosts do with The Quiz Master."
+        },
+        {
+          "title": "Permissions and data privacy",
+          "text": "Queries run with the signed-in user's own permissions, read-only where reading is enough, and personal data is filtered out before it reaches the model."
+        }
+      ],
+      "processTitle": "How a project runs",
+      "process": [
+        {
+          "title": "Pick one real use case",
+          "text": "We start from a question or task your team repeats often and look at the data behind it, not from a list of AI ideas."
+        },
+        {
+          "title": "Map data and permissions",
+          "text": "I check where the data lives, who may see what, and what must never reach the model. This shapes the design from the start."
+        },
+        {
+          "title": "Build it where the work happens",
+          "text": "I build a first version inside the tool your team already uses and put it in front of a few real users early."
+        },
+        {
+          "title": "Pilot, fix, extend",
+          "text": "We read real questions and answers from the pilot, fix what goes wrong, and only then add more data sources or more users."
+        }
+      ],
+      "proofTitle": "Where I have done this",
+      "proofText": "At Bettermile, part of GLS, I lead Bekki: an AI assistant in the Back Office where operations staff ask about tours, parcels and depot performance and get answers from live data, read-only and with their own permissions. In my own products, AI translates property listings, extracts holiday offers and lets assistants write quizzes.",
+      "faqTitle": "Questions companies ask",
+      "faq": [
+        {
+          "q": "Will my company data be used to train AI models?",
+          "a": "I build on the business APIs of cloud providers, such as Claude on AWS Bedrock or Gemini on Google Vertex AI, where the providers' terms say your prompts are not used for training. On top of that I send the model only the data a question needs, and personal data can be filtered out before it leaves your systems."
+        },
+        {
+          "q": "Can the assistant show data a user is not allowed to see?",
+          "a": "I design it so it cannot. Each query runs with the permissions of the person who asks, so the assistant sees what that person would see in your tools and nothing more. Where reading is enough, the tools are read-only."
+        },
+        {
+          "q": "What if the AI gives a wrong answer?",
+          "a": "Answers come from tool calls on your real data, not from the model's memory. I show the data source and how fresh it is next to each answer, so people can check it. During the pilot we review real conversations and fix the tools or instructions where answers go wrong."
+        },
+        {
+          "q": "Do we need to replace our existing software?",
+          "a": "No. The assistant or AI feature is added to what you already run: your back office, your database, your product. I connect to them through their APIs and keep the changes small."
+        },
+        {
+          "q": "Which AI models do you work with?",
+          "a": "I have shipped work on Claude through AWS Bedrock and on Gemini through Google Vertex AI. The choice depends on the task, where your data is hosted and which cloud your company already uses."
+        }
+      ],
+      "ctaTitle": "Is there a question your team keeps asking?",
+      "ctaText": "Write to me with the task or the data you have in mind. I will tell you plainly whether AI is a good fit and what a first version could look like."
+    },
+    "it": {
+      "slug": "integrazione-ai-aziende",
+      "navLabel": "Integrazione AI",
+      "metaTitle": "Integrazione AI in azienda | Redon Cela",
+      "metaDescription": "Integrazione AI in azienda: assistenti che rispondono dai dati aziendali, chat nel gestionale, traduzione ed estrazione dati, nel rispetto dei permessi.",
+      "eyebrow": "AI per le aziende",
+      "h1": "Integrazione AI in azienda, partendo dai vostri dati",
+      "lead": "Porto l'intelligenza artificiale negli strumenti che il vostro team usa già: assistenti che rispondono dai dati aziendali, una chat dentro il gestionale, funzioni AI nel vostro prodotto. Ogni risposta tiene conto di chi chiede, e i dati personali restano dove devono stare.",
+      "problemsTitle": "Vi riconoscete in queste situazioni?",
+      "problems": [
+        "Ogni settimana qualcuno chiede gli stessi numeri e aspetta che un collega prepari un report in Excel.",
+        "Avete provato ChatGPT, ma non vede i vostri sistemi, e i colleghi ci incollano i dati a mano.",
+        "Nessuno sa dire quali dati potrebbe vedere un'AI, così il progetto resta fermo tra IT e ufficio legale.",
+        "Schede prodotto, annunci o email servono in più lingue e qualcuno li traduce a mano.",
+        "Le informazioni utili arrivano da post social, PDF o email, e qualcuno le ricopia in un foglio di calcolo."
+      ],
+      "buildTitle": "Cosa realizzo",
+      "build": [
+        {
+          "title": "Assistenti che rispondono dai dati aziendali",
+          "text": "Il personale fa domande in linguaggio naturale e riceve risposte con tabelle e grafici dai dati aggiornati. Accanto a ogni risposta compaiono la fonte e quanto è recente il dato."
+        },
+        {
+          "title": "Una chat dentro il gestionale",
+          "text": "Un pannello di chat nello strumento interno che le persone aprono già ogni giorno, senza cambiare applicazione né copiare dati."
+        },
+        {
+          "title": "Traduzione automatica con AI",
+          "text": "Un testo scritto una volta compare anche nelle altre lingue. Su ALProperty, Gemini su Vertex AI traduce ogni annuncio a ogni modifica dell'agente."
+        },
+        {
+          "title": "Estrazione dati da contenuti disordinati",
+          "text": "Post, pagine web e documenti trasformati in dati ordinati. Pushim legge ogni giorno siti e post social delle agenzie di viaggio e ne ricava offerte con date e prezzi."
+        },
+        {
+          "title": "Il vostro prodotto dentro Claude e ChatGPT",
+          "text": "Un server MCP per lavorare con il vostro prodotto dall'assistente AI che si usa già, come fanno i presentatori con The Quiz Master."
+        },
+        {
+          "title": "Permessi e privacy dei dati",
+          "text": "Le richieste girano con i permessi dell'utente autenticato, in sola lettura quando basta leggere, e i dati personali vengono filtrati prima di arrivare al modello."
+        }
+      ],
+      "processTitle": "Come lavoriamo",
+      "process": [
+        {
+          "title": "Un caso d'uso reale",
+          "text": "Partiamo da una domanda o da un'attività che il team ripete spesso e guardiamo i dati che ci sono dietro, non da una lista di idee sull'AI."
+        },
+        {
+          "title": "Dati e permessi",
+          "text": "Verifico dove stanno i dati, chi può vedere cosa e cosa non deve mai arrivare al modello. Questo guida il progetto fin dall'inizio."
+        },
+        {
+          "title": "Una prima versione nel posto giusto",
+          "text": "Costruisco una prima versione dentro lo strumento che il team usa già e la faccio provare presto ad alcuni utenti reali."
+        },
+        {
+          "title": "Pilota, correzioni, estensione",
+          "text": "Leggiamo domande e risposte vere del pilota, correggiamo ciò che non va e solo dopo aggiungiamo altre fonti di dati o altri utenti."
+        }
+      ],
+      "proofTitle": "Dove l'ho già fatto",
+      "proofText": "In Bettermile, parte del gruppo GLS, guido lo sviluppo di Bekki: un assistente AI nel Back Office dove il personale operativo chiede di giri di consegna, pacchi e depositi e riceve risposte dai dati in tempo reale, in sola lettura e con i propri permessi. Nei miei prodotti l'AI traduce annunci immobiliari, estrae offerte di viaggio e permette agli assistenti di scrivere quiz.",
+      "faqTitle": "Domande frequenti",
+      "faq": [
+        {
+          "q": "I dati della mia azienda vengono usati per addestrare i modelli AI?",
+          "a": "Lavoro con le API aziendali dei provider cloud, come Claude su AWS Bedrock o Gemini su Google Vertex AI, i cui termini prevedono che i vostri prompt non vengano usati per l'addestramento. In più invio al modello solo i dati che servono alla domanda, e i dati personali si possono filtrare prima che escano dai vostri sistemi."
+        },
+        {
+          "q": "L'assistente può mostrare dati che un utente non dovrebbe vedere?",
+          "a": "Lo progetto in modo che non possa farlo. Ogni richiesta gira con i permessi di chi la fa, quindi l'assistente vede quello che quella persona vedrebbe nei vostri strumenti, niente di più. Quando basta leggere, gli strumenti sono in sola lettura."
+        },
+        {
+          "q": "E se l'AI sbaglia una risposta?",
+          "a": "Le risposte nascono da chiamate ai vostri dati reali, non dalla memoria del modello. Accanto a ogni risposta mostro la fonte e quanto è aggiornato il dato, così chi legge può controllare. Durante il pilota rivediamo le conversazioni reali e correggiamo strumenti o istruzioni dove le risposte non tornano."
+        },
+        {
+          "q": "Dobbiamo sostituire il gestionale o il software che usiamo?",
+          "a": "No. L'assistente o la funzione AI si aggiunge a quello che avete già: gestionale, database, prodotto. Mi collego tramite le loro API e tengo le modifiche al minimo."
+        },
+        {
+          "q": "Con quali modelli AI lavori?",
+          "a": "Ho portato in produzione progetti con Claude su AWS Bedrock e con Gemini su Google Vertex AI. La scelta dipende dal compito, da dove sono ospitati i vostri dati e dal cloud che l'azienda usa già."
+        }
+      ],
+      "ctaTitle": "C'è una domanda che il vostro team ripete sempre?",
+      "ctaText": "Scrivetemi quale attività o quali dati avete in mente. Vi dirò con franchezza se l'AI ha senso nel vostro caso e come potrebbe essere una prima versione."
+    },
+    "sq": {
+      "slug": "inteligjenca-artificiale-per-biznese",
+      "navLabel": "AI për biznese",
+      "metaTitle": "Inteligjenca artificiale për biznese | Redon Cela",
+      "metaDescription": "Inteligjenca artificiale për biznese: asistentë që përgjigjen nga të dhënat e kompanisë, chat në sistemin e brendshëm, përkthim me AI, me leje të sakta.",
+      "eyebrow": "AI për kompanitë",
+      "h1": "Inteligjenca artificiale për biznese, mbi të dhënat tuaja",
+      "lead": "E sjell inteligjencën artificiale te mjetet që ekipi juaj përdor tashmë: asistentë që përgjigjen nga të dhënat e kompanisë, chat brenda sistemit të brendshëm dhe funksione AI në produktin tuaj. Çdo përgjigje merr parasysh kush pyet, dhe të dhënat personale mbeten aty ku duhet.",
+      "problemsTitle": "A ju duket e njohur?",
+      "problems": [
+        "Çdo javë dikush kërkon të njëjtat shifra dhe pret që një koleg të përgatisë një raport në Excel.",
+        "E keni provuar ChatGPT, por ai nuk i sheh sistemet tuaja, ndaj stafi i kopjon të dhënat me dorë.",
+        "Askush nuk di të thotë cilat të dhëna lejohet të shohë një AI, ndaj projekti mbetet në pritje.",
+        "Njoftimet, faqet e produkteve ose email-et duhen në disa gjuhë dhe dikush i përkthen me dorë.",
+        "Informacioni i dobishëm vjen nga postime në rrjete sociale, PDF ose email, dhe dikush e rishkruan në një tabelë."
+      ],
+      "buildTitle": "Çfarë ndërtoj",
+      "build": [
+        {
+          "title": "Asistentë që përgjigjen nga të dhënat e kompanisë",
+          "text": "Stafi pyet në gjuhë të zakonshme dhe merr përgjigje me tabela e grafikë nga të dhënat aktuale. Pranë çdo përgjigjeje shfaqet burimi dhe sa të freskëta janë të dhënat."
+        },
+        {
+          "title": "Chat brenda sistemit të brendshëm",
+          "text": "Një panel chat-i në mjetin që stafi e hap çdo ditë, pa kaluar në një aplikacion tjetër dhe pa kopjuar të dhëna."
+        },
+        {
+          "title": "Përkthim automatik me AI",
+          "text": "Një tekst i shkruar një herë del edhe në gjuhët e tjera. Te ALProperty, Gemini në Vertex AI e përkthen çdo njoftim sa herë agjenti e ndryshon."
+        },
+        {
+          "title": "Nxjerrje të dhënash nga përmbajtje e çrregullt",
+          "text": "Postime, faqe web dhe dokumente të kthyera në të dhëna të rregullta. Pushim lexon çdo ditë faqet dhe postimet e agjencive të udhëtimit dhe nxjerr ofertat me data e çmime."
+        },
+        {
+          "title": "Produkti juaj brenda Claude dhe ChatGPT",
+          "text": "Një server MCP që njerëzit të punojnë me produktin tuaj nga asistenti AI që përdorin tashmë, siç bëjnë organizatorët me The Quiz Master."
+        },
+        {
+          "title": "Leje dhe privatësi e të dhënave",
+          "text": "Kërkesat kryhen me lejet e përdoruesit të identifikuar, vetëm për lexim kur mjafton leximi, dhe të dhënat personale filtrohen para se të arrijnë te modeli."
+        }
+      ],
+      "processTitle": "Si punojmë",
+      "process": [
+        {
+          "title": "Një rast konkret",
+          "text": "Nisemi nga një pyetje ose detyrë që ekipi e përsërit shpesh dhe shohim të dhënat pas saj, jo nga një listë idesh për AI."
+        },
+        {
+          "title": "Të dhënat dhe lejet",
+          "text": "Kontrolloj ku ndodhen të dhënat, kush mund të shohë çfarë dhe çfarë nuk duhet të arrijë kurrë te modeli. Kjo e përcakton projektin që në fillim."
+        },
+        {
+          "title": "Versioni i parë aty ku punohet",
+          "text": "Ndërtoj një version të parë brenda mjetit që ekipi përdor tashmë dhe ua jap herët disa përdoruesve të vërtetë."
+        },
+        {
+          "title": "Pilot, korrigjime, zgjerim",
+          "text": "Lexojmë pyetjet dhe përgjigjet e vërteta nga piloti, rregullojmë çfarë nuk shkon dhe vetëm pastaj shtojmë burime të tjera të dhënash ose përdorues të tjerë."
+        }
+      ],
+      "proofTitle": "Ku e kam bërë",
+      "proofText": "Te Bettermile, pjesë e GLS, drejtoj zhvillimin e Bekki: një asistent AI në Back Office, ku stafi operativ pyet për turet, pakot dhe depot dhe merr përgjigje nga të dhënat në kohë reale, vetëm për lexim dhe me lejet e veta. Në produktet e mia, AI përkthen njoftime pronash, nxjerr oferta pushimesh dhe u lejon asistentëve të shkruajnë kuize.",
+      "faqTitle": "Pyetje të shpeshta",
+      "faq": [
+        {
+          "q": "A përdoren të dhënat e kompanisë sime për të trajnuar modelet AI?",
+          "a": "Punoj me API-të për biznese të ofruesve cloud, si Claude në AWS Bedrock ose Gemini në Google Vertex AI, ku kushtet e ofruesve thonë që kërkesat tuaja nuk përdoren për trajnim. Përveç kësaj, modelit i dërgoj vetëm të dhënat që i duhen pyetjes, dhe të dhënat personale mund të filtrohen para se të dalin nga sistemet tuaja."
+        },
+        {
+          "q": "A mund t'i tregojë asistenti një përdoruesi të dhëna që nuk duhet t'i shohë?",
+          "a": "E projektoj që të mos mundet. Çdo kërkesë kryhet me lejet e personit që pyet, kështu asistenti sheh atë që ai person do të shihte në sistemet tuaja dhe asgjë më shumë. Kur mjafton leximi, mjetet janë vetëm për lexim."
+        },
+        {
+          "q": "Po nëse AI jep një përgjigje të gabuar?",
+          "a": "Përgjigjet vijnë nga thirrje mbi të dhënat tuaja reale, jo nga kujtesa e modelit. Pranë çdo përgjigjeje tregoj burimin dhe sa të freskëta janë të dhënat, që lexuesi të mund të kontrollojë. Gjatë pilotit rishikojmë bisedat e vërteta dhe rregullojmë mjetet ose udhëzimet aty ku përgjigjet nuk dalin."
+        },
+        {
+          "q": "A duhet të ndërrojmë programin që përdorim tani?",
+          "a": "Jo. Asistenti ose funksioni AI shtohet mbi atë që keni: sistemin e brendshëm, databazën, produktin. Lidhem me to përmes API-ve të tyre dhe i mbaj ndryshimet sa më të vogla."
+        },
+        {
+          "q": "Me cilat modele AI punon?",
+          "a": "Kam nxjerrë në prodhim punë me Claude përmes AWS Bedrock dhe me Gemini përmes Google Vertex AI. Zgjedhja varet nga detyra, nga ku ruhen të dhënat tuaja dhe nga cloud-i që kompania përdor tashmë."
+        }
+      ],
+      "ctaTitle": "Ka një pyetje që ekipi juaj e bën vazhdimisht?",
+      "ctaText": "Më shkruani për detyrën ose të dhënat që keni në mendje. Do t'ju them hapur nëse AI ka kuptim në rastin tuaj dhe si mund të duket një version i parë."
+    }
+  }
+}

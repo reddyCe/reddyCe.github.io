@@ -2,9 +2,10 @@
 import Logo from './Logo.astro';
 import { projects } from '../data/projects';
 import { EMAIL, profile } from '../data/profile';
-import { langs, languages, prefix, homeHref, projectHref, useT, type Lang } from '../i18n/ui';
-interface Props { lang: Lang; path: string }
-const { lang, path } = Astro.props;
+import { services, serviceHref, servicesIndexHref } from '../data/services';
+import { langs, languages, homeHref, projectHref, useT, type Lang } from '../i18n/ui';
+interface Props { lang: Lang; alts: Record<Lang, string> }
+const { lang, alts } = Astro.props;
 const t = useT(lang);
 const home = homeHref(lang);
 const year = new Date().getFullYear();
@@ -22,12 +23,16 @@ const year = new Date().getFullYear();
       <h2 id="f-projects">{t('footer.projects')}</h2>
       <ul>{projects.map((p) => <li><a href={projectHref(lang, p.slug)}>{p.name}</a></li>)}</ul>
     </nav>
+    <nav aria-labelledby="f-services">
+      <h2 id="f-services"><a href={servicesIndexHref(lang)}>{t('nav.services')}</a></h2>
+      <ul>{services.map((s) => <li><a href={serviceHref(lang, s)}>{s.i18n[lang].navLabel}</a></li>)}</ul>
+    </nav>
     <nav aria-labelledby="f-site">
       <h2 id="f-site">{t('footer.site')}</h2>
       <ul>
         <li><a href={`${home}#work`}>{t('nav.work')}</a></li>
         <li><a href={`${home}#ai`}>{t('nav.ai')}</a></li>
-        <li><a href={`${home}#services`}>{t('nav.services')}</a></li>
+        <li><a href={servicesIndexHref(lang)}>{t('nav.services')}</a></li>
         <li><a href={`${home}#about`}>{t('nav.about')}</a></li>
         <li><a href={`${home}#contact`}>{t('nav.contact')}</a></li>
       </ul>
@@ -43,6 +48,6 @@ const year = new Date().getFullYear();
   </div>
   <div class="wrap footer-bottom">
     <p>© {year} Redon Cela. {t('footer.note')}</p>
-    <p>{langs.map((l, i) => <>{i > 0 && ' · '}<a href={`${prefix(l)}${path}`} hreflang={l} lang={l}>{languages[l]}</a></>)}</p>
+    <p>{langs.map((l, i) => <>{i > 0 && ' · '}<a href={alts[l]} hreflang={l} lang={l}>{languages[l]}</a></>)}</p>
   </div>
 </footer>
