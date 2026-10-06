@@ -1,0 +1,47 @@
+---
+import { projects } from '../data/projects';
+import { EMAIL, profile } from '../data/profile';
+import { langs, languages, prefix, homeHref, projectHref, useT, type Lang } from '../i18n/ui';
+interface Props { lang: Lang; path: string }
+const { lang, path } = Astro.props;
+const t = useT(lang);
+const home = homeHref(lang);
+const year = new Date().getFullYear();
+---
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div class="footer-brand">
+      <a class="logo" href={home}>
+        <span class="logo-mark" aria-hidden="true">RC</span>
+        <span class="logo-text"><strong>Redon Cela</strong></span>
+      </a>
+      <p>{t('footer.tagline')}</p>
+    </div>
+    <nav aria-labelledby="f-projects">
+      <h2 id="f-projects">{t('footer.projects')}</h2>
+      <ul>{projects.map((p) => <li><a href={projectHref(lang, p.slug)}>{p.name}</a></li>)}</ul>
+    </nav>
+    <nav aria-labelledby="f-site">
+      <h2 id="f-site">{t('footer.site')}</h2>
+      <ul>
+        <li><a href={`${home}#work`}>{t('nav.work')}</a></li>
+        <li><a href={`${home}#ai`}>{t('nav.ai')}</a></li>
+        <li><a href={`${home}#services`}>{t('nav.services')}</a></li>
+        <li><a href={`${home}#about`}>{t('nav.about')}</a></li>
+        <li><a href={`${home}#contact`}>{t('nav.contact')}</a></li>
+      </ul>
+    </nav>
+    <div>
+      <h2>{t('footer.contact')}</h2>
+      <ul>
+        <li><a href={`mailto:${EMAIL}`}>{EMAIL}</a></li>
+        <li><a href={profile.linkedinUrl} rel="me noopener" target="_blank">LinkedIn</a></li>
+        <li><a href={profile.githubUrl} rel="me noopener" target="_blank">GitHub</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap footer-bottom">
+    <p>© {year} Redon Cela. {t('footer.note')}</p>
+    <p>{langs.map((l, i) => <>{i > 0 && ' · '}<a href={`${prefix(l)}${path}`} hreflang={l} lang={l}>{languages[l]}</a></>)}</p>
+  </div>
+</footer>

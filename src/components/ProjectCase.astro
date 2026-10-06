@@ -1,0 +1,35 @@
+---
+import Gallery from './Gallery.astro';
+import Icon from './Icon.astro';
+import { type Project, hostOf, boardType } from '../data/projects';
+import { projectHref, useT, type Lang } from '../i18n/ui';
+
+interface Props { project: Project; lang: Lang; index: number }
+const { project: p, lang, index } = Astro.props;
+const t = useT(lang);
+const c = p.i18n[lang] ?? p.i18n.en;
+---
+
+<article class="case" id={p.slug} data-reveal>
+  <div class:list={['panel', { 'panel-flip': index % 2 === 1 }]}>
+    <div class="panel-text">
+      <p class="eyebrow">{boardType[p.slug]?.[lang] ?? p.category} · {p.period}</p>
+      <h3 class="h2">{p.name}</h3>
+      <p class="lead">{c.tagline}</p>
+      <p class="case-summary">{c.summary}</p>
+      <ul class="checks">{c.useCases.slice(0, 3).map((u) => <li>{u}</li>)}</ul>
+      <ul class="tags" aria-label={t('project.stack')}>{p.stack.map((s) => <li class="tag">{s}</li>)}</ul>
+      <p class="case-cta">
+        <a class="btn btn-ink" href={projectHref(lang, p.slug)}>{t('project.case', { name: p.name })}</a>
+        {p.url && (
+          <a class="more" href={p.url} target="_blank" rel="noopener">
+            {t('project.visit')} {hostOf(p.url)} <Icon name="external" />
+          </a>
+        )}
+      </p>
+    </div>
+    <div class="panel-media">
+      <Gallery project={p} lang={lang} max={8} />
+    </div>
+  </div>
+</article>

@@ -1,0 +1,33 @@
+import type { APIRoute } from 'astro';
+import { projects, hostOf } from '../data/projects';
+import { EMAIL, profile } from '../data/profile';
+
+// Plain-text summary for AI assistants and search tools (llmstxt.org).
+export const GET: APIRoute = ({ site }) => {
+  const abs = (p: string) => new URL(p, site).href;
+  const lines = [
+    '# Redon Cela',
+    '',
+    '> Freelance full-stack and AI engineer based in Berlin. Builds web platforms, mobile apps, AI assistants and MCP servers end to end. Open to new projects. Works in English, Italian and Albanian.',
+    '',
+    `Contact: ${EMAIL}`,
+    `LinkedIn: ${profile.linkedinUrl}`,
+    `GitHub: ${profile.githubUrl}`,
+    '',
+    '## Projects',
+    '',
+    ...projects.map((p) => `- [${p.name}](${abs(`/projects/${p.slug}/`)}): ${p.i18n.en.tagline}. ${p.i18n.en.summary}${p.url ? ` Live at ${hostOf(p.url)}.` : ''}`),
+    '',
+    '## Employment',
+    '',
+    ...profile.experience.map((e) => `- ${e.title}, ${e.company} (${e.start} to ${e.end ?? 'present'})${e.location ? `, ${e.location}` : ''}`),
+    '',
+    '## Languages',
+    '',
+    `- English: ${abs('/')}`,
+    `- Italiano: ${abs('/it/')}`,
+    `- Shqip: ${abs('/sq/')}`,
+    '',
+  ];
+  return new Response(lines.join('\n'), { headers: { 'Content-Type': 'text/plain; charset=utf-8' } });
+};

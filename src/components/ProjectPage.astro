@@ -1,0 +1,126 @@
+---
+import Contact from './Contact.astro';
+import Frame from './Frame.astro';
+import Icon from './Icon.astro';
+import { projects, hostOf, boardType, type Project } from '../data/projects';
+import { homeHref, projectHref, useT, type Lang } from '../i18n/ui';
+
+interface Props { project: Project; lang: Lang }
+const { project: p, lang } = Astro.props;
+const t = useT(lang);
+const c = p.i18n[lang] ?? p.i18n.en;
+const idx = projects.findIndex((x) => x.slug === p.slug);
+const next = projects[(idx + 1) % projects.length];
+const host = hostOf(p.url) || `${p.slug}.app`;
+const cover = p.screenshots.find((s) => s.kind === 'desktop') ?? p.screenshots[0];
+const bySurface = p.surfaces.map((s) => ({ surface: s, shots: p.screenshots.filter((x) => x.surface === s) }));
+const live = /live/i.test(p.status);
+---
+
+<nav class="wrap crumbs" aria-label="Breadcrumb">
+  <ol>
+    <li><a href={homeHref(lang)}>Redon Cela</a></li>
+    <li><a href={`${homeHref(lang)}#work`}>{t('nav.work')}</a></li>
+    <li aria-current="page">{p.name}</li>
+  </ol>
+</nav>
+
+<article>
+  <header class="wrap pp-hero">
+    <div class="panel">
+      <div class="panel-text">
+        <p class="eyebrow">{boardType[p.slug]?.[lang] ?? p.category}</p>
+        <h1 class="h1">{p.name}</h1>
+        <p class="lead">{c.tagline}</p>
+        <dl class="pp-meta">
+          <div><dt>{t('project.role')}</dt><dd>{p.role}</dd></div>
+          <div><dt>{t('project.period')}</dt><dd>{p.period}</dd></div>
+          <div><dt>{t('project.status')}</dt><dd><span class:list={['dot', { 'dot-amber': !live }]} aria-hidden="true"></span>{p.status}</dd></div>
+          <div><dt>{t('project.surfaces')}</dt><dd>{p.surfaces.join(', ')}</dd></div>
+        </dl>
+        {p.url && (
+          <p class="btn-row">
+            <a class="btn btn-ink" href={p.url} target="_blank" rel="noopener">{t('project.visit')} {hostOf(p.url)} <Icon name="external" /></a>
+          </p>
+        )}
+      </div>
+      <div class="panel-media">
+        {cover && <Frame image={cover.image} kind={cover.kind} alt={`${p.name}: ${cover.caption?.[lang] ?? ''}`} url={host} eager sizes="(max-width: 900px) 100vw, 640px" />}
+      </div>
+    </div>
+  </header>
+
+  <section class="wrap section">
+    <p class="lead" style="max-width: 46em">{c.summary}</p>
+    <div class="pp-cols pp-block">
+      <div>
+        <h2>{t('project.useCases')}</h2>
+        <ul class="checks">{c.useCases.map((u) => <li>{u}</li>)}</ul>
+      </div>
+      <div>
+        <h2>{t('project.highlights')}</h2>
+        <ul class="checks">{c.highlights.map((u) => <li>{u}</li>)}</ul>
+      </div>
+    </div>
+    <div class="pp-cols pp-block">
+      <div>
+        <h2>{t('project.stack')}</h2>
+        <ul class="tags">{p.stack.map((s) => <li class="tag">{s}</li>)}</ul>
+      </div>
+      {p.facts.length > 0 && (
+        <div>
+          <h2>{t('project.facts')}</h2>
+          <ul class="facts-list">{p.facts.map((f) => <li>{f}</li>)}</ul>
+        </div>
+      )}
+    </div>
+    {p.mcpTools && p.mcpTools.length > 0 && (
+      <div class="pp-block">
+        <h2>{t('project.mcpTools')}</h2>
+        <table class="mcp-table">
+          <thead><tr><th scope="col">{{ en: 'Tool', it: 'Strumento', sq: 'Mjeti' }[lang]}</th><th scope="col">{{ en: 'What it does', it: 'Cosa fa', sq: 'Çfarë bën' }[lang]}</th></tr></thead>
+          <tbody>
+            {p.mcpTools.map((tool) => (
+              <tr><td><code>{tool.name}</code></td><td>{tool.description}</td></tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    )}
+
+    {bySurface.map(({ surface, shots }) => (
+      <section class="pp-surface" aria-label={surface}>
+        <h2>{surface}</h2>
+        <div class="pp-shots">
+          {shots.map((s) => (
+            <figure class:list={['pp-shot', `pp-shot-${s.kind}`]}>
+              <Frame
+                image={s.image}
+                kind={s.kind}
+                alt={`${p.name}, ${surface}: ${s.caption?.[lang] ?? ''}`}
+                url={host}
+                sizes={s.kind === 'desktop' ? '(max-width: 1360px) 100vw, 1280px' : '300px'}
+              />
+              <figcaption>{s.caption?.[lang]}</figcaption>
+            </figure>
+          ))}
+        </div>
+      </section>
+    ))}
+
+    <p class="pp-fake muted">{t('project.fake')}</p>
+
+    <nav class="pp-next" aria-label={t('project.next')}>
+      <a href={projectHref(lang, next.slug)}>
+        <span>
+          <span class="eyebrow">{t('project.next')}</span>
+          <span class="h2" style="display:block">{next.name}</span>
+          <span class="muted">{next.i18n[lang].tagline}</span>
+        </span>
+        <Icon name="chevron" size={32} />
+      </a>
+    </nav>
+  </section>
+</article>
+
+<Contact lang={lang} />

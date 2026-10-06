@@ -1,0 +1,140 @@
+{
+  "slug": "ucs",
+  "name": "USA College Sport",
+  "url": "https://usacollegesport.com",
+  "period": "2026",
+  "role": "Full-stack development (solo rebuild)",
+  "status": "Beta",
+  "category": "Sports recruiting platform",
+  "stack": [
+    "Nuxt 4 (Vue 3, TypeScript)",
+    "Tailwind CSS 4",
+    "PostgreSQL (Neon) + Drizzle ORM",
+    "Firebase Auth + App Hosting",
+    "Google Cloud Storage",
+    "@nuxtjs/i18n + Nuxt Content",
+    "Python + FFmpeg video runner (Modal)",
+    "pnpm monorepo"
+  ],
+  "facts": [
+    "2 Nuxt apps in one pnpm monorepo: the public site with the player portal, and a separate coach portal (Recruit11)",
+    "3 user roles: player, coach, admin",
+    "About 250 Vue components and pages, about 60 server API routes",
+    "23 Postgres tables, 15 Drizzle migrations",
+    "Public site and portal in 3 languages (Italian, English, Spanish), 76 blog posts",
+    "10-step player journey from profile to visa, with 131 taggable action types across 19 sports",
+    "A serverless FFmpeg runner cuts tagged clips, draws the circle on the player and builds the highlight reel"
+  ],
+  "i18n": {
+    "en": {
+      "tagline": "Recruiting platform for European athletes aiming at US colleges",
+      "summary": "A rebuild of the platform for an agency that has placed European student-athletes in US colleges since 2015. Players build a profile and turn full match videos into a highlight reel. College coaches search players by position, class year, GPA and game film.",
+      "useCases": [
+        "A football player in Genoa pastes a YouTube link to a match, tags their best plays and gets the clips back already cut.",
+        "The player trims, names and orders the clips, and the system renders a highlight reel with a circle on them.",
+        "A college coach filters players on a clickable pitch by position, class year, height, GPA and level, then adds them to a shortlist.",
+        "Agency staff follow each athlete through 10 steps: profile, video, contract, English test, ACT/SAT, NCAA eligibility and visa."
+      ],
+      "highlights": [
+        "One Postgres schema serves two apps: the player side and a coach portal on its own domain.",
+        "Tags go into a queue. A serverless FFmpeg worker cuts the clips, draws the circle marker and joins them into the reel.",
+        "Each sport has its own profile questions, positions and play types, and coach search filters on them.",
+        "Firebase session cookies with role checks, signed media streaming from private storage, and a script that keeps the three languages in sync."
+      ]
+    },
+    "it": {
+      "tagline": "Piattaforma di reclutamento per atleti europei verso i college USA",
+      "summary": "Il rifacimento della piattaforma di un'agenzia che dal 2015 porta studenti-atleti europei nei college americani. I giocatori compilano il profilo e trasformano le partite intere in un video di highlight. I coach dei college cercano gli atleti per ruolo, anno di diploma, GPA e video.",
+      "useCases": [
+        "Un calciatore di Genova incolla il link YouTube di una partita, tagga le sue azioni migliori e riceve le clip già tagliate.",
+        "Il giocatore rifila, rinomina e ordina le clip, e il sistema monta l'highlight con un cerchio su di lui.",
+        "Un coach universitario filtra gli atleti su un campo cliccabile per ruolo, anno, altezza, GPA e livello, poi li salva in una shortlist.",
+        "Lo staff dell'agenzia segue ogni atleta in 10 tappe: profilo, video, contratto, test d'inglese, ACT/SAT, eleggibilità NCAA e visto."
+      ],
+      "highlights": [
+        "Un solo schema Postgres per due app: il lato giocatori e il portale coach su un dominio separato.",
+        "I tag entrano in coda. Un worker FFmpeg serverless taglia le clip, disegna il cerchio e le unisce nell'highlight.",
+        "Ogni sport ha domande, ruoli e tipi di azione propri, e la ricerca dei coach filtra su questi.",
+        "Cookie di sessione Firebase con controllo dei ruoli, streaming firmato dei media da storage privato e uno script che tiene allineate le tre lingue."
+      ]
+    },
+    "sq": {
+      "tagline": "Platformë rekrutimi për atletë evropianë drejt kolegjeve amerikane",
+      "summary": "Rindërtimi i platformës së një agjencie që prej vitit 2015 çon student-atletë evropianë në kolegjet amerikane. Lojtarët plotësojnë profilin dhe i kthejnë ndeshjet e plota në një video me momentet më të mira. Trajnerët e kolegjeve kërkojnë lojtarë sipas pozicionit, vitit të diplomimit, GPA-së dhe videove.",
+      "useCases": [
+        "Një futbollist në Genova ngjit linkun YouTube të një ndeshjeje, shënon aksionet më të mira dhe i merr klipet të prera.",
+        "Lojtari i shkurton, i emërton dhe i rendit klipet, dhe sistemi krijon videon ku lojtari shënohet me një rreth.",
+        "Një trajner kolegji filtron lojtarët në një fushë të klikueshme sipas pozicionit, vitit, gjatësisë, GPA-së dhe nivelit, pastaj i ruan në listën e tij.",
+        "Stafi i agjencisë ndjek çdo atlet në 10 hapa: profili, video, kontrata, testi i anglishtes, ACT/SAT, kualifikimi NCAA dhe viza."
+      ],
+      "highlights": [
+        "Një skemë e vetme Postgres për dy aplikacione: anën e lojtarëve dhe portalin e trajnerëve në një domen më vete.",
+        "Shënimet futen në radhë. Një worker FFmpeg serverless pret klipet, vizaton rrethin dhe i bashkon në video.",
+        "Çdo sport ka pyetjet, pozicionet dhe llojet e aksioneve të veta, dhe kërkimi i trajnerëve filtron mbi to.",
+        "Cookie sesioni Firebase me kontroll rolesh, transmetim i nënshkruar i medias nga storage privat dhe një skript që mban të sinkronizuara tri gjuhët."
+      ]
+    }
+  },
+  "screenshots": [
+    {
+      "file": "projects/ucs/website-home.png",
+      "kind": "desktop",
+      "surface": "Website",
+      "caption": {
+        "en": "Public website: the landing page, in Italian, English and Spanish.",
+        "it": "Sito pubblico: la home, in italiano, inglese e spagnolo.",
+        "sq": "Faqja publike: faqja kryesore, në italisht, anglisht dhe spanjisht."
+      }
+    },
+    {
+      "file": "projects/ucs/website-how-it-works.png",
+      "kind": "desktop",
+      "surface": "Website",
+      "caption": {
+        "en": "How it works page: the nine steps from registration to the first season at a US college.",
+        "it": "Pagina Come funziona: i nove passi dalla registrazione alla prima stagione in un college americano.",
+        "sq": "Faqja Si funksionon: nëntë hapat nga regjistrimi te sezoni i parë në një kolegj amerikan."
+      }
+    },
+    {
+      "file": "projects/ucs/player-clip-editor.png",
+      "kind": "desktop",
+      "surface": "Player",
+      "caption": {
+        "en": "Player portal: trim, name and order the clips cut from your matches.",
+        "it": "Portale giocatore: rifila, nomina e ordina le clip tagliate dalle tue partite.",
+        "sq": "Portali i lojtarit: shkurto, emërto dhe rendit klipet e prera nga ndeshjet e tua."
+      }
+    },
+    {
+      "file": "projects/ucs/player-clip-editor-mobile.png",
+      "kind": "mobile",
+      "surface": "Player",
+      "caption": {
+        "en": "The same clip editor on a phone, with progress through the 10-step journey at the top.",
+        "it": "Lo stesso editor di clip da smartphone, con l'avanzamento del percorso in 10 tappe in alto.",
+        "sq": "I njëjti editor klipesh në telefon, me ecurinë e rrugëtimit me 10 hapa sipër."
+      }
+    },
+    {
+      "file": "projects/ucs/coach-player-search.png",
+      "kind": "desktop",
+      "surface": "Coach",
+      "caption": {
+        "en": "Coach portal: filter players by position on a clickable pitch, then by class, GPA and film.",
+        "it": "Portale coach: filtra i giocatori per ruolo su un campo cliccabile, poi per anno, GPA e video.",
+        "sq": "Portali i trajnerit: filtro lojtarët sipas pozicionit në një fushë të klikueshme, pastaj sipas vitit, GPA-së dhe videos."
+      }
+    },
+    {
+      "file": "projects/ucs/coach-player-profile.png",
+      "kind": "desktop",
+      "surface": "Coach",
+      "caption": {
+        "en": "A player's profile as coaches see it: key stats, game film and clips grouped by action.",
+        "it": "Il profilo di un giocatore visto dal coach: dati principali, video e clip raggruppate per azione.",
+        "sq": "Profili i lojtarit siç e sheh trajneri: të dhënat kryesore, videot dhe klipet të grupuara sipas aksionit."
+      }
+    }
+  ]
+}

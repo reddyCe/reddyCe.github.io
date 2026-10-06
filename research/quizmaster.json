@@ -1,0 +1,160 @@
+{
+  "slug": "quizmaster",
+  "name": "The Quiz Master",
+  "url": "https://thequizmaster.app",
+  "period": "2026",
+  "role": "Founder, design and full-stack development",
+  "status": "Beta",
+  "category": "Pub-quiz hosting app with an MCP server",
+  "stack": [
+    "Vue 3 + TypeScript",
+    "Pinia",
+    "Vite",
+    "Tailwind CSS v4",
+    "GSAP",
+    "Firebase (Auth, Firestore, Storage, Functions, Hosting)",
+    "Model Context Protocol SDK",
+    "Express + zod",
+    "OAuth 2.1 (PKCE, dynamic client registration)"
+  ],
+  "facts": [
+    "Remote MCP server with 17 typed tools at thequizmaster.app/mcp",
+    "Own OAuth 2.1 authorization server with dynamic client registration, required S256 PKCE and hashed opaque tokens",
+    "Authoring only: no delete tools, and every read or write is scoped to the signed-in host",
+    "10 presenter themes, 9 question types, 14 timeline segment types",
+    "Media import copies images, audio and video into the app's own storage (25 MB cap, SVG rejected)",
+    "About 118 Vue single-file components. Presenter and control panel stay in sync across two windows via BroadcastChannel",
+    "Keeps working offline mid-quiz thanks to Firestore's persistent multi-tab cache"
+  ],
+  "mcpTools": [
+    { "name": "get_authoring_guide", "description": "Returns the authoring spec: localized text, segment structure, question and answer shapes, quality guidance. The assistant reads it first." },
+    { "name": "list_themes", "description": "Lists the presenter themes a quiz can use (Arcade, Cosmos, Quiz Board, Terminus, Chalkboard, ...)." },
+    { "name": "list_quizzes", "description": "Lists the host's quiz templates with languages, theme and per-round question counts." },
+    { "name": "get_quiz", "description": "Fetches one quiz in full, with the round questions included inline." },
+    { "name": "create_quiz", "description": "Creates a quiz template; can import a complete running order in one call." },
+    { "name": "update_quiz", "description": "Patches title, description, theme, languages, settings and metadata." },
+    { "name": "add_segment", "description": "Inserts a timeline segment (welcome, rules, round, answer reveal, break, scoreboard, ...). A new round gets a matching answer-reveal segment automatically." },
+    { "name": "update_segment", "description": "Patches one segment's fields." },
+    { "name": "remove_segment", "description": "Removes a segment and renumbers the timeline. The questions stay in the question bank." },
+    { "name": "move_segment", "description": "Moves a segment to a new position in the running order." },
+    { "name": "search_questions", "description": "Searches the host's question bank by text, tags, type and difficulty." },
+    { "name": "get_question", "description": "Fetches one question in full (prompt, answer, media, clue stages, sub-questions, tags)." },
+    { "name": "create_question", "description": "Creates a standalone question in the question bank, with an optional image, audio clip or YouTube video." },
+    { "name": "update_question", "description": "Edits a question. The change shows up in every quiz that uses it." },
+    { "name": "add_questions_to_round", "description": "Adds new inline questions or existing questions from the bank to a round." },
+    { "name": "remove_question_from_round", "description": "Unlinks a question from a round without deleting it." },
+    { "name": "import_media", "description": "Copies a remote image, audio or video file into Quiz Master storage and returns a permanent URL." }
+  ],
+  "i18n": {
+    "en": {
+      "tagline": "Pub-quiz hosting app that AI assistants can write into",
+      "summary": "Quiz Master is a web app for running pub-quiz nights: build the running order, rehearse it, then present it full-screen while scoring teams from a control panel. Its MCP server lets AI assistants such as Claude or ChatGPT write quizzes directly into the host's library. Ask for \"a 3-round pub quiz on 90s football\" and the finished quiz appears in Quiz Master, ready to host.",
+      "useCases": [
+        "A pub quiz host asks Claude for a themed night and gets a full quiz with rounds, answer reveals and a scoreboard.",
+        "A host builds a picture or music round in chat, and the assistant finds the files and imports them into the app's storage.",
+        "A host reuses questions from their own bank across quiz nights, and an edit shows up in every quiz that uses the question.",
+        "On the night, the host runs the quiz from a laptop while the room watches the presenter screen in the chosen theme."
+      ],
+      "highlights": [
+        "Remote MCP server with 17 typed tools validated with zod, covering quizzes, timeline segments, the question bank and media import.",
+        "Sign-in is a full OAuth 2.1 flow with dynamic client registration and PKCE, so connecting needs only the server URL and no API key.",
+        "The server has no delete tools, and every request only touches data owned by the signed-in host.",
+        "10 animated presenter themes built with GSAP. Presenter and control panel run in two windows and keep working offline."
+      ]
+    },
+    "it": {
+      "tagline": "Quiz da pub condotti in sala e scritti anche dall'AI",
+      "summary": "Quiz Master è una web app per condurre serate quiz: si costruisce la scaletta, la si prova e poi la si proietta a schermo intero, assegnando i punti alle squadre da un pannello di controllo. Il suo server MCP permette ad assistenti AI come Claude o ChatGPT di scrivere i quiz direttamente nella libreria dell'host. Basta chiedere \"un quiz da pub in 3 round sul calcio anni '90\" e il quiz completo compare in Quiz Master, pronto da condurre.",
+      "useCases": [
+        "Un presentatore di quiz chiede a Claude una serata a tema e riceve un quiz completo con round, soluzioni e classifica.",
+        "Un presentatore costruisce in chat un round di immagini o di musica, e l'assistente trova i file e li importa nello storage dell'app.",
+        "Un presentatore riusa le domande del proprio archivio in più serate, e ogni modifica compare in tutti i quiz che usano quella domanda.",
+        "Durante la serata il presentatore guida il quiz dal portatile, mentre la sala guarda lo schermo con il tema scelto."
+      ],
+      "highlights": [
+        "Server MCP remoto con 17 strumenti tipizzati e validati con zod per quiz, segmenti della scaletta, archivio domande e import dei media.",
+        "L'accesso è un flusso OAuth 2.1 completo, con registrazione dinamica del client e PKCE: per collegarsi basta l'URL del server, senza chiavi API.",
+        "Il server non ha strumenti di cancellazione, e ogni richiesta tocca solo i dati dell'host autenticato.",
+        "10 temi animati con GSAP per lo schermo del pubblico. Presenter e pannello di controllo girano in due finestre e funzionano anche offline."
+      ]
+    },
+    "sq": {
+      "tagline": "Aplikacion për kuize pubi, ku shkruan edhe asistenti AI",
+      "summary": "Quiz Master është një aplikacion web për të drejtuar mbrëmje kuizi: ndërton radhën e programit, e provon dhe pastaj e shfaq në ekran të plotë, ndërsa u jep pikë skuadrave nga një panel kontrolli. Serveri i tij MCP u lejon asistentëve AI si Claude ose ChatGPT të shkruajnë kuize direkt në bibliotekën e organizatorit. Mjafton të kërkosh \"një kuiz pubi me 3 raunde për futbollin e viteve '90\" dhe kuizi i plotë shfaqet në Quiz Master, gati për t'u drejtuar.",
+      "useCases": [
+        "Një organizator kuizesh i kërkon Claude-it një mbrëmje me temë dhe merr një kuiz të plotë me raunde, përgjigje dhe renditje.",
+        "Një organizator ndërton në chat një raund me foto ose muzikë, dhe asistenti gjen skedarët dhe i importon në hapësirën e aplikacionit.",
+        "Një organizator ripërdor pyetjet e arkivit të vet në disa mbrëmje, dhe çdo ndryshim shfaqet në të gjitha kuizet që e përdorin pyetjen.",
+        "Gjatë mbrëmjes organizatori e drejton kuizin nga laptopi, ndërsa salla ndjek ekranin me temën e zgjedhur."
+      ],
+      "highlights": [
+        "Server MCP në distancë me 17 mjete të tipizuara dhe të validuara me zod për kuizet, segmentet, arkivin e pyetjeve dhe importin e medias.",
+        "Hyrja bëhet me një rrjedhë të plotë OAuth 2.1, me regjistrim dinamik të klientit dhe PKCE: mjafton URL-ja e serverit, pa çelësa API.",
+        "Serveri nuk ka mjete fshirjeje, dhe çdo kërkesë prek vetëm të dhënat e organizatorit të identifikuar.",
+        "10 tema të animuara me GSAP për ekranin e publikut. Prezantuesi dhe paneli i kontrollit punojnë në dy dritare, edhe pa internet."
+      ]
+    }
+  },
+  "screenshots": [
+    {
+      "file": "projects/quizmaster/mcp-chat.png",
+      "kind": "desktop",
+      "surface": "MCP",
+      "caption": {
+        "en": "MCP in use: an AI assistant builds a 3-round 90s football quiz with the Quiz Master tools, and it lands in the library ready to host (illustrative mock).",
+        "it": "MCP in uso: un assistente AI costruisce un quiz in 3 round sul calcio anni '90 con gli strumenti di Quiz Master, e il quiz arriva in libreria pronto da condurre (mockup illustrativo).",
+        "sq": "MCP në përdorim: një asistent AI ndërton një kuiz me 3 raunde për futbollin e viteve '90 me mjetet e Quiz Master, dhe kuizi del në bibliotekë gati për t'u drejtuar (mockup ilustrues)."
+      }
+    },
+    {
+      "file": "projects/quizmaster/mcp-tools.png",
+      "kind": "desktop",
+      "surface": "MCP",
+      "caption": {
+        "en": "The 17 tools the MCP server exposes: quizzes, timeline segments, the question repo and media import. Nothing destructive.",
+        "it": "I 17 strumenti esposti dal server MCP: quiz, segmenti della scaletta, archivio domande e import dei media. Niente di distruttivo.",
+        "sq": "17 mjetet që ofron serveri MCP: kuize, segmente të programit, arkivi i pyetjeve dhe importi i medias. Asgjë shkatërruese."
+      }
+    },
+    {
+      "file": "projects/quizmaster/mcp-connect-page.png",
+      "kind": "desktop",
+      "surface": "Website",
+      "caption": {
+        "en": "The connect page: one server URL and an OAuth sign-in, then the assistant works in your own quiz library.",
+        "it": "La pagina di collegamento: un URL del server e l'accesso OAuth, poi l'assistente lavora nella tua libreria di quiz.",
+        "sq": "Faqja e lidhjes: një URL serveri dhe hyrja me OAuth, pastaj asistenti punon në bibliotekën tënde të kuizeve."
+      }
+    },
+    {
+      "file": "projects/quizmaster/landing.png",
+      "kind": "desktop",
+      "surface": "Website",
+      "caption": {
+        "en": "Landing page at thequizmaster.app.",
+        "it": "La landing page su thequizmaster.app.",
+        "sq": "Faqja kryesore në thequizmaster.app."
+      }
+    },
+    {
+      "file": "projects/quizmaster/host-builder.png",
+      "kind": "desktop",
+      "surface": "Host app",
+      "caption": {
+        "en": "Quiz builder: the timeline on the left, a live slide preview in the middle, the question inspector on the right.",
+        "it": "Editor del quiz: scaletta a sinistra, anteprima della slide al centro, ispettore della domanda a destra.",
+        "sq": "Ndërtuesi i kuizit: programi majtas, pamja paraprake e slajdit në mes, inspektori i pyetjes djathtas."
+      }
+    },
+    {
+      "file": "projects/quizmaster/presenter-arcade.png",
+      "kind": "desktop",
+      "surface": "Player",
+      "caption": {
+        "en": "What the room sees: a picture question in the Arcade theme, with the host's controls alongside.",
+        "it": "Ciò che vede la sala: una domanda con immagine nel tema Arcade, accanto ai controlli del presentatore.",
+        "sq": "Çfarë sheh salla: një pyetje me foto në temën Arcade, krahas kontrolleve të organizatorit."
+      }
+    }
+  ]
+}

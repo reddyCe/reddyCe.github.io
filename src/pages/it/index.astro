@@ -1,0 +1,11 @@
+---
+import Base from '../../layouts/Base.astro';
+import Home from '../../components/Home.astro';
+import { homeJsonLd } from '../../data/seo';
+import { useT } from '../../i18n/ui';
+const lang = 'it';
+const t = useT(lang);
+---
+<Base lang={lang} title={t('meta.title')} description={t('meta.description')} path="/" type="profile" jsonLd={homeJsonLd(lang, Astro.site!)}>
+  <Home lang={lang} />
+</Base>

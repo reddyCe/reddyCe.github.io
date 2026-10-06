@@ -1,0 +1,97 @@
+{
+  "slug": "saneo",
+  "name": "Saneo",
+  "url": "https://saneo.al",
+  "period": "2026",
+  "role": "Founder, design and full-stack development",
+  "status": "Live",
+  "category": "Healthcare booking platform",
+  "stack": ["Vue 3", "Vite", "PrimeVue + Tailwind CSS 4", "Pinia", "Hono API (TypeScript)", "Drizzle ORM + Postgres (Neon)", "Firebase Auth", "Capacitor (iOS & Android)", "Mapbox GL"],
+  "facts": [
+    "Patient portal and staff workspace in one codebase",
+    "137 Vue components, 26 API route modules, 39 database tables",
+    "Two native apps from the same code: Saneo for patients, Saneo Pro for doctors",
+    "26 medical specialties, interface in English and Albanian",
+    "Video consultations, waiting list, analytics and a CRM for medical tourism"
+  ],
+  "i18n": {
+    "en": {
+      "tagline": "Doctor booking for patients and clinics in Albania",
+      "summary": "Patients in Albania use Saneo to search doctors by specialty and city, see open slots and book a visit in person or by video. Doctors and clinics use the same product for their shared calendar, patient charts, reminders and a public booking page.",
+      "useCases": [
+        "A patient in Tirana finds a cardiologist on the map and books tomorrow's 11:30 slot from their phone.",
+        "A receptionist at a clinic sees every doctor's day side by side and confirms new online requests.",
+        "A doctor reads a patient's past visits, notes and lab files before the appointment.",
+        "A doctor who works alone shares a booking link or QR code, so patients book without calling."
+      ],
+      "highlights": [
+        "Open slots are computed from opening hours, services and existing visits, so a slot on screen is actually free.",
+        "The workspace switches between solo and clinic mode based on team size.",
+        "A role-based API sends new bookings to the calendar over server-sent events.",
+        "iOS and Android apps for patients and doctors, built from the Vue codebase with Capacitor."
+      ]
+    },
+    "it": {
+      "tagline": "Prenotazione di visite mediche per pazienti e cliniche in Albania",
+      "summary": "Con Saneo i pazienti in Albania cercano un medico per specialità e città, vedono gli orari liberi e prenotano una visita in studio o in video. Medici e cliniche usano lo stesso prodotto per il calendario condiviso, le cartelle dei pazienti, i promemoria e una pagina di prenotazione pubblica.",
+      "useCases": [
+        "Un paziente a Tirana trova un cardiologo sulla mappa e dal telefono prenota per domani alle 11:30.",
+        "La receptionist di una clinica vede la giornata di tutti i medici affiancata e conferma le nuove richieste online.",
+        "Un medico legge visite precedenti, note e referti del paziente prima dell'appuntamento.",
+        "Un medico che lavora da solo condivide un link o un QR code, e i pazienti prenotano senza telefonare."
+      ],
+      "highlights": [
+        "Gli orari liberi sono calcolati da orari di apertura, servizi e visite già fissate, quindi uno slot sullo schermo è davvero libero.",
+        "Lo spazio di lavoro passa dalla modalità singolo a quella clinica in base alla dimensione del team.",
+        "Un'API basata sui ruoli invia le nuove prenotazioni al calendario tramite server-sent events.",
+        "App iOS e Android per pazienti e medici, costruite dal codice Vue con Capacitor."
+      ]
+    },
+    "sq": {
+      "tagline": "Rezervime te mjeku për pacientë dhe klinika në Shqipëri",
+      "summary": "Me Saneo pacientët në Shqipëri kërkojnë mjekë sipas specialitetit dhe qytetit, shohin oraret e lira dhe rezervojnë vizitë në klinikë ose me video. Mjekët dhe klinikat përdorin të njëjtin produkt për kalendarin e përbashkët, kartelat e pacientëve, kujtesat dhe një faqe publike rezervimi.",
+      "useCases": [
+        "Një pacient në Tiranë gjen një kardiolog në hartë dhe nga telefoni rezervon për nesër në orën 11:30.",
+        "Recepsionistja e një klinike sheh ditën e të gjithë mjekëve krah për krah dhe konfirmon kërkesat e reja online.",
+        "Mjeku lexon vizitat e mëparshme, shënimet dhe analizat e pacientit para takimit.",
+        "Një mjek që punon vetëm ndan një link ose kod QR, dhe pacientët rezervojnë pa telefonuar."
+      ],
+      "highlights": [
+        "Oraret e lira llogariten nga orari i punës, shërbimet dhe vizitat e caktuara, ndaj një orar që shfaqet është vërtet i lirë.",
+        "Hapësira e punës kalon nga mënyra solo në mënyrën klinikë sipas madhësisë së ekipit.",
+        "Një API me role i dërgon rezervimet e reja në kalendar me server-sent events.",
+        "Aplikacione iOS dhe Android për pacientët dhe mjekët, të ndërtuara nga kodi Vue me Capacitor."
+      ]
+    }
+  },
+  "screenshots": [
+    {
+      "file": "projects/saneo/patient-home.png", "kind": "desktop", "surface": "Patient",
+      "caption": { "en": "Patient home: search by specialty, city and date, in person or by video", "it": "Home paziente: ricerca per specialità, città e data, in studio o in video", "sq": "Faqja kryesore e pacientit: kërkim sipas specialitetit, qytetit dhe datës, në klinikë ose me video" }
+    },
+    {
+      "file": "projects/saneo/patient-search-map.png", "kind": "desktop", "surface": "Patient",
+      "caption": { "en": "Doctor search in Tirana with map, filters and the next free slots", "it": "Ricerca medici a Tirana con mappa, filtri e prossimi orari liberi", "sq": "Kërkimi i mjekëve në Tiranë me hartë, filtra dhe oraret e para të lira" }
+    },
+    {
+      "file": "projects/saneo/patient-doctor-profile.png", "kind": "desktop", "surface": "Patient",
+      "caption": { "en": "Public doctor profile with the booking agenda", "it": "Profilo pubblico del medico con l'agenda delle prenotazioni", "sq": "Profili publik i mjekut me axhendën e rezervimeve" }
+    },
+    {
+      "file": "projects/saneo/patient-booking-mobile.png", "kind": "mobile", "surface": "Patient",
+      "caption": { "en": "Booking on a phone: slot, service and price in one step", "it": "Prenotazione da smartphone: orario, servizio e prezzo in un passaggio", "sq": "Rezervimi nga telefoni: orari, shërbimi dhe çmimi në një hap" }
+    },
+    {
+      "file": "projects/saneo/doctor-calendar-day.png", "kind": "desktop", "surface": "Doctor",
+      "caption": { "en": "Clinic day board: every doctor's appointments side by side", "it": "Agenda giornaliera della clinica: gli appuntamenti di ogni medico affiancati", "sq": "Dita e klinikës: takimet e çdo mjeku krah për krah" }
+    },
+    {
+      "file": "projects/saneo/doctor-patient-chart.png", "kind": "desktop", "surface": "Doctor",
+      "caption": { "en": "Patient chart with visit history, clinical notes and files", "it": "Cartella paziente con storico visite, note cliniche e documenti", "sq": "Kartela e pacientit me historikun e vizitave, shënime klinike dhe dokumente" }
+    },
+    {
+      "file": "projects/saneo/doctor-agenda-mobile.png", "kind": "mobile", "surface": "Doctor",
+      "caption": { "en": "The doctor's agenda in the Saneo Pro app", "it": "L'agenda del medico nell'app Saneo Pro", "sq": "Axhenda e mjekut në aplikacionin Saneo Pro" }
+    }
+  ]
+}

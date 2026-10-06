@@ -1,0 +1,141 @@
+{
+  "slug": "circleon",
+  "name": "CircleOn.me",
+  "url": "https://circleon.me",
+  "period": "2025–2026",
+  "role": "Lead developer, built with a partner",
+  "status": "Live",
+  "category": "Sports highlight video tool",
+  "stack": ["Nuxt 4", "Vue 3 + TypeScript", "Tailwind CSS", "Firebase (Auth, Firestore, Functions, Storage)", "Stripe", "Python on Modal", "FFmpeg", "yt-dlp", "GitHub Actions"],
+  "facts": [
+    "About 78 Vue components and 29 composables",
+    "15 Cloud Functions: callables, Stripe webhook, Firestore triggers and scheduled jobs",
+    "4 plans (Free, Single credit, Plus, Pro) on Stripe subscriptions and one-time credits",
+    "Serverless FFmpeg render pipeline on Modal: freeze-frames, circle overlays, music, watermark",
+    "81 programmatic SEO pages in the sitemap (sports, positions, divisions, how-to guides)",
+    "Admin dashboard with 5 tabs: users, payments, proxies, growth attribution and activity",
+    "136 commits, about 78% by Redon"
+  ],
+  "i18n": {
+    "en": {
+      "tagline": "Circle yourself in game film for college recruiters",
+      "summary": "CircleOn.me is a browser tool for student athletes making recruiting videos. They paste a YouTube link or upload game film, click on themselves at each key play and get back an MP4 with freeze-frames, an animated circle and optional music. There is a free tier, and paid plans run through Stripe.",
+      "useCases": [
+        "A high-school player circles themselves in a full match so college coaches can follow them on every play.",
+        "A parent turns a season of YouTube game film into a short recruiting video without paying an editor.",
+        "A club coach on the Pro plan exports highlight clips for several players each month.",
+        "The founders check signups, revenue, marketing attribution and render status in the admin dashboard."
+      ],
+      "highlights": [
+        "A browser studio where you click to place and resize circles on a YouTube or uploaded video. Drafts save locally and sync to Firestore.",
+        "Exports render on Modal workers that fetch the video through rotating proxies and build the MP4 with FFmpeg. Firestore listeners show the status as it changes.",
+        "Cloud Functions enforce plan limits, credits and refunds, handle Stripe webhooks and block re-registering for extra free exports.",
+        "Typed content modules generate a page for each sport, position and division, deployed from CI to Firebase Hosting."
+      ]
+    },
+    "it": {
+      "tagline": "Video di reclutamento con un cerchio sul giocatore",
+      "summary": "CircleOn.me è uno strumento nel browser per studenti-atleti che preparano video di reclutamento. Si incolla un link YouTube o si carica il video della partita, si clicca su sé stessi nelle azioni chiave e si riceve un MP4 con fermo immagine, cerchio animato e musica opzionale. C'è un piano gratuito, e i piani a pagamento passano da Stripe.",
+      "useCases": [
+        "Un giocatore delle superiori si cerchia nella partita intera, così gli allenatori dei college lo seguono in ogni azione.",
+        "Un genitore trasforma una stagione di partite su YouTube in un breve video di reclutamento, senza pagare un montatore.",
+        "Un allenatore di club con il piano Pro esporta ogni mese le clip di più giocatori.",
+        "I fondatori controllano iscrizioni, ricavi, attribuzione marketing e stato dei rendering nella dashboard di amministrazione."
+      ],
+      "highlights": [
+        "Uno studio nel browser dove si posizionano e ridimensionano i cerchi con un clic su un video YouTube o caricato. Le bozze si salvano in locale e si sincronizzano su Firestore.",
+        "Gli export vengono renderizzati su worker Modal che scaricano il video tramite proxy a rotazione e montano l'MP4 con FFmpeg. I listener di Firestore mostrano lo stato man mano che cambia.",
+        "Le Cloud Functions applicano limiti dei piani, crediti e rimborsi, gestiscono i webhook di Stripe e bloccano chi si registra di nuovo per avere altri export gratuiti.",
+        "Moduli di contenuto tipizzati generano una pagina per ogni sport, ruolo e divisione, pubblicata da CI su Firebase Hosting."
+      ]
+    },
+    "sq": {
+      "tagline": "Video rekrutimi me një rreth mbi lojtarin",
+      "summary": "CircleOn.me është një mjet në shfletues për atletët studentë që përgatisin video rekrutimi. Ata ngjitin një link YouTube ose ngarkojnë videon e ndeshjes, klikojnë mbi veten në çdo aksion kyç dhe marrin një MP4 me ngrirje kuadri, rreth të animuar dhe muzikë sipas dëshirës. Ka një plan falas, ndërsa planet me pagesë kalojnë përmes Stripe.",
+      "useCases": [
+        "Një lojtar i shkollës së mesme shënon veten me rreth në ndeshjen e plotë, që trajnerët e kolegjit ta ndjekin në çdo aksion.",
+        "Një prind e kthen një sezon ndeshjesh në YouTube në një video të shkurtër rekrutimi, pa paguar montazhier.",
+        "Një trajner klubi me planin Pro eksporton çdo muaj klipe për disa lojtarë.",
+        "Themeluesit ndjekin në panelin e administrimit regjistrimet, të ardhurat, burimet e marketingut dhe gjendjen e renderimeve."
+      ],
+      "highlights": [
+        "Studio në shfletues ku rrathët vendosen dhe ndryshojnë madhësi me një klik mbi videon YouTube ose të ngarkuar. Draftet ruhen lokalisht dhe sinkronizohen me Firestore.",
+        "Eksportet renderohen në workerë Modal që e shkarkojnë videon përmes proxy-ve në rotacion dhe e ndërtojnë MP4-n me FFmpeg. Dëgjuesit e Firestore e tregojnë statusin sapo ndryshon.",
+        "Cloud Functions zbatojnë kufijtë e planeve, kreditet dhe rimbursimet, trajtojnë webhook-et e Stripe dhe bllokojnë riregjistrimin për eksporte falas shtesë.",
+        "Module përmbajtjeje të tipizuara krijojnë një faqe për çdo sport, pozicion dhe divizion, të publikuar nga CI në Firebase Hosting."
+      ]
+    }
+  },
+  "screenshots": [
+    {
+      "file": "projects/circleon/home.png",
+      "kind": "desktop",
+      "surface": "Website",
+      "caption": {
+        "en": "Landing page: paste a YouTube link or upload game film and start placing circles for free.",
+        "it": "Landing page: si incolla un link YouTube o si carica il video della partita e si inizia gratis a posizionare i cerchi.",
+        "sq": "Faqja kryesore: ngjit një link YouTube ose ngarko videon e ndeshjes dhe fillo falas të vendosësh rrathë."
+      }
+    },
+    {
+      "file": "projects/circleon/pricing.png",
+      "kind": "desktop",
+      "surface": "Website",
+      "caption": {
+        "en": "Pricing: a free tier, a one-time credit and two monthly plans, billed through Stripe.",
+        "it": "Prezzi: un piano gratuito, un credito singolo e due piani mensili, con pagamento tramite Stripe.",
+        "sq": "Çmimet: një plan falas, një kredit i vetëm dhe dy plane mujore, me pagesë përmes Stripe."
+      }
+    },
+    {
+      "file": "projects/circleon/app-editor.png",
+      "kind": "desktop",
+      "surface": "Video studio",
+      "caption": {
+        "en": "The studio: circles marked on the timeline, a choice of circle styles and the list of highlights for the export.",
+        "it": "Lo studio: cerchi segnati sulla timeline, scelta dello stile del cerchio ed elenco degli highlight per l'export.",
+        "sq": "Studioja: rrathë të shënuar në timeline, zgjedhje e stilit të rrethit dhe lista e momenteve për eksport."
+      }
+    },
+    {
+      "file": "projects/circleon/app-dashboard.png",
+      "kind": "desktop",
+      "surface": "Athlete dashboard",
+      "caption": {
+        "en": "Athlete dashboard: exports with live render status, plus watch, edit, download and share actions.",
+        "it": "Dashboard dell'atleta: export con stato del rendering in tempo reale e azioni per guardare, modificare, scaricare e condividere.",
+        "sq": "Paneli i atletit: eksporte me statusin e renderimit në kohë reale dhe veprime për të parë, ndryshuar, shkarkuar e ndarë."
+      }
+    },
+    {
+      "file": "projects/circleon/app-dashboard-mobile.png",
+      "kind": "mobile",
+      "surface": "Athlete dashboard",
+      "caption": {
+        "en": "The same dashboard on a phone, with the remaining credits always in view.",
+        "it": "La stessa dashboard sul telefono, con i crediti rimanenti sempre in vista.",
+        "sq": "I njëjti panel në telefon, me kreditet e mbetura gjithmonë në pamje."
+      }
+    },
+    {
+      "file": "projects/circleon/admin-users.png",
+      "kind": "desktop",
+      "surface": "Admin dashboard",
+      "caption": {
+        "en": "Admin dashboard: every user with plan, remaining exports and video count, filterable by paying or free.",
+        "it": "Dashboard di amministrazione: ogni utente con piano, export rimanenti e numero di video, filtrabile tra paganti e gratuiti.",
+        "sq": "Paneli i administrimit: çdo përdorues me planin, eksportet e mbetura dhe numrin e videove, i filtrueshëm sipas pagesës."
+      }
+    },
+    {
+      "file": "projects/circleon/admin-payments.png",
+      "kind": "desktop",
+      "surface": "Admin dashboard",
+      "caption": {
+        "en": "Payments tab: revenue, credits sold and a per-plan breakdown for the selected time range.",
+        "it": "Scheda pagamenti: ricavi, crediti venduti e ripartizione per piano nel periodo scelto.",
+        "sq": "Skeda e pagesave: të ardhurat, kreditet e shitura dhe ndarja sipas planit për periudhën e zgjedhur."
+      }
+    }
+  ]
+}

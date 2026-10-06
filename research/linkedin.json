@@ -1,0 +1,151 @@
+{
+  "name": "Redon Cela",
+  "headline": "Frontend Developer @Bettermile",
+  "location": "Berlin, Germany",
+  "linkedinUrl": "https://www.linkedin.com/in/redoncela",
+  "githubUrl": "https://github.com/reddyCe",
+  "about": "Frontend developer with an affinity for Vue.js. Skilled in RESTful architecture and programmatic video editing. I have good managerial skills. Always eager to learn new technologies. I'm a Sports Tech enthusiast and have advanced knowledge of Blockchain technology.",
+  "experience": [
+    {
+      "company": "Bettermile (GLS)",
+      "title": "Senior Frontend Developer",
+      "start": "2021-11",
+      "end": null,
+      "location": "Berlin, Germany",
+      "employmentType": "Full-time",
+      "linkedinSkills": ["Jest", "Version Control", "Webpack", "REST APIs", "Git"],
+      "description": "",
+      "derivedDescription": "Long-time core developer of the Back Office web app for last-mile delivery operations (Vue 3, TypeScript, Vuetify, Pinia; ~2,270 commits since Nov 2021). In 2026 led the Back Office side of the GLS/Bettermile AI transformation: a read-only MCP server exposing Back Office data to Claude, and Bekki, an AI chat assistant built into the Back Office (see bettermileAI)."
+    },
+    {
+      "company": "eXact learning solutions",
+      "title": "Frontend Developer",
+      "start": "2020-05",
+      "end": "2021-09",
+      "location": "Genoa, Liguria, Italy",
+      "employmentType": "Full-time",
+      "linkedinSkills": ["AJAX", "Version Control", "REST APIs", "Webpack"],
+      "description": ""
+    },
+    {
+      "company": "USA College Sport",
+      "title": "Full-stack Developer",
+      "start": "2016-10",
+      "end": "2020-05",
+      "location": "Greater Genoa Metropolitan Area, Italy",
+      "employmentType": "Full-time",
+      "linkedinSkills": ["AJAX", "Version Control", "REST APIs"],
+      "description": "",
+      "relatedProject": "USA College Sport Management System (Oct 2015 - 2019): management system for USA College Sport"
+    },
+    {
+      "company": "Freelance",
+      "title": "Freelance Web Developer (Sviluppatore web freelance)",
+      "start": "2014-02",
+      "end": "2020-05",
+      "location": "Greater Genoa Metropolitan Area, Italy",
+      "employmentType": "Freelance",
+      "description": ""
+    }
+  ],
+  "education": [
+    {
+      "school": "Università degli Studi di Genova",
+      "degree": null,
+      "field": null,
+      "start": "2015",
+      "end": "2018"
+    }
+  ],
+  "skills": [
+    "Firebase",
+    "Nuxt.js",
+    "Jest",
+    "AJAX",
+    "Version Control",
+    "User Experience (UX)",
+    "Software Development",
+    "Webpack",
+    "REST APIs (passed LinkedIn Skill Assessment)",
+    "Git (passed LinkedIn Skill Assessment)"
+  ],
+  "skillsFromCode": [
+    "Vue 3", "Nuxt", "TypeScript", "Vuetify", "Pinia", "Vite", "ApexCharts", "Firebase",
+    "Kotlin", "Spring Boot", "Spring AI", "Model Context Protocol (MCP)", "Claude / AWS Bedrock", "AWS CDK"
+  ],
+  "languages": [
+    { "language": "Albanian", "proficiency": "Native or bilingual" },
+    { "language": "Italian", "proficiency": "Native or bilingual" },
+    { "language": "English", "proficiency": "Full professional" },
+    { "language": "Spanish", "proficiency": "Limited working" }
+  ],
+  "certifications": [],
+  "projects": [
+    { "name": "littlebill.io", "period": "May 2019 - Jun 2019", "description": "Front end" },
+    { "name": "USA College Sport Management System", "period": "Oct 2015 - 2019", "description": "Management system for USA College Sport" },
+    { "name": "ALProperty", "period": null, "description": "Website and full real estate CRM", "skills": ["Firebase", "Nuxt.js"] },
+    { "name": "CircleOn.me", "period": null, "description": "", "links": ["https://www.circleon.me", "https://tdown.live"] }
+  ],
+  "bettermileAI": {
+    "en": {
+      "title": "Bekki: AI assistant for last-mile operations",
+      "summary": "Bekki is an AI assistant inside Bettermile's Back Office, built as part of the GLS AI transformation. Operations staff ask about tours, parcels and depot performance in plain language and get streamed answers with charts and tables from live operational data. Queries are read-only and run with the user's own permissions, and the same tools are published as a remote MCP server so Claude can query Back Office data directly.",
+      "bullets": [
+        "Questions about tours, parcels and depot performance in plain language, answered in the user's language",
+        "Streamed answers (SSE) that show the thinking steps, inline charts and tables, and the data source and its freshness",
+        "Read-only MCP server: every tool call runs as the signed-in user, and personal data is filtered out before it reaches the model",
+        "Claude on AWS Bedrock as the agent, a Kotlin and Spring AI backend, and a Vue 3 chat drawer in the Back Office"
+      ]
+    },
+    "it": {
+      "title": "Bekki: assistente AI per le operazioni di last mile",
+      "summary": "Bekki è un assistente AI dentro il Back Office di Bettermile, sviluppato nell'ambito della trasformazione AI di GLS. Il personale operativo chiede in linguaggio naturale di giri di consegna, pacchi e performance dei depositi, e riceve risposte in streaming con grafici e tabelle basati sui dati operativi in tempo reale. Le richieste sono in sola lettura e usano i permessi dell'utente, e gli stessi strumenti sono pubblicati come server MCP remoto, così Claude può interrogare direttamente i dati del Back Office.",
+      "bullets": [
+        "Domande in linguaggio naturale su giri, pacchi e performance dei depositi, con risposta nella lingua dell'utente",
+        "Risposte in streaming (SSE) che mostrano i passaggi del ragionamento, grafici e tabelle nel testo, la fonte dei dati e quanto sono aggiornati",
+        "Server MCP in sola lettura: ogni chiamata viene eseguita con i permessi dell'utente autenticato e i dati personali vengono filtrati prima di arrivare al modello",
+        "Claude su AWS Bedrock come agente, backend in Kotlin e Spring AI, e una chat in Vue 3 dentro il Back Office"
+      ]
+    },
+    "sq": {
+      "title": "Bekki: asistent AI për operacionet e shpërndarjes",
+      "summary": "Bekki është një asistent AI brenda Back Office-it të Bettermile, i ndërtuar si pjesë e transformimit AI të GLS-së. Stafi operativ pyet në gjuhë të zakonshme për turet e shpërndarjes, pakot dhe performancën e depove, dhe merr përgjigje në streaming me grafikë e tabela nga të dhënat operative në kohë reale. Kërkesat janë vetëm për lexim dhe kryhen me lejet e vetë përdoruesit, ndërsa të njëjtat mjete ofrohen edhe si server MCP në distancë, që Claude të lexojë drejtpërdrejt të dhënat e Back Office-it.",
+      "bullets": [
+        "Pyetje në gjuhë të zakonshme për turet, pakot dhe performancën e depove, me përgjigje në gjuhën e përdoruesit",
+        "Përgjigje në streaming (SSE) që tregojnë hapat e arsyetimit, grafikë e tabela brenda tekstit, burimin e të dhënave dhe sa të freskëta janë",
+        "Server MCP vetëm për lexim: çdo thirrje kryhet me lejet e përdoruesit të identifikuar, dhe të dhënat personale filtrohen para se të arrijnë te modeli",
+        "Claude në AWS Bedrock si agjent, backend në Kotlin dhe Spring AI, dhe një chat në Vue 3 brenda Back Office-it"
+      ]
+    },
+    "stack": [
+      "Kotlin",
+      "Spring Boot",
+      "Spring AI",
+      "Model Context Protocol (MCP)",
+      "Claude on AWS Bedrock",
+      "Server-Sent Events (SSE)",
+      "OAuth 2.1 / AWS Cognito",
+      "AWS (ECS, CDK)",
+      "Vue 3",
+      "TypeScript",
+      "Vuetify",
+      "ApexCharts"
+    ],
+    "period": "2026",
+    "status": "MCP server live in production for Claude (since Aug 2026); Bekki in-app chat on stage / pilot (Sep-Oct 2026)",
+    "role": "Lead developer: main contributor to the MCP server and to the Bekki chat backend and frontend"
+  },
+  "photo": "me.jpg",
+  "photoSource": "Public GitHub avatar of reddyCe (460x460 JPEG). The LinkedIn photo is only served via signed URLs (100x100 on the profile page), so it was not downloaded.",
+  "github": {
+    "login": "reddyCe",
+    "name": "Redon Cela",
+    "location": "Berlin",
+    "hireable": true,
+    "bio": null,
+    "blog": null,
+    "publicRepos": 11,
+    "createdAt": "2016-10-26"
+  },
+  "notes": "Years of experience: about 12 years building for the web (freelance since Feb 2014) and about 10 years full-time (since Oct 2016); 5 years at Bettermile. Career: freelance web developer in Genoa (2014-2020) -> Full-stack Developer at USA College Sport, Genoa (2016-2020) -> Frontend Developer at eXact learning solutions, Genoa (e-learning, 2020-2021) -> Senior Frontend Developer at Bettermile, Berlin (last-mile delivery tech, part of GLS, Nov 2021-present). Industries: logistics / last-mile delivery, e-learning, sports recruiting, real estate (ALProperty CRM). Headline mismatch: LinkedIn headline says 'Frontend Developer @Bettermile' but the current position is 'Senior Frontend Developer'. The site can use 'Senior Frontend / Full-stack Developer' since recent work includes Kotlin/Spring backends and AI agents. LinkedIn has no role descriptions, no certifications and no Featured section; 'About' is short and dated (mentions blockchain and video editing). Studied at Università degli Studi di Genova (2015-2018, no degree listed). Speaks Albanian and Italian natively, plus fluent English, which fits a trilingual site. LinkedIn does not mention the AI chatbot; its description here comes from repo docs and is kept high-level. Internal hostnames, ticket IDs, tool names and customer data were left out on purpose. GitHub profile is hireable=true, location Berlin."
+}

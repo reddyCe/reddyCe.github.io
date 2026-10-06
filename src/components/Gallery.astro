@@ -1,0 +1,63 @@
+---
+import Frame from './Frame.astro';
+import type { Project } from '../data/projects';
+import { hostOf } from '../data/projects';
+import type { Lang } from '../i18n/ui';
+
+interface Props { project: Project; lang: Lang; max?: number }
+const { project, lang, max = 99 } = Astro.props;
+const shots = project.screenshots.slice(0, max);
+const host = hostOf(project.url) || `${project.slug}.app`;
+const alt = (i: number) => `${project.name}, ${shots[i].surface}: ${shots[i].caption?.[lang] ?? ''}`;
+// number shots within each surface: "Website 1", "Website 2"
+const counts: Record<string, number> = {};
+const labels = shots.map((s) => {
+  counts[s.surface] = (counts[s.surface] ?? 0) + 1;
+  return counts[s.surface];
+});
+const totals = counts;
+---
+{shots.length > 0 && (
+  <div class="gallery" data-gallery>
+    <div class="stage">
+      {shots.map((s, i) => (
+        <figure class:list={['shot', `shot-${s.kind}`, { 'is-active': i === 0 }]} data-i={i}>
+          <Frame image={s.image} kind={s.kind} alt={alt(i)} url={host} />
+          <figcaption>{s.caption?.[lang]}</figcaption>
+        </figure>
+      ))}
+    </div>
+    {shots.length > 1 && (
+      <div class="rail" role="tablist" aria-label={`${project.name} screenshots`}>
+        {shots.map((s, i) => (
+          <button type="button" class="thumb" role="tab" aria-selected={i === 0 ? 'true' : 'false'} tabindex={i === 0 ? 0 : -1} data-i={i}>
+            <b>{s.surface}</b>
+            <span>{s.kind === 'mobile' ? 'Mobile' : 'Web'}{totals[s.surface] > 1 ? ` ${labels[i]}` : ''}</span>
+          </button>
+        ))}
+      </div>
+    )}
+  </div>
+)}
+
+<script>
+  document.querySelectorAll<HTMLElement>('[data-gallery]').forEach((g) => {
+    const shots = g.querySelectorAll<HTMLElement>('.shot');
+    const thumbs = [...g.querySelectorAll<HTMLButtonElement>('.thumb')];
+    const show = (i: number, focus = false) => {
+      shots.forEach((s) => s.classList.toggle('is-active', s.dataset.i === String(i)));
+      thumbs.forEach((t, j) => {
+        t.setAttribute('aria-selected', String(j === i));
+        t.tabIndex = j === i ? 0 : -1;
+      });
+      if (focus) thumbs[i].focus();
+    };
+    thumbs.forEach((t, i) => t.addEventListener('click', () => show(i)));
+    g.querySelector('.rail')?.addEventListener('keydown', (e) => {
+      const ev = e as KeyboardEvent;
+      if (!['ArrowLeft', 'ArrowRight'].includes(ev.key)) return;
+      const cur = thumbs.findIndex((t) => t.getAttribute('aria-selected') === 'true');
+      show((cur + (ev.key === 'ArrowRight' ? 1 : -1) + thumbs.length) % thumbs.length, true);
+    });
+  });
+</script>

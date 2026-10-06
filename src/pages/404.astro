@@ -1,0 +1,13 @@
+---
+import Base from '../layouts/Base.astro';
+import { useT } from '../i18n/ui';
+const t = useT('en');
+---
+<Base lang="en" title="Page not found | Redon Cela" description={t('notfound.lede')} path="/404/" noindex>
+  <section class="wrap nf">
+    <p class="eyebrow">404</p>
+    <h1 class="h1">{t('notfound.title')}</h1>
+    <p class="lead">{t('notfound.lede')}</p>
+    <p class="btn-row"><a class="btn btn-accent" href="/">{t('notfound.cta')}</a> <a class="btn btn-outline" href="/it/">Italiano</a> <a class="btn btn-outline" href="/sq/">Shqip</a></p>
+  </section>
+</Base>

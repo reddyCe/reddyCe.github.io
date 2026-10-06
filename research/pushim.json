@@ -1,0 +1,89 @@
+{
+  "slug": "pushim",
+  "name": "Pushim",
+  "url": "https://pushim.al",
+  "period": "2026",
+  "role": "Founder, design and full-stack development",
+  "status": "Live",
+  "category": "Travel offer comparison site",
+  "stack": ["Nuxt", "Vue 3", "Tailwind CSS 4", "Firebase", "Firebase Hosting", "Automated offer extraction (web + social posts)"],
+  "facts": [
+    "Collects offers from travel agencies in Tirana and Durrës every day",
+    "2,564 active offers from 103 agencies, 220 agencies tracked (live site counters, 6 Oct 2026)",
+    "Normalises every offer to price per person, dates, nights, board and transport",
+    "Removes expired departures automatically",
+    "Pre-rendered pages per destination, country, category and month for SEO"
+  ],
+  "i18n": {
+    "en": {
+      "tagline": "Holiday offers from Tirana and Durrës agencies, compared",
+      "summary": "Pushim gathers the holiday offers that travel agencies in Tirana and Durrës publish on their websites, Instagram and Facebook, and turns them into one searchable catalogue. Travellers compare price per person, dates and agency, then book directly with the agency.",
+      "useCases": [
+        "A family filters beach holidays under €500 per person for August and compares agencies on the same trip.",
+        "A traveller in Tirana opens the last-minute page to see departures in the next 14 days.",
+        "Someone planning a city break to Rome sees every offer, the cheapest price and the next departure.",
+        "A travel agency has its offers listed for free without uploading anything."
+      ],
+      "highlights": [
+        "A daily job reads agency websites and social posts and extracts offers with dates and prices.",
+        "Prices quoted per couple are converted to per person so comparisons are fair.",
+        "When several agencies sell the same trip, it shows once with all its sellers.",
+        "Static, pre-rendered pages for each destination and month, with automatically written summaries."
+      ]
+    },
+    "it": {
+      "tagline": "Le offerte delle agenzie di Tirana e Durazzo, a confronto",
+      "summary": "Pushim raccoglie le offerte vacanza che le agenzie di Tirana e Durazzo pubblicano sui loro siti, su Instagram e Facebook, e le trasforma in un unico catalogo ricercabile. Chi viaggia confronta prezzo a persona, date e agenzia, poi prenota direttamente con l'agenzia.",
+      "useCases": [
+        "Una famiglia filtra le vacanze al mare sotto i 500 € a persona ad agosto e confronta le agenzie sullo stesso viaggio.",
+        "Un viaggiatore di Tirana apre la pagina last minute per vedere le partenze nei prossimi 14 giorni.",
+        "Chi pianifica un city break a Roma vede tutte le offerte, il prezzo più basso e la prossima partenza.",
+        "Un'agenzia di viaggio ha le proprie offerte pubblicate gratis, senza caricare nulla."
+      ],
+      "highlights": [
+        "Ogni giorno un processo legge i siti e i post social delle agenzie ed estrae le offerte con date e prezzi.",
+        "I prezzi indicati per coppia vengono convertiti a persona, così il confronto è corretto.",
+        "Quando più agenzie vendono lo stesso viaggio, compare una sola volta con tutti i venditori.",
+        "Pagine statiche pre-renderizzate per ogni destinazione e mese, con riepiloghi scritti in automatico."
+      ]
+    },
+    "sq": {
+      "tagline": "Ofertat e agjencive të Tiranës dhe Durrësit, krah për krah",
+      "summary": "Pushim mbledh ofertat e pushimeve që agjencitë e Tiranës dhe Durrësit publikojnë në faqet e tyre, në Instagram dhe Facebook, dhe i kthen në një katalog të vetëm me kërkim. Udhëtarët krahasojnë çmimin për person, datat dhe agjencinë, pastaj rezervojnë direkt me agjencinë.",
+      "useCases": [
+        "Një familje filtron pushimet në plazh nën 500 € për person në gusht dhe krahason agjencitë për të njëjtin udhëtim.",
+        "Një udhëtar në Tiranë hap faqen last minute për të parë nisjet e 14 ditëve të ardhshme.",
+        "Kush planifikon një udhëtim të shkurtër në Romë sheh të gjitha ofertat, çmimin më të ulët dhe nisjen e radhës.",
+        "Një agjenci udhëtimi i ka ofertat e veta të publikuara falas, pa ngarkuar asgjë."
+      ],
+      "highlights": [
+        "Çdo ditë një proces lexon faqet dhe postimet sociale të agjencive dhe nxjerr ofertat me data e çmime.",
+        "Çmimet \"për çift\" kthehen në çmim për person, që krahasimi të jetë i drejtë.",
+        "Kur disa agjenci shesin të njëjtin udhëtim, ai shfaqet një herë me të gjithë shitësit.",
+        "Faqe statike të para-renderuara për çdo destinacion dhe muaj, me përmbledhje të shkruara automatikisht."
+      ]
+    }
+  },
+  "screenshots": [
+    {
+      "file": "projects/pushim/home.png", "kind": "desktop", "surface": "Website",
+      "caption": { "en": "Home: search by destination, departure city, dates and budget", "it": "Home: ricerca per destinazione, città di partenza, date e budget", "sq": "Faqja kryesore: kërkim sipas destinacionit, nisjes, datave dhe buxhetit" }
+    },
+    {
+      "file": "projects/pushim/search.png", "kind": "desktop", "surface": "Website",
+      "caption": { "en": "All offers with monthly lowest prices, filters and agency comparison", "it": "Tutte le offerte con prezzi minimi per mese, filtri e confronto agenzie", "sq": "Të gjitha ofertat me çmimin më të ulët për muaj, filtra dhe krahasim agjencish" }
+    },
+    {
+      "file": "projects/pushim/destination.png", "kind": "desktop", "surface": "Website",
+      "caption": { "en": "Destination page: live stats and an auto-written market summary", "it": "Pagina destinazione: statistiche aggiornate e riepilogo generato automaticamente", "sq": "Faqja e destinacionit: statistika të përditësuara dhe përmbledhje e shkruar automatikisht" }
+    },
+    {
+      "file": "projects/pushim/offer.png", "kind": "desktop", "surface": "Website",
+      "caption": { "en": "Offer detail: departures, price per person and the agency behind it", "it": "Dettaglio offerta: partenze, prezzo a persona e agenzia", "sq": "Detajet e ofertës: nisjet, çmimi për person dhe agjencia" }
+    },
+    {
+      "file": "projects/pushim/home-mobile.png", "kind": "mobile", "surface": "Website",
+      "caption": { "en": "Mobile-first layout with a bottom tab bar", "it": "Layout pensato per il mobile con barra di navigazione in basso", "sq": "Dizajn i menduar për celular, me shirit navigimi poshtë" }
+    }
+  ]
+}

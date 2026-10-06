@@ -1,0 +1,181 @@
+---
+import { Image } from 'astro:assets';
+import BriefBuilder from './BriefBuilder.astro';
+import ProjectCase from './ProjectCase.astro';
+import ChatDemo from './ChatDemo.astro';
+import Contact from './Contact.astro';
+import Icon from './Icon.astro';
+import { projects, getProject } from '../data/projects';
+import { profile } from '../data/profile';
+import { about } from '../data/about';
+import { projectHref, useT, type Lang } from '../i18n/ui';
+
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const t = useT(lang);
+const ai = profile.bettermileAI?.[lang];
+const ab = about[lang];
+
+const fmtDate = (d?: string | null) => {
+  if (!d) return t('exp.present');
+  const [y, m] = d.split('-').map(Number);
+  return m ? new Intl.DateTimeFormat(lang, { month: 'short', year: 'numeric' }).format(new Date(y, m - 1)) : String(y);
+};
+
+const tiles = [
+  ['booking', 'tiles.booking', '#saneo'],
+  ['crm', 'tiles.crm', '#alproperty'],
+  ['recruit', 'tiles.recruit', '#ucs'],
+  ['video', 'tiles.video', '#circleon'],
+  ['ai', 'tiles.ai', '#ai'],
+  ['mobile', 'tiles.mobile', '#tdown'],
+  ['compare', 'tiles.compare', '#pushim'],
+  ['quiz', 'tiles.quiz', '#quizmaster'],
+] as const;
+
+const now = new Date();
+const yearsSince = (y: number, m: number) => Math.floor((now.getFullYear() * 12 + now.getMonth() - (y * 12 + m - 1)) / 12);
+const numbers = [
+  [t('numbers.years'), String(yearsSince(2014, 2)), t('numbers.years.sub')],
+  [t('numbers.products'), 'Berlin', t('numbers.products.sub')],
+  [t('numbers.bm'), String(yearsSince(2021, 11)), t('numbers.bm.sub')],
+  [t('numbers.langs'), '3', t('numbers.langs.sub')],
+];
+
+const seen = (slugs: string[]) =>
+  slugs.map((s) => getProject(s)).filter((p): p is NonNullable<typeof p> => Boolean(p));
+const services = [
+  { n: 1, icon: 'browser', ex: seen(['saneo', 'alproperty', 'pushim']) },
+  { n: 2, icon: 'phone', ex: seen(['tdown', 'saneo']) },
+  { n: 3, icon: 'plug', ex: seen(['quizmaster']) },
+  { n: 4, icon: 'kanban', ex: seen(['alproperty', 'ucs', 'circleon']) },
+] as const;
+---
+
+<section class="hero wrap" aria-labelledby="hero-title">
+  <div class="panel">
+    <div class="panel-text panel-accent">
+      <p class="eyebrow">{t('hero.eyebrow')}</p>
+      <h1 id="hero-title" class="h1">{t('hero.title')}</h1>
+      <p class="lead">{t('hero.lede')}</p>
+      <p class="btn-row">
+        <a class="btn btn-dark" href="#work">{t('hero.cta')}</a>
+        <a class="btn btn-outline-light" href="#about">{t('hero.cta2')}</a>
+      </p>
+    </div>
+    <div class="panel-media hero-brief">
+      <BriefBuilder lang={lang} />
+    </div>
+  </div>
+</section>
+
+<section class="section wrap" aria-labelledby="tiles-title">
+  <div class="section-head">
+    <h2 id="tiles-title" class="h2">{t('tiles.title')}</h2>
+    <p>{t('tiles.lede')}</p>
+  </div>
+  <div class="tiles">
+    {tiles.map(([icon, key, href]) => (
+      <a class="tile" href={href}><Icon name={icon} />{t(key)}</a>
+    ))}
+  </div>
+</section>
+
+<section class="section wrap" id="work" aria-labelledby="work-title">
+  <div class="section-head">
+    <p class="eyebrow">{t('work.kicker')}</p>
+    <h2 id="work-title" class="h2">{t('work.title')}</h2>
+    <p>{t('work.lede')}</p>
+  </div>
+  <div class="cases">
+    {projects.map((p, i) => <ProjectCase project={p} lang={lang} index={i} />)}
+  </div>
+</section>
+
+<section class="section wrap ai" id="ai" aria-labelledby="ai-title">
+  <div class="panel panel-dark" data-reveal>
+    <div class="panel-text">
+      <p class="eyebrow">{t('ai.kicker')}</p>
+      <h2 id="ai-title" class="h2">{ai?.title ?? 'Bekki'}</h2>
+      <p class="lead">{ai?.summary ?? t('ai.lede')}</p>
+      {ai?.bullets && <ul class="checks">{ai.bullets.map((b) => <li>{b}</li>)}</ul>}
+      {profile.bettermileAI?.stack && (
+        <ul class="tags">{profile.bettermileAI.stack.map((s) => <li class="tag">{s}</li>)}</ul>
+      )}
+      <p class="ai-note">{t('ai.note')}</p>
+    </div>
+    <div class="panel-media">
+      <ChatDemo lang={lang} />
+    </div>
+  </div>
+</section>
+
+<section class="section wrap" aria-labelledby="numbers-title">
+  <div class="section-head">
+    <h2 id="numbers-title" class="h2">{t('numbers.title')}</h2>
+  </div>
+  <div class="numbers">
+    {numbers.map(([label, value, sub]) => (
+      <div class="num">
+        <p class="num-label">{label}</p>
+        <p class="num-value">{value}</p>
+        <p class="num-sub">{sub}</p>
+      </div>
+    ))}
+  </div>
+</section>
+
+<section class="section wrap" id="services" aria-labelledby="services-title">
+  <div class="section-head">
+    <p class="eyebrow">{t('services.kicker')}</p>
+    <h2 id="services-title" class="h2">{t('services.title')}</h2>
+  </div>
+  <div class="services-list">
+    {services.map((s) => (
+      <div class="service">
+        <Icon name={s.icon} />
+        <h3>{t(`services.${s.n}.t`)}</h3>
+        <p>{t(`services.${s.n}.d`)}</p>
+        <p class="service-seen">
+          {t('services.seen')}{' '}
+          {s.ex.map((p, i) => <>{i > 0 && ', '}<a href={projectHref(lang, p.slug)}>{p.name}</a></>)}
+        </p>
+      </div>
+    ))}
+  </div>
+</section>
+
+<section class="section wrap about" id="about" aria-labelledby="about-title">
+  <div class="panel panel-flip" data-reveal>
+    <div class="panel-text about-copy">
+      <p class="eyebrow">{t('about.kicker')}</p>
+      <h2 id="about-title" class="h2">{t('about.title')}</h2>
+      {ab.bio.map((para) => <p>{para}</p>)}
+      <dl class="facts">
+        {ab.facts.map(([k, v]) => <div><dt>{k}</dt><dd>{v}</dd></div>)}
+      </dl>
+    </div>
+    <div class="panel-media">
+      {profile.photo && (
+        <Image src={profile.photo} alt="Redon Cela" widths={[460]} sizes="(max-width: 900px) 100vw, 50vw" format="webp" quality={85} />
+      )}
+    </div>
+  </div>
+
+  {profile.experience.length > 0 && (
+    <div class="timeline">
+      <h3>{t('exp.title')}</h3>
+      <ol>
+        {profile.experience.map((e) => (
+          <li>
+            <span class="tl-date">{fmtDate(e.start)} – {fmtDate(e.end)}</span>
+            <span class="tl-role"><strong>{e.title}</strong>, {e.company}</span>
+            {e.location && <span class="tl-loc">{e.location}</span>}
+          </li>
+        ))}
+      </ol>
+    </div>
+  )}
+</section>
+
+<Contact lang={lang} />

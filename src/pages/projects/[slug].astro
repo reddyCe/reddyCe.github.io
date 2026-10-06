@@ -1,0 +1,26 @@
+---
+import Base from '../../layouts/Base.astro';
+import ProjectPage from '../../components/ProjectPage.astro';
+import { projects } from '../../data/projects';
+import { projectJsonLd } from '../../data/seo';
+import type { Project } from '../../data/projects';
+export function getStaticPaths() {
+  return projects.map((project) => ({ params: { slug: project.slug }, props: { project } }));
+}
+const lang = 'en';
+const { project } = Astro.props as { project: Project };
+const c = project.i18n[lang];
+const cover = project.screenshots[0];
+---
+<Base
+  lang={lang}
+  title={`${project.name}: ${c.tagline} | Redon Cela`}
+  description={c.summary.length > 160 ? c.summary.slice(0, 157).replace(/\s+\S*$/, '') + '…' : c.summary}
+  path={`/projects/${project.slug}/`}
+  image={`/og/${project.slug}-${lang}.png`}
+  imageAlt={cover?.caption?.[lang]}
+  type="article"
+  jsonLd={projectJsonLd(project, lang, Astro.site!)}
+>
+  <ProjectPage project={project} lang={lang} />
+</Base>

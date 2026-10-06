@@ -1,0 +1,180 @@
+---
+// Three quick choices write a plain email to Redon. Native radios, so it works with keyboard
+// and screen readers; without JS the button still opens a blank email.
+import Icon from './Icon.astro';
+import { EMAIL } from '../data/profile';
+import type { Lang } from '../i18n/ui';
+
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+
+const copy = {
+  en: {
+    title: 'Describe your project in three clicks',
+    lede: 'I’ll turn your answers into an email. Edit it or send it as it is.',
+    what: 'What do you need?',
+    who: 'Who will use it?',
+    when: 'When?',
+    idea: 'The idea in one line (optional)',
+    ideaPh: 'e.g. online bookings for our three dental clinics',
+    draft: 'Your email',
+    send: 'Send this to Redon',
+    copy: 'Copy text',
+    copied: 'Copied',
+    opts: {
+      what: [['web', 'Web platform', 'a web platform'], ['mobile', 'Mobile app', 'a mobile app'], ['ai', 'AI assistant', 'an AI assistant'], ['crm', 'CRM or internal tool', 'a CRM or internal tool'], ['unsure', 'Not sure yet', 'help working out what to build']],
+      who: [['customers', 'Customers', 'my customers'], ['team', 'My team', 'my team'], ['both', 'Both', 'my customers and my team']],
+      when: [['asap', 'As soon as possible', ', as soon as possible'], ['soon', 'In 1–3 months', ', ideally in the next 1–3 months'], ['later', 'Just exploring', '. There’s no fixed date yet, I’m exploring']],
+    },
+    hi: 'Hi Redon,',
+    need: 'I need {what} for {who}{when}.',
+    ideaLine: 'The idea: {idea}',
+    bye: 'Thanks,',
+    subject: 'New project: {label}',
+  },
+  it: {
+    title: 'Descrivi il tuo progetto in tre clic',
+    lede: 'Trasformo le tue risposte in un’email. Puoi modificarla o inviarla così com’è.',
+    what: 'Cosa ti serve?',
+    who: 'Chi lo userà?',
+    when: 'Quando?',
+    idea: 'L’idea in una riga (facoltativo)',
+    ideaPh: 'es. prenotazioni online per i nostri tre studi dentistici',
+    draft: 'La tua email',
+    send: 'Invia a Redon',
+    copy: 'Copia il testo',
+    copied: 'Copiato',
+    opts: {
+      what: [['web', 'Piattaforma web', 'una piattaforma web'], ['mobile', 'App mobile', 'un’app mobile'], ['ai', 'Assistente AI', 'un assistente AI'], ['crm', 'CRM o strumento interno', 'un CRM o uno strumento interno'], ['unsure', 'Non lo so ancora', 'aiuto per capire cosa realizzare']],
+      who: [['customers', 'Clienti', 'i miei clienti'], ['team', 'Il mio team', 'il mio team'], ['both', 'Entrambi', 'i miei clienti e il mio team']],
+      when: [['asap', 'Il prima possibile', ', il prima possibile'], ['soon', 'Tra 1–3 mesi', ', idealmente entro 1–3 mesi'], ['later', 'Sto valutando', '. Non ho ancora una data, sto valutando']],
+    },
+    hi: 'Ciao Redon,',
+    need: 'mi serve {what} per {who}{when}.',
+    ideaLine: 'L’idea: {idea}',
+    bye: 'Grazie,',
+    subject: 'Nuovo progetto: {label}',
+  },
+  sq: {
+    title: 'Përshkruaje projektin me tre klikime',
+    lede: 'I kthej përgjigjet e tua në një email. Mund ta ndryshosh ose ta dërgosh siç është.',
+    what: 'Çfarë të duhet?',
+    who: 'Kush do ta përdorë?',
+    when: 'Kur?',
+    idea: 'Ideja me një rresht (opsionale)',
+    ideaPh: 'p.sh. rezervime online për tre klinikat tona dentare',
+    draft: 'Email-i yt',
+    send: 'Dërgoja Redonit',
+    copy: 'Kopjo tekstin',
+    copied: 'U kopjua',
+    opts: {
+      what: [['web', 'Platformë web', 'një platformë web'], ['mobile', 'Aplikacion mobile', 'një aplikacion mobile'], ['ai', 'Asistent AI', 'një asistent AI'], ['crm', 'CRM ose mjet i brendshëm', 'një CRM ose një mjet i brendshëm'], ['unsure', 'Ende s’e di', 'ndihmë për të kuptuar çfarë të ndërtoj']],
+      who: [['customers', 'Klientët', 'klientët e mi'], ['team', 'Ekipi im', 'ekipin tim'], ['both', 'Të dy', 'klientët dhe ekipin tim']],
+      when: [['asap', 'Sa më shpejt', ', sa më shpejt të jetë e mundur'], ['soon', 'Brenda 1–3 muajsh', ', mundësisht brenda 1–3 muajve'], ['later', 'Po eksploroj', '. Ende s’kam një datë, po eksploroj']],
+    },
+    hi: 'Përshëndetje Redon,',
+    need: 'më duhet {what} për {who}{when}.',
+    ideaLine: 'Ideja: {idea}',
+    bye: 'Faleminderit,',
+    subject: 'Projekt i ri: {label}',
+  },
+}[lang];
+
+const defaults = { what: 'web', who: 'customers', when: 'soon' } as const;
+const groups = [
+  ['what', copy.what],
+  ['who', copy.who],
+  ['when', copy.when],
+] as const;
+const template = { hi: copy.hi, need: copy.need, ideaLine: copy.ideaLine, bye: copy.bye, subject: copy.subject, opts: copy.opts };
+---
+
+<form class="brief" data-brief data-email={EMAIL} data-tpl={JSON.stringify(template)} action={`mailto:${EMAIL}`} method="get" novalidate>
+  <h2 class="brief-title">{copy.title}</h2>
+  <p class="brief-lede">{copy.lede}</p>
+
+  {groups.map(([name, legend]) => (
+    <fieldset class="brief-group">
+      <legend>{legend}</legend>
+      <div class="chips">
+        {copy.opts[name].map(([value, label]) => (
+          <label class="chip">
+            <input type="radio" name={name} value={value} checked={defaults[name] === value} />
+            <span>{label}</span>
+          </label>
+        ))}
+      </div>
+    </fieldset>
+  ))}
+
+  <label class="brief-idea">
+    <span>{copy.idea}</span>
+    <input type="text" name="idea" maxlength="160" placeholder={copy.ideaPh} autocomplete="off" />
+  </label>
+
+  <div class="brief-draft">
+    <p class="brief-draft-label" id="brief-draft-label">{copy.draft}</p>
+    <output class="brief-letter" for="idea" aria-labelledby="brief-draft-label" data-letter></output>
+  </div>
+
+  <p class="brief-actions">
+    <a class="btn btn-accent" href={`mailto:${EMAIL}`} data-send><Icon name="mail" />{copy.send}</a>
+    <button class="more" type="button" data-copy-brief data-done={copy.copied}><Icon name="copy" /><span>{copy.copy}</span></button>
+  </p>
+</form>
+
+<script>
+  type Opt = [string, string, string];
+  document.querySelectorAll<HTMLFormElement>('[data-brief]').forEach((form) => {
+    const tpl = JSON.parse(form.dataset.tpl!) as {
+      hi: string; need: string; ideaLine: string; bye: string; subject: string;
+      opts: Record<'what' | 'who' | 'when', Opt[]>;
+    };
+    const email = form.dataset.email!;
+    const letter = form.querySelector<HTMLElement>('[data-letter]')!;
+    const send = form.querySelector<HTMLAnchorElement>('[data-send]')!;
+    const pick = (name: 'what' | 'who' | 'when') => {
+      const v = (form.elements.namedItem(name) as RadioNodeList).value;
+      return tpl.opts[name].find((o) => o[0] === v) ?? tpl.opts[name][0];
+    };
+    const fill = (s: string, vars: Record<string, string>) => s.replace(/\{(\w+)\}/g, (_, k) => vars[k] ?? '');
+    const capital = (s: string) => s.charAt(0).toUpperCase() + s.slice(1);
+
+    const render = () => {
+      const what = pick('what');
+      const who = pick('who');
+      const when = pick('when');
+      const idea = (form.elements.namedItem('idea') as HTMLInputElement).value.trim();
+      const body = [
+        tpl.hi,
+        '',
+        capital(fill(tpl.need, { what: what[2], who: who[2], when: when[2] })),
+        ...(idea ? ['', fill(tpl.ideaLine, { idea })] : []),
+        '',
+        tpl.bye,
+      ].join('\n');
+      letter.textContent = body;
+      const subject = fill(tpl.subject, { label: what[1] });
+      send.href = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body + '\n')}`;
+      return body;
+    };
+
+    form.addEventListener('input', render);
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      send.click();
+    });
+    render();
+
+    const copyBtn = form.querySelector<HTMLButtonElement>('[data-copy-brief]');
+    copyBtn?.addEventListener('click', async () => {
+      const label = copyBtn.querySelector('span')!;
+      const old = label.textContent;
+      try {
+        await navigator.clipboard.writeText(render());
+        label.textContent = copyBtn.dataset.done!;
+        setTimeout(() => (label.textContent = old), 2000);
+      } catch {}
+    });
+  });
+</script>

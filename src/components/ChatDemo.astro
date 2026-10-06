@@ -1,0 +1,70 @@
+---
+import type { Lang } from '../i18n/ui';
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+
+const copy = {
+  en: {
+    note: 'Illustration · sample data',
+    q: 'Which depots had the most failed deliveries last week?',
+    think: ['Reading tour results for last week', 'Grouping failed stops by depot'],
+    a: 'Depot North had the most failed deliveries (412), mostly “recipient not at home”. Here’s the top five:',
+    src: 'Source: tour results · updated 4 min ago',
+    ph: 'Ask anything about your tours…',
+  },
+  it: {
+    note: 'Illustrazione · dati di esempio',
+    q: 'Quali depositi hanno avuto più consegne fallite la settimana scorsa?',
+    think: ['Leggo i risultati dei giri della settimana scorsa', 'Raggruppo le fermate fallite per deposito'],
+    a: 'Il Deposito Nord ha avuto più consegne fallite (412), soprattutto per “destinatario assente”. Ecco i primi cinque:',
+    src: 'Fonte: risultati dei giri · aggiornato 4 min fa',
+    ph: 'Chiedi qualsiasi cosa sui tuoi giri…',
+  },
+  sq: {
+    note: 'Ilustrim · të dhëna shembull',
+    q: 'Cilat depo patën më shumë dorëzime të dështuara javën e kaluar?',
+    think: ['Po lexoj rezultatet e tureve të javës së kaluar', 'Po grupoj ndalesat e dështuara sipas depos'],
+    a: 'Depoja Veri pati më shumë dorëzime të dështuara (412), kryesisht “marrësi nuk ishte në shtëpi”. Ja pesë të parat:',
+    src: 'Burimi: rezultatet e tureve · përditësuar 4 min më parë',
+    ph: 'Pyet çfarëdo për turet e tua…',
+  },
+}[lang];
+
+const names = {
+  en: ['North', 'Harbour', 'East', 'Airport', 'Old Town'],
+  it: ['Nord', 'Porto', 'Est', 'Aeroporto', 'Centro'],
+  sq: ['Veri', 'Porti', 'Lindje', 'Aeroporti', 'Qendra'],
+}[lang];
+const depots = [412, 356, 298, 241, 187].map((n, i) => [names[i], n] as [string, number]);
+const max = depots[0][1];
+---
+
+<figure class="chat" aria-label={copy.note}>
+  <div class="chat-top">
+    <span class="chat-avatar" aria-hidden="true">B</span>
+    <span class="chat-name">Bekki</span>
+    <span class="chat-note">{copy.note}</span>
+  </div>
+  <div class="chat-body">
+    <p class="msg msg-user">{copy.q}</p>
+    <ul class="think">
+      {copy.think.map((s) => <li><span class="check" aria-hidden="true">✓</span>{s}</li>)}
+    </ul>
+    <div class="msg msg-ai">
+      <p>{copy.a}</p>
+      <div class="bars" role="img" aria-label={depots.map(([d, n]) => `${d}: ${n}`).join(', ')}>
+        {depots.map(([d, n], i) => (
+          <div class="bar-row" style={`--w:${(n / max) * 100}%; --i:${i}`}>
+            <span class="bar-label">{d}</span>
+            <span class="bar"><span></span></span>
+            <span class="bar-val">{n}</span>
+          </div>
+        ))}
+      </div>
+      <p class="src">{copy.src}</p>
+    </div>
+  </div>
+  <div class="chat-input" aria-hidden="true">
+    <span>{copy.ph}</span><span class="send">↑</span>
+  </div>
+</figure>

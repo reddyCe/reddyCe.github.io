@@ -1,0 +1,46 @@
+---
+// Wraps a screenshot in a browser window (web) or a phone (mobile).
+import { Image } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
+import Icon from './Icon.astro';
+interface Props {
+  image: ImageMetadata;
+  kind: 'desktop' | 'mobile';
+  alt: string;
+  url?: string;
+  eager?: boolean;
+  sizes?: string;
+}
+const { image, kind, alt, url = '', eager = false, sizes } = Astro.props;
+---
+{kind === 'desktop' ? (
+  <div class="browser">
+    <div class="browser-bar" aria-hidden="true">
+      <span class="tl"></span><span class="tl"></span><span class="tl"></span>
+      <span class="browser-url"><Icon name="lock" />{url}</span>
+      <span class="spacer"></span>
+    </div>
+    <Image
+      src={image}
+      alt={alt}
+      widths={[640, 960, 1440, 2048]}
+      sizes={sizes ?? '(max-width: 900px) 100vw, 640px'}
+      loading={eager ? 'eager' : 'lazy'}
+      fetchpriority={eager ? 'high' : 'auto'}
+      format="webp"
+      quality={80}
+    />
+  </div>
+) : (
+  <div class="phone">
+    <Image
+      src={image}
+      alt={alt}
+      widths={[300, 450, 700]}
+      sizes={sizes ?? '300px'}
+      loading={eager ? 'eager' : 'lazy'}
+      format="webp"
+      quality={82}
+    />
+  </div>
+)}

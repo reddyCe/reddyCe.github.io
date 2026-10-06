@@ -1,0 +1,130 @@
+{
+  "slug": "tdown",
+  "name": "Touchdown (tdown.live)",
+  "url": "https://tdown.live",
+  "period": "2026",
+  "role": "Founder, web and iOS development",
+  "status": "Live",
+  "category": "Flight tracker for airport pickups",
+  "stack": [
+    "SwiftUI + MapKit (iOS)",
+    "Nuxt 4 / Vue 3",
+    "TypeScript",
+    "Tailwind CSS v4",
+    "Leaflet",
+    "Firebase Cloud Functions",
+    "Firestore",
+    "Firebase Cloud Messaging",
+    "Android Trusted Web Activity"
+  ],
+  "facts": [
+    "Three clients: a native iOS app (SwiftUI, no third-party dependencies), a Nuxt web app and an Android TWA",
+    "11 Cloud Functions: flight lookup, live track, delay history, short links, push watches, link previews, stats",
+    "Server-side push alerts for departed, landing soon, landed and time to leave, even with the page closed",
+    "Open Graph preview cards rendered per flight on the server, so shared links show a preview in WhatsApp and Telegram",
+    "No account and no API key in the clients: flight data goes through a cached Functions proxy",
+    "Flight data from AeroDataBox schedules plus live ADS-B positions (originally the FR24 API)"
+  ],
+  "i18n": {
+    "en": {
+      "tagline": "Flight tracker for picking someone up at the airport",
+      "summary": "Touchdown follows one flight and tells you when it lands and when to leave to pick someone up. You type a flight number and share the link, and everyone sees the same countdown, the plane on the map and a pickup plan. It runs on the web at tdown.live and as iOS and Android apps.",
+      "useCases": [
+        "Someone shares a tdown.live link in the family chat, and everyone at home watches the same countdown to landing.",
+        "A driver heading to the airport sees the drive time from their location and when to leave, with a buffer they can adjust.",
+        "With push alerts on, you hear when the flight departs, when it is about to land, when it lands and when it is time to leave.",
+        "Someone waiting checks the past week's delay history to see how late this flight usually arrives."
+      ],
+      "highlights": [
+        "One backend for three clients. Firebase Functions proxy and cache the flight data, so the apps need no keys or accounts.",
+        "Flight matching avoids a common bug where a flight number resolves to yesterday's or tomorrow's leg.",
+        "Shared links get preview images rendered on the server, so the flight card shows directly in messaging apps.",
+        "The iOS app uses only SwiftUI and MapKit, with no third-party dependencies. The web app mirrors it with Nuxt and Leaflet."
+      ]
+    },
+    "it": {
+      "tagline": "Tracciamento voli per chi va a prendere qualcuno in aeroporto",
+      "summary": "Touchdown segue un volo e ti dice quando atterra e quando uscire per andare a prendere qualcuno. Inserisci il numero di volo e condividi il link: tutti vedono lo stesso conto alla rovescia, l'aereo sulla mappa e un piano per il ritiro. Funziona sul web su tdown.live e come app per iOS e Android.",
+      "useCases": [
+        "Qualcuno condivide un link tdown.live nella chat di famiglia, e chi aspetta a casa segue lo stesso conto alla rovescia fino all'atterraggio.",
+        "Chi va in aeroporto in macchina vede il tempo di guida dalla sua posizione e l'ora in cui uscire, con un margine regolabile.",
+        "Con le notifiche push attive si sa quando il volo decolla, quando sta per atterrare, quando atterra e quando è ora di uscire.",
+        "Chi aspetta controlla lo storico dei ritardi dell'ultima settimana per vedere quanto arriva in ritardo di solito quel volo."
+      ],
+      "highlights": [
+        "Un solo backend per tre client. Le Firebase Functions fanno da proxy e cache per i dati di volo, quindi le app non hanno bisogno di chiavi né di account.",
+        "L'abbinamento dei voli evita un errore comune: lo stesso numero di volo che punta alla tratta di ieri o di domani.",
+        "I link condivisi hanno immagini di anteprima generate sul server, così la scheda del volo appare direttamente nelle app di messaggistica.",
+        "L'app iOS usa solo SwiftUI e MapKit, senza dipendenze esterne. L'app web la replica con Nuxt e Leaflet."
+      ]
+    },
+    "sq": {
+      "tagline": "Ndjekje fluturimi për ata që presin dikë në aeroport",
+      "summary": "Touchdown ndjek një fluturim dhe të tregon kur ulet dhe kur duhet të nisesh për të marrë dikë. Shkruan numrin e fluturimit dhe ndan linkun: të gjithë shohin të njëjtin numërim mbrapsht, avionin në hartë dhe një plan për marrjen. Punon në web te tdown.live dhe si aplikacion për iOS dhe Android.",
+      "useCases": [
+        "Dikush ndan një link tdown.live në grupin e familjes, dhe kush pret në shtëpi ndjek të njëjtin numërim mbrapsht deri në ulje.",
+        "Kush shkon me makinë në aeroport sheh kohën e udhëtimit nga vendndodhja e vet dhe orën kur duhet të niset, me një rezervë kohe që mund ta ndryshojë.",
+        "Me njoftimet push të aktivizuara, mëson kur fluturimi niset, kur është gati të ulet, kur ulet dhe kur është koha të nisesh.",
+        "Kush pret shikon historikun e vonesave të javës së fundit për të parë sa vonon zakonisht ky fluturim."
+      ],
+      "highlights": [
+        "Një backend për tre klientë. Firebase Functions shërbejnë si proxy dhe cache për të dhënat e fluturimeve, prandaj aplikacionet nuk kanë nevojë për çelësa apo llogari.",
+        "Përputhja e fluturimeve shmang një gabim të zakonshëm: i njëjti numër fluturimi që tregon fluturimin e djeshëm ose të nesërm.",
+        "Linqet e ndara kanë imazhe parapamjeje të gjeneruara në server, kështu karta e fluturimit shfaqet direkt në aplikacionet e mesazheve.",
+        "Aplikacioni iOS përdor vetëm SwiftUI dhe MapKit, pa varësi të jashtme. Aplikacioni web e pasqyron me Nuxt dhe Leaflet."
+      ]
+    }
+  },
+  "screenshots": [
+    {
+      "file": "projects/tdown/home.png",
+      "kind": "desktop",
+      "surface": "Website",
+      "caption": {
+        "en": "Landing page: search by flight number, route or city. No app, no sign-up.",
+        "it": "Landing page: cerca per numero di volo, tratta o città. Nessuna app, nessuna registrazione.",
+        "sq": "Faqja kryesore: kërko sipas numrit të fluturimit, rrugës ose qytetit. Pa aplikacion, pa regjistrim."
+      }
+    },
+    {
+      "file": "projects/tdown/flight-mobile.png",
+      "kind": "mobile",
+      "surface": "Web app",
+      "caption": {
+        "en": "A tracked flight on the phone: LH1832 Munich to Tirana, live on the map, landing in 42 minutes.",
+        "it": "Un volo seguito dal telefono: LH1832 da Monaco a Tirana, in diretta sulla mappa, atterra tra 42 minuti.",
+        "sq": "Një fluturim i ndjekur nga telefoni: LH1832 nga Mynihu në Tiranë, drejtpërdrejt në hartë, ulet pas 42 minutash."
+      }
+    },
+    {
+      "file": "projects/tdown/details-mobile.png",
+      "kind": "mobile",
+      "surface": "Web app",
+      "caption": {
+        "en": "Flight details: countdown, progress, scheduled vs. estimated times, terminals and gates.",
+        "it": "Dettagli del volo: conto alla rovescia, avanzamento, orari previsti e stimati, terminal e gate.",
+        "sq": "Detajet e fluturimit: numërimi mbrapsht, ecuria, oraret e planifikuara dhe të parashikuara, terminalet dhe portat."
+      }
+    },
+    {
+      "file": "projects/tdown/pickup-mobile.png",
+      "kind": "mobile",
+      "surface": "Web app",
+      "caption": {
+        "en": "Pickup planner: drive time from your location plus a buffer gives the time to leave.",
+        "it": "Pianificatore del ritiro: il tempo di guida dalla tua posizione più un margine dà l'ora in cui uscire.",
+        "sq": "Planifikuesi i marrjes: koha me makinë nga vendndodhja jote plus një rezervë jep orën kur duhet të nisesh."
+      }
+    },
+    {
+      "file": "projects/tdown/flight-desktop.png",
+      "kind": "desktop",
+      "surface": "Web app",
+      "caption": {
+        "en": "Desktop view: flight details beside a full-height map with the flown track and remaining route.",
+        "it": "Vista desktop: dettagli del volo accanto a una mappa a tutta altezza con la rotta percorsa e quella rimanente.",
+        "sq": "Pamja në desktop: detajet e fluturimit pranë një harte në lartësi të plotë me rrugën e përshkuar dhe atë që mbetet."
+      }
+    }
+  ]
+}
