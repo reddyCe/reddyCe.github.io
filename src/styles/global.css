@@ -1483,7 +1483,7 @@ html:not(.js) .bar span {
   line-height: var(--lh-3);
   margin-bottom: 16px;
 }
-.timeline li {
+.timeline > ol > li {
   display: grid;
   grid-template-columns: 220px 1fr auto;
   gap: 16px;
@@ -1491,7 +1491,7 @@ html:not(.js) .bar span {
   border-top: 1px solid var(--line);
   align-items: baseline;
 }
-.timeline li:last-child {
+.timeline > ol > li:last-child {
   border-bottom: 1px solid var(--line);
 }
 .tl-date {
@@ -1502,12 +1502,54 @@ html:not(.js) .bar span {
 .tl-role strong {
   font-weight: 600;
 }
+/* promotions inside one company: newest on top, a rail joins the steps */
+.tl-steps {
+  list-style: none;
+  margin: 8px 0 0;
+  padding: 0;
+}
+.tl-steps li {
+  position: relative;
+  padding: 0 0 8px 20px;
+  color: var(--ink-2);
+}
+.tl-steps li:last-child {
+  padding-bottom: 0;
+}
+.tl-steps li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  border: 1.5px solid var(--line-strong);
+  background: var(--bg);
+}
+.tl-steps li:first-child {
+  color: var(--ink);
+  font-weight: 600;
+}
+.tl-steps li:first-child::before {
+  border-color: var(--ink);
+  background: var(--ink);
+}
+.tl-steps li + li::after {
+  /* rail segment from this dot up to the previous one */
+  content: '';
+  position: absolute;
+  left: 4px;
+  bottom: calc(100% - 0.55em);
+  height: calc(8px + 0.55em + 0.4em);
+  border-left: 1.5px solid var(--line-strong);
+}
 .tl-loc {
   font-size: var(--fs-6);
   color: var(--muted);
 }
 @media (max-width: 800px) {
-  .timeline li {
+  .timeline > ol > li {
     grid-template-columns: 1fr;
     gap: 2px;
   }

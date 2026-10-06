@@ -224,7 +224,14 @@ const numbers = [
         {profile.experience.map((e) => (
           <li>
             <span class="tl-date">{fmtDate(e.start)} – {fmtDate(e.end)}</span>
-            <span class="tl-role"><strong>{e.title}</strong>, {e.company}</span>
+            {e.roles?.length ? (
+              <span class="tl-role">
+                <strong>{e.company}</strong>
+                <ol class="tl-steps">{e.roles.map((r) => <li>{r}</li>)}</ol>
+              </span>
+            ) : (
+              <span class="tl-role"><strong>{e.title}</strong>, {e.company}</span>
+            )}
             {e.location && <span class="tl-loc">{e.location}</span>}
           </li>
         ))}

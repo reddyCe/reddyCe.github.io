@@ -8,7 +8,12 @@
   "experience": [
     {
       "company": "Bettermile (GLS)",
-      "title": "Senior Frontend Developer",
+      "title": "Lead Engineer & AI Transformation Lead",
+      "roles": [
+        "Lead Engineer & AI Transformation Lead",
+        "Senior Engineer & Mentor",
+        "Senior Frontend Developer"
+      ],
       "start": "2021-11",
       "end": null,
       "location": "Berlin, Germany",

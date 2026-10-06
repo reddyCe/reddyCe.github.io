@@ -27,6 +27,8 @@ export const profile = {
     end?: string;
     location?: string;
     description?: string;
+    /** Promotions within one company, newest first. Rendered under the company, without dates. */
+    roles?: string[];
   }[],
   education: (li.education ?? []) as any[],
   skills: (li.skills ?? []) as string[],

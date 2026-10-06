@@ -25,7 +25,7 @@ export const GET: APIRoute = ({ site }) => {
     '',
     '## Employment',
     '',
-    ...profile.experience.map((e) => `- ${e.title}, ${e.company} (${e.start} to ${e.end ?? 'present'})${e.location ? `, ${e.location}` : ''}`),
+    ...profile.experience.map((e) => `- ${e.roles?.length ? e.roles.join(' < ') : e.title}, ${e.company} (${e.start} to ${e.end ?? 'present'})${e.location ? `, ${e.location}` : ''}`),
     '',
     '## Languages',
     '',
