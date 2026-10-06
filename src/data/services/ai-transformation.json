@@ -1,17 +1,21 @@
 {
   "id": "ai-transformation",
   "icon": "ai",
-  "related": ["quizmaster", "alproperty", "pushim"],
+  "related": [
+    "quizmaster",
+    "alproperty",
+    "pushim"
+  ],
   "heroShot": "projects/quizmaster/mcp-chat.webp",
   "i18n": {
     "en": {
       "slug": "ai-integration-for-business",
-      "navLabel": "AI integration",
-      "metaTitle": "AI integration for business | Red Zone Labs",
-      "metaDescription": "AI integration for business: assistants that answer from your company data, chat in your back office, AI translation and extraction, with permissions kept.",
-      "eyebrow": "AI for companies",
-      "h1": "AI integration for business, built on your own data",
-      "lead": "We add AI to the tools your team already uses: assistants that answer from company data, chat inside the back office and AI features inside your product. Every answer respects who is asking, and personal data stays where it belongs.",
+      "navLabel": "AI transformation",
+      "metaTitle": "AI transformation and workflow automation for business | Red Zone Labs",
+      "metaDescription": "AI transformation for business: AI built into existing workflows, documents read and filed, answers from company data and assistants in your back office, with permissions kept.",
+      "eyebrow": "AI transformation",
+      "h1": "AI transformation: AI inside the workflows your team already runs",
+      "lead": "We bring AI into the work your team already does: emails and documents read and filed, answers from company data, drafts prepared for a person to approve, and assistants inside the tools people open every day. Every answer respects who is asking, and personal data stays where it belongs.",
       "problemsTitle": "Sounds familiar?",
       "problems": [
         "Your team asks the same data questions every week and waits for someone to build a report.",
@@ -22,6 +26,10 @@
       ],
       "buildTitle": "What we build",
       "build": [
+        {
+          "title": "AI steps inside existing workflows",
+          "text": "Incoming emails, invoices and forms are read, sorted and written into the right record in your CRM or database. A person reviews anything unclear before it moves on."
+        },
         {
           "title": "Assistants that answer from company data",
           "text": "Staff ask in plain language and get answers with tables and charts from live data. The source and how fresh it is are shown next to each answer."
@@ -96,12 +104,12 @@
     },
     "it": {
       "slug": "integrazione-ai-aziende",
-      "navLabel": "Integrazione AI",
-      "metaTitle": "Integrazione AI in azienda | Red Zone Labs",
-      "metaDescription": "Integrazione AI in azienda: assistenti che rispondono dai dati aziendali, chat nel gestionale, traduzione ed estrazione dati, nel rispetto dei permessi.",
-      "eyebrow": "AI per le aziende",
-      "h1": "Integrazione AI in azienda, partendo dai vostri dati",
-      "lead": "Portiamo l'intelligenza artificiale negli strumenti che il vostro team usa già: assistenti che rispondono dai dati aziendali, una chat dentro il gestionale, funzioni AI nel vostro prodotto. Ogni risposta tiene conto di chi chiede, e i dati personali restano dove devono stare.",
+      "navLabel": "Trasformazione AI",
+      "metaTitle": "Trasformazione AI e automazione dei processi in azienda | Red Zone Labs",
+      "metaDescription": "Trasformazione AI in azienda: l'AI dentro i processi esistenti, documenti letti e archiviati, risposte dai dati aziendali e assistenti nel gestionale, nel rispetto dei permessi.",
+      "eyebrow": "Trasformazione AI",
+      "h1": "Trasformazione AI: l'AI dentro i processi che il vostro team usa già",
+      "lead": "Portiamo l'intelligenza artificiale nel lavoro che il vostro team fa già: email e documenti letti e archiviati, risposte dai dati aziendali, bozze pronte per l'approvazione di una persona e assistenti negli strumenti che si aprono ogni giorno. Ogni risposta tiene conto di chi chiede, e i dati personali restano dove devono stare.",
       "problemsTitle": "Vi riconoscete in queste situazioni?",
       "problems": [
         "Ogni settimana qualcuno chiede gli stessi numeri e aspetta che un collega prepari un report in Excel.",
@@ -112,6 +120,10 @@
       ],
       "buildTitle": "Cosa realizziamo",
       "build": [
+        {
+          "title": "Passaggi AI dentro i processi esistenti",
+          "text": "Email, fatture e moduli in arrivo vengono letti, smistati e registrati nella scheda giusta del CRM o del database. Una persona controlla i casi dubbi prima che proseguano."
+        },
         {
           "title": "Assistenti che rispondono dai dati aziendali",
           "text": "Il personale fa domande in linguaggio naturale e riceve risposte con tabelle e grafici dai dati aggiornati. Accanto a ogni risposta compaiono la fonte e quanto è recente il dato."
@@ -186,12 +198,12 @@
     },
     "sq": {
       "slug": "inteligjenca-artificiale-per-biznese",
-      "navLabel": "AI për biznese",
-      "metaTitle": "Inteligjenca artificiale për biznese | Red Zone Labs",
-      "metaDescription": "Inteligjenca artificiale për biznese: asistentë që përgjigjen nga të dhënat e kompanisë, chat në sistemin e brendshëm, përkthim me AI, me leje të sakta.",
-      "eyebrow": "AI për kompanitë",
-      "h1": "Inteligjenca artificiale për biznese, mbi të dhënat tuaja",
-      "lead": "E sjellim inteligjencën artificiale te mjetet që ekipi juaj përdor tashmë: asistentë që përgjigjen nga të dhënat e kompanisë, chat brenda sistemit të brendshëm dhe funksione AI në produktin tuaj. Çdo përgjigje merr parasysh kush pyet, dhe të dhënat personale mbeten aty ku duhet.",
+      "navLabel": "Transformim me AI",
+      "metaTitle": "Transformim me AI dhe automatizim i proceseve për biznese | Red Zone Labs",
+      "metaDescription": "Transformim me AI për biznese: AI brenda proceseve ekzistuese, dokumente të lexuara dhe të arkivuara, përgjigje nga të dhënat e kompanisë dhe asistentë në sistemin e brendshëm, me leje të sakta.",
+      "eyebrow": "Transformimi me AI",
+      "h1": "Transformim me AI: AI brenda proceseve që ekipi juaj përdor tashmë",
+      "lead": "E sjellim inteligjencën artificiale te puna që ekipi juaj bën tashmë: email-e dhe dokumente të lexuara dhe të arkivuara, përgjigje nga të dhënat e kompanisë, drafte gati për miratimin e një personi dhe asistentë te mjetet që hapen çdo ditë. Çdo përgjigje merr parasysh kush pyet, dhe të dhënat personale mbeten aty ku duhet.",
       "problemsTitle": "A ju duket e njohur?",
       "problems": [
         "Çdo javë dikush kërkon të njëjtat shifra dhe pret që një koleg të përgatisë një raport në Excel.",
@@ -202,6 +214,10 @@
       ],
       "buildTitle": "Çfarë ndërtojmë",
       "build": [
+        {
+          "title": "Hapa me AI brenda proceseve ekzistuese",
+          "text": "Email-et, faturat dhe formularët që vijnë lexohen, renditen dhe regjistrohen te kartela e duhur në CRM ose databazë. Një person kontrollon rastet e paqarta para se të vazhdojnë."
+        },
         {
           "title": "Asistentë që përgjigjen nga të dhënat e kompanisë",
           "text": "Stafi pyet në gjuhë të zakonshme dhe merr përgjigje me tabela e grafikë nga të dhënat aktuale. Pranë çdo përgjigjeje shfaqet burimi dhe sa të freskëta janë të dhënat."

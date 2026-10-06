@@ -33,10 +33,10 @@ export interface Service {
 
 /** Display order. */
 export const SERVICE_ORDER = [
+  'ai-transformation',
   'web-platforms',
   'custom-crm',
   'mobile-apps',
-  'ai-transformation',
   'digital-transformation',
   'mcp-servers',
 ];

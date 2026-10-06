@@ -9,9 +9,9 @@ const root = path.resolve(import.meta.dirname, '..');
 const ORDER = ['saneo', 'alproperty', 'ucs', 'circleon', 'quizmaster', 'tdown', 'pushim'];
 const LANGS = ['en', 'it', 'sq'];
 const home = {
-  en: { title: 'We build web platforms, mobile apps and AI tools, end to end.', role: 'Software studio for web, mobile and AI', open: 'Open to new projects' },
-  it: { title: 'Realizziamo piattaforme web, app mobile e strumenti AI.', role: 'Studio software per web, mobile e AI', open: 'Disponibili per nuovi progetti' },
-  sq: { title: 'Ndërtojmë platforma web, aplikacione mobile dhe mjete AI.', role: 'Studio softueri për web, mobile dhe AI', open: 'Të hapur për projekte të reja' },
+  en: { title: 'Web platforms, apps and AI built into the way your team works.', role: 'Software and AI transformation studio', open: 'Open to new projects' },
+  it: { title: 'Piattaforme web, app e AI dentro i processi del tuo team.', role: 'Studio software e di trasformazione AI', open: 'Disponibili per nuovi progetti' },
+  sq: { title: 'Platforma web, aplikacione dhe AI brenda proceseve të ekipit tënd.', role: 'Studio softueri dhe transformimi me AI', open: 'Të hapur për projekte të reja' },
 };
 
 const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]);

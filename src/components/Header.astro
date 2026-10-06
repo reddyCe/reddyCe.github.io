@@ -10,7 +10,7 @@ const t = useT(lang);
 const home = homeHref(lang);
 const links = [
   [`${home}#work`, t('nav.work')],
-  [`${home}#ai`, t('nav.ai')],
+  [`${home}#ai-transformation`, t('nav.ai')],
   [servicesIndexHref(lang), t('nav.services')],
   [`${home}#about`, t('nav.about')],
 ] as const;
@@ -45,9 +45,27 @@ const links = [
       {links.map(([href, label]) => <a href={href}>{label}</a>)}
     </nav>
     <a class="btn btn-accent" href={`${home}#contact`}>{t('nav.cta')}</a>
+    <details class="menu" data-menu>
+      <summary class="menu-btn" aria-label={t('nav.menu')}>
+        <Icon name="menu" class="icon menu-open" /><Icon name="close" class="icon menu-close" />
+      </summary>
+      <nav class="menu-panel" aria-label={t('nav.menu')}>
+        {links.map(([href, label]) => <a href={href}>{label}</a>)}
+        <a href={`${home}#contact`}>{t('nav.contact')}</a>
+      </nav>
+    </details>
   </div>
 </header>
 <script>
+  // Mobile menu: close on link click, Escape or a click outside.
+  const menu = document.querySelector<HTMLDetailsElement>('[data-menu]');
+  if (menu) {
+    menu.querySelectorAll('a').forEach((a) => a.addEventListener('click', () => (menu.open = false)));
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && menu.open) { menu.open = false; menu.querySelector('summary')?.focus(); }
+    });
+    document.addEventListener('click', (e) => { if (menu.open && !menu.contains(e.target as Node)) menu.open = false; });
+  }
   const btn = document.querySelector<HTMLButtonElement>('[data-theme-toggle]');
   const root = document.documentElement;
   const isDark = () =>

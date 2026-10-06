@@ -9,7 +9,7 @@ export const GET: APIRoute = ({ site }) => {
   const lines = [
     `# ${BRAND}`,
     '',
-    `> Software studio based in Berlin. Builds web platforms, mobile apps, AI assistants and MCP servers end to end. Founded by ${FOUNDER}. Open to new projects. Works in English, Italian and Albanian.`,
+    `> Software and AI transformation studio based in Berlin. Builds web platforms and mobile apps, and brings AI into existing business workflows: document handling, answers from company data, assistants and MCP servers. Founded by ${FOUNDER}. Open to new projects. Works in English, Italian and Albanian.`,
     '',
     `Contact: ${EMAIL}`,
     `LinkedIn: ${profile.linkedinUrl}`,

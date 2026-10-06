@@ -21,6 +21,9 @@ interface Props { lang: Lang }
 const { lang } = Astro.props;
 const t = useT(lang);
 const ai = profile.bettermileAI?.[lang];
+const aiService = services.find((s) => s.id === 'ai-transformation');
+const aiSteps = [1, 2, 3, 4] as const;
+const aiExamples = [1, 2, 3, 4] as const;
 const ab = about[lang];
 
 const fmtDate = (d?: string | null) => {
@@ -34,7 +37,7 @@ const tiles = [
   ['crm', 'tiles.crm', '#alproperty'],
   ['recruit', 'tiles.recruit', '#ucs'],
   ['video', 'tiles.video', '#circleon'],
-  ['ai', 'tiles.ai', '#ai'],
+  ['ai', 'tiles.ai', '#ai-transformation'],
   ['mobile', 'tiles.mobile', '#tdown'],
   ['compare', 'tiles.compare', '#pushim'],
   ['quiz', 'tiles.quiz', '#quizmaster'],
@@ -117,6 +120,53 @@ const numbers = [
   </div>
 </section>
 
+<section class="section wrap aix" id="ai-transformation" aria-labelledby="aix-title">
+  <div class="section-head">
+    <p class="eyebrow">{t('aix.kicker')}</p>
+    <h2 id="aix-title" class="h2">{t('aix.title')}</h2>
+    <p>{t('aix.lede')}</p>
+  </div>
+  <div class="panel aix-panel" data-reveal>
+    <ol class="aix-steps">
+      {aiSteps.map((n) => (
+        <li>
+          <span class="aix-num">{n}</span>
+          <div>
+            <h3>{t(`aix.s${n}.t`)}</h3>
+            <p>{t(`aix.s${n}.d`)}</p>
+          </div>
+        </li>
+      ))}
+    </ol>
+    <div class="panel-text aix-side">
+      <h3>{t('aix.ex.title')}</h3>
+      <ul class="checks">{aiExamples.map((n) => <li>{t(`aix.ex.${n}`)}</li>)}</ul>
+      <p class="btn-row">
+        {aiService && <a class="btn btn-accent" href={serviceHref(lang, aiService)}>{t('aix.cta')}</a>}
+        <a class="btn btn-outline" href="#brief">{t('aix.cta2')}</a>
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="section wrap ai" id="ai" aria-labelledby="ai-title">
+  <div class="panel panel-dark" data-reveal>
+    <div class="panel-text">
+      <p class="eyebrow">{t('ai.kicker')}</p>
+      <h2 id="ai-title" class="h2">{ai?.title ?? 'Bekki'}</h2>
+      <p class="lead">{ai?.summary ?? t('ai.lede')}</p>
+      {ai?.bullets && <ul class="checks">{ai.bullets.map((b) => <li>{b}</li>)}</ul>}
+      {profile.bettermileAI?.stack && (
+        <ul class="tags">{profile.bettermileAI.stack.map((s) => <li class="tag">{s}</li>)}</ul>
+      )}
+      <p class="ai-note">{t('ai.note')}</p>
+    </div>
+    <div class="panel-media">
+      <ChatDemo lang={lang} />
+    </div>
+  </div>
+</section>
+
 <section class="section wrap brief-section" id="brief" aria-labelledby="brief-title">
   <BriefBuilder lang={lang} />
 </section>
@@ -141,24 +191,6 @@ const numbers = [
   </div>
   <div class="cases">
     {projects.map((p, i) => <ProjectCase project={p} lang={lang} index={i} />)}
-  </div>
-</section>
-
-<section class="section wrap ai" id="ai" aria-labelledby="ai-title">
-  <div class="panel panel-dark" data-reveal>
-    <div class="panel-text">
-      <p class="eyebrow">{t('ai.kicker')}</p>
-      <h2 id="ai-title" class="h2">{ai?.title ?? 'Bekki'}</h2>
-      <p class="lead">{ai?.summary ?? t('ai.lede')}</p>
-      {ai?.bullets && <ul class="checks">{ai.bullets.map((b) => <li>{b}</li>)}</ul>}
-      {profile.bettermileAI?.stack && (
-        <ul class="tags">{profile.bettermileAI.stack.map((s) => <li class="tag">{s}</li>)}</ul>
-      )}
-      <p class="ai-note">{t('ai.note')}</p>
-    </div>
-    <div class="panel-media">
-      <ChatDemo lang={lang} />
-    </div>
   </div>
 </section>
 

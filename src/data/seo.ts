@@ -30,6 +30,8 @@ function person(site: URL) {
       'Firebase',
       'Kotlin',
       'Mobile app development',
+      'AI transformation',
+      'AI workflow automation',
       'AI assistants',
       'Model Context Protocol (MCP)',
       'Large language models',
