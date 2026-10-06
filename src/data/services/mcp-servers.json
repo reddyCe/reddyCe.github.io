@@ -9,11 +9,11 @@
     "en": {
       "slug": "mcp-server-development",
       "navLabel": "MCP servers",
-      "metaTitle": "MCP server development | Redon Cela",
+      "metaTitle": "MCP server development | Red Zone Labs",
       "metaDescription": "MCP server development: make your product usable from Claude, ChatGPT and other AI assistants, with clear tools, OAuth sign-in and per-user permissions.",
       "eyebrow": "Model Context Protocol",
       "h1": "MCP server development for Claude, ChatGPT and other assistants",
-      "lead": "An MCP server lets AI assistants such as Claude and ChatGPT read and write in your product on behalf of a signed-in user. I design the tools, the sign-in and the permissions, and run it as a remote server your users connect with one URL.",
+      "lead": "An MCP server lets AI assistants such as Claude and ChatGPT read and write in your product on behalf of a signed-in user. We design the tools, the sign-in and the permissions, and run it as a remote server your users connect with one URL.",
       "problemsTitle": "Why companies ask for one",
       "problems": [
         "Your customers already work in Claude or ChatGPT and ask why your product is not there.",
@@ -22,7 +22,7 @@
         "You want AI access to your data, but not an assistant that can delete records or see other customers' data.",
         "Connecting today means creating API keys and editing config files, so almost nobody does it."
       ],
-      "buildTitle": "What I build",
+      "buildTitle": "What we build",
       "build": [
         {
           "title": "Tool design",
@@ -57,19 +57,19 @@
         },
         {
           "title": "Design the tools",
-          "text": "I write the tool names, inputs and descriptions, then try them with real prompts before building out the full set."
+          "text": "We write the tool names, inputs and descriptions, then try them with real prompts before building out the full set."
         },
         {
           "title": "Sign-in and permissions",
-          "text": "I add OAuth sign-in and make sure every call is scoped to the signed-in user and their role."
+          "text": "We add OAuth sign-in and make sure every call is scoped to the signed-in user and their role."
         },
         {
           "title": "Test in real assistants and publish",
-          "text": "I test the server in Claude and the other clients your users have, deploy it, and write a connect page that explains how to add it."
+          "text": "We test the server in Claude and the other clients your users have, deploy it, and write a connect page that explains how to add it."
         }
       ],
       "proofTitle": "MCP servers in production",
-      "proofText": "The Quiz Master has a remote MCP server with 17 tools, so assistants write quizzes straight into a host's library. At Bettermile, part of GLS, I am the main contributor to a read-only MCP server that lets Claude query Back Office data with each user's own permissions.",
+      "proofText": "The Quiz Master has a remote MCP server with 17 tools, so assistants write quizzes straight into a host's library. At Bettermile, part of GLS, our founder is the main contributor to a read-only MCP server that lets Claude query Back Office data with each user's own permissions.",
       "faqTitle": "Questions about MCP",
       "faq": [
         {
@@ -78,7 +78,7 @@
         },
         {
           "q": "Does it work with ChatGPT as well as Claude?",
-          "a": "Yes, both support remote MCP servers, and so do a growing number of other assistants and developer tools. Setup and supported features differ a little between clients, so I test the server in the ones your users actually use."
+          "a": "Yes, both support remote MCP servers, and so do a growing number of other assistants and developer tools. Setup and supported features differ a little between clients, so we test the server in the ones your users actually use."
         },
         {
           "q": "Do my users need an API key?",
@@ -86,24 +86,24 @@
         },
         {
           "q": "Can the AI delete or change our data?",
-          "a": "Only if you give it a tool that does that. I keep read and write tools separate, leave out destructive actions by default, and limit every call to what the signed-in user may do. A server can also be fully read-only, like the one at Bettermile."
+          "a": "Only if you give it a tool that does that. We keep read and write tools separate, leave out destructive actions by default, and limit every call to what the signed-in user may do. A server can also be fully read-only, like the one at Bettermile."
         },
         {
           "q": "Do we need to rebuild our backend?",
-          "a": "No. The MCP server usually sits next to your existing API or database and calls it, as a small separate service or as part of your backend. I have built them in TypeScript with the MCP SDK and in Kotlin with Spring AI."
+          "a": "No. The MCP server usually sits next to your existing API or database and calls it, as a small separate service or as part of your backend. We build them in TypeScript with the MCP SDK, and our founder built one in Kotlin with Spring AI at Bettermile."
         }
       ],
       "ctaTitle": "Want your product inside Claude and ChatGPT?",
-      "ctaText": "Send me a short description of your product and what users would ask an assistant to do in it. I will reply with a first list of tools and how sign-in could work."
+      "ctaText": "Send us a short description of your product and what users would ask an assistant to do in it. We will reply with a first list of tools and how sign-in could work."
     },
     "it": {
       "slug": "sviluppo-server-mcp",
       "navLabel": "Server MCP",
-      "metaTitle": "Sviluppo server MCP | Redon Cela",
+      "metaTitle": "Sviluppo server MCP | Red Zone Labs",
       "metaDescription": "Sviluppo server MCP: il vostro prodotto usabile da Claude, ChatGPT e altri assistenti AI, con strumenti chiari, accesso OAuth e permessi per ogni utente.",
       "eyebrow": "Model Context Protocol",
       "h1": "Sviluppo server MCP per Claude, ChatGPT e altri assistenti AI",
-      "lead": "Un server MCP permette ad assistenti AI come Claude e ChatGPT di leggere e scrivere nel vostro prodotto per conto di un utente autenticato. Progetto gli strumenti, l'accesso e i permessi, e lo pubblico come server remoto che gli utenti collegano con un solo URL.",
+      "lead": "Un server MCP permette ad assistenti AI come Claude e ChatGPT di leggere e scrivere nel vostro prodotto per conto di un utente autenticato. Progettiamo gli strumenti, l'accesso e i permessi, e lo pubblichiamo come server remoto che gli utenti collegano con un solo URL.",
       "problemsTitle": "Perché le aziende lo chiedono",
       "problems": [
         "I vostri clienti lavorano già in Claude o ChatGPT e chiedono perché il vostro prodotto non ci sia.",
@@ -112,7 +112,7 @@
         "Volete dare all'AI accesso ai dati, ma non a un assistente che possa cancellare record o vedere i dati di altri clienti.",
         "Oggi per collegarsi servono chiavi API e file di configurazione, e quasi nessuno lo fa."
       ],
-      "buildTitle": "Cosa realizzo",
+      "buildTitle": "Cosa realizziamo",
       "build": [
         {
           "title": "Progettazione degli strumenti",
@@ -147,19 +147,19 @@
         },
         {
           "title": "Progetto degli strumenti",
-          "text": "Scrivo nomi, input e descrizioni degli strumenti e li provo con richieste reali prima di sviluppare l'insieme completo."
+          "text": "Scriviamo nomi, input e descrizioni degli strumenti e li proviamo con richieste reali prima di sviluppare l'insieme completo."
         },
         {
           "title": "Accesso e permessi",
-          "text": "Aggiungo l'accesso OAuth e verifico che ogni chiamata sia limitata all'utente autenticato e al suo ruolo."
+          "text": "Aggiungiamo l'accesso OAuth e verifichiamo che ogni chiamata sia limitata all'utente autenticato e al suo ruolo."
         },
         {
           "title": "Test negli assistenti e pubblicazione",
-          "text": "Provo il server in Claude e negli altri client che usano i vostri utenti, lo metto online e scrivo una pagina che spiega come collegarlo."
+          "text": "Proviamo il server in Claude e negli altri client che usano i vostri utenti, lo mettiamo online e scriviamo una pagina che spiega come collegarlo."
         }
       ],
       "proofTitle": "Server MCP in produzione",
-      "proofText": "The Quiz Master ha un server MCP remoto con 17 strumenti, così gli assistenti scrivono i quiz direttamente nella libreria del presentatore. In Bettermile, parte del gruppo GLS, sono il principale sviluppatore di un server MCP in sola lettura che permette a Claude di interrogare i dati del Back Office con i permessi di ciascun utente.",
+      "proofText": "The Quiz Master ha un server MCP remoto con 17 strumenti, così gli assistenti scrivono i quiz direttamente nella libreria del presentatore. In Bettermile, parte del gruppo GLS, il nostro fondatore è il principale sviluppatore di un server MCP in sola lettura che permette a Claude di interrogare i dati del Back Office con i permessi di ciascun utente.",
       "faqTitle": "Domande frequenti sui server MCP",
       "faq": [
         {
@@ -168,7 +168,7 @@
         },
         {
           "q": "Funziona anche con ChatGPT, oltre che con Claude?",
-          "a": "Sì, entrambi supportano i server MCP remoti, come un numero crescente di altri assistenti e strumenti per sviluppatori. Configurazione e funzioni supportate cambiano un po' da un client all'altro, per questo provo il server in quelli che i vostri utenti usano davvero."
+          "a": "Sì, entrambi supportano i server MCP remoti, come un numero crescente di altri assistenti e strumenti per sviluppatori. Configurazione e funzioni supportate cambiano un po' da un client all'altro, per questo proviamo il server in quelli che i vostri utenti usano davvero."
         },
         {
           "q": "I miei utenti devono creare una chiave API?",
@@ -176,24 +176,24 @@
         },
         {
           "q": "L'AI può cancellare o modificare i nostri dati?",
-          "a": "Solo se le date uno strumento che lo fa. Tengo separati gli strumenti di lettura e di scrittura, lascio fuori le azioni distruttive come impostazione predefinita e limito ogni chiamata a ciò che l'utente autenticato può fare. Un server può anche essere del tutto in sola lettura, come quello in Bettermile."
+          "a": "Solo se le date uno strumento che lo fa. Teniamo separati gli strumenti di lettura e di scrittura, lasciamo fuori le azioni distruttive come impostazione predefinita e limitiamo ogni chiamata a ciò che l'utente autenticato può fare. Un server può anche essere del tutto in sola lettura, come quello in Bettermile."
         },
         {
           "q": "Dobbiamo rifare il nostro backend?",
-          "a": "No. Di solito il server MCP sta accanto alla vostra API o al database esistente e li richiama, come piccolo servizio separato o come parte del backend. Ne ho sviluppati in TypeScript con l'SDK MCP e in Kotlin con Spring AI."
+          "a": "No. Di solito il server MCP sta accanto alla vostra API o al database esistente e li richiama, come piccolo servizio separato o come parte del backend. Li sviluppiamo in TypeScript con l'SDK MCP, e il nostro fondatore ne ha sviluppato uno in Kotlin con Spring AI in Bettermile."
         }
       ],
       "ctaTitle": "Volete il vostro prodotto dentro Claude e ChatGPT?",
-      "ctaText": "Mandatemi una breve descrizione del prodotto e di cosa gli utenti chiederebbero di fare a un assistente. Vi rispondo con una prima lista di strumenti e un'idea di come gestire l'accesso."
+      "ctaText": "Mandateci una breve descrizione del prodotto e di cosa gli utenti chiederebbero di fare a un assistente. Vi rispondiamo con una prima lista di strumenti e un'idea di come gestire l'accesso."
     },
     "sq": {
       "slug": "zhvillim-server-mcp",
       "navLabel": "Servera MCP",
-      "metaTitle": "Zhvillim serveri MCP | Redon Cela",
+      "metaTitle": "Zhvillim serveri MCP | Red Zone Labs",
       "metaDescription": "Zhvillim serveri MCP: produkti juaj i përdorshëm nga Claude, ChatGPT dhe asistentë AI, me mjete të qarta, hyrje me OAuth dhe leje për çdo përdorues.",
       "eyebrow": "Model Context Protocol",
       "h1": "Zhvillim serveri MCP për Claude, ChatGPT dhe asistentë të tjerë AI",
-      "lead": "Një server MCP u lejon asistentëve AI si Claude dhe ChatGPT të lexojnë dhe të shkruajnë në produktin tuaj në emër të një përdoruesi të identifikuar. Unë projektoj mjetet, hyrjen dhe lejet, dhe e vë në punë si server në distancë që përdoruesit e lidhin me një URL të vetme.",
+      "lead": "Një server MCP u lejon asistentëve AI si Claude dhe ChatGPT të lexojnë dhe të shkruajnë në produktin tuaj në emër të një përdoruesi të identifikuar. Ne projektojmë mjetet, hyrjen dhe lejet, dhe e vëmë në punë si server në distancë që përdoruesit e lidhin me një URL të vetme.",
       "problemsTitle": "Pse kompanitë e kërkojnë",
       "problems": [
         "Klientët tuaj punojnë tashmë në Claude ose ChatGPT dhe pyesin pse produkti juaj nuk është aty.",
@@ -202,7 +202,7 @@
         "Doni që AI të ketë qasje te të dhënat, por jo një asistent që fshin regjistrime ose sheh të dhënat e klientëve të tjerë.",
         "Sot lidhja kërkon çelësa API dhe skedarë konfigurimi, ndaj pothuajse askush nuk e bën."
       ],
-      "buildTitle": "Çfarë ndërtoj",
+      "buildTitle": "Çfarë ndërtojmë",
       "build": [
         {
           "title": "Projektimi i mjeteve",
@@ -237,19 +237,19 @@
         },
         {
           "title": "Projektimi i mjeteve",
-          "text": "Shkruaj emrat, të dhënat hyrëse dhe përshkrimet e mjeteve, dhe i provoj me kërkesa reale para se të ndërtoj gjithë grupin."
+          "text": "Shkruajmë emrat, të dhënat hyrëse dhe përshkrimet e mjeteve, dhe i provojmë me kërkesa reale para se të ndërtojmë gjithë grupin."
         },
         {
           "title": "Hyrja dhe lejet",
-          "text": "Shtoj hyrjen me OAuth dhe sigurohem që çdo thirrje të kufizohet te përdoruesi i identifikuar dhe roli i tij."
+          "text": "Shtojmë hyrjen me OAuth dhe sigurohemi që çdo thirrje të kufizohet te përdoruesi i identifikuar dhe roli i tij."
         },
         {
           "title": "Prova në asistentë realë dhe publikimi",
-          "text": "E provoj serverin në Claude dhe në klientët e tjerë që përdorin përdoruesit tuaj, e vë online dhe shkruaj një faqe që shpjegon si lidhet."
+          "text": "E provojmë serverin në Claude dhe në klientët e tjerë që përdorin përdoruesit tuaj, e vëmë online dhe shkruajmë një faqe që shpjegon si lidhet."
         }
       ],
       "proofTitle": "Servera MCP në prodhim",
-      "proofText": "The Quiz Master ka një server MCP në distancë me 17 mjete, kështu asistentët i shkruajnë kuizet direkt në bibliotekën e organizatorit. Te Bettermile, pjesë e GLS, jam kontribuuesi kryesor i një serveri MCP vetëm për lexim që i lejon Claude-it të lexojë të dhënat e Back Office-it me lejet e çdo përdoruesi.",
+      "proofText": "The Quiz Master ka një server MCP në distancë me 17 mjete, kështu asistentët i shkruajnë kuizet direkt në bibliotekën e organizatorit. Te Bettermile, pjesë e GLS, themeluesi ynë është kontribuuesi kryesor i një serveri MCP vetëm për lexim që i lejon Claude-it të lexojë të dhënat e Back Office-it me lejet e çdo përdoruesi.",
       "faqTitle": "Pyetje për serverat MCP",
       "faq": [
         {
@@ -258,7 +258,7 @@
         },
         {
           "q": "A punon edhe me ChatGPT, jo vetëm me Claude?",
-          "a": "Po, të dyja i mbështetin serverat MCP në distancë, ashtu si një numër në rritje asistentësh dhe mjetesh të tjera për programues. Konfigurimi dhe funksionet ndryshojnë pak nga një klient te tjetri, ndaj e provoj serverin në ato që përdoruesit tuaj përdorin realisht."
+          "a": "Po, të dyja i mbështetin serverat MCP në distancë, ashtu si një numër në rritje asistentësh dhe mjetesh të tjera për programues. Konfigurimi dhe funksionet ndryshojnë pak nga një klient te tjetri, ndaj e provojmë serverin në ato që përdoruesit tuaj përdorin realisht."
         },
         {
           "q": "A u duhet përdoruesve të mi një çelës API?",
@@ -266,15 +266,15 @@
         },
         {
           "q": "A mund t'i fshijë ose t'i ndryshojë AI të dhënat tona?",
-          "a": "Vetëm nëse i jepni një mjet që e bën këtë. I mbaj të ndara mjetet e leximit dhe të shkrimit, i lë jashtë veprimet shkatërruese si parazgjedhje dhe e kufizoj çdo thirrje te ajo që lejohet të bëjë përdoruesi i identifikuar. Një server mund të jetë edhe tërësisht vetëm për lexim, si ai te Bettermile."
+          "a": "Vetëm nëse i jepni një mjet që e bën këtë. I mbajmë të ndara mjetet e leximit dhe të shkrimit, i lëmë jashtë veprimet shkatërruese si parazgjedhje dhe e kufizojmë çdo thirrje te ajo që lejohet të bëjë përdoruesi i identifikuar. Një server mund të jetë edhe tërësisht vetëm për lexim, si ai te Bettermile."
         },
         {
           "q": "A duhet ta rindërtojmë backend-in tonë?",
-          "a": "Jo. Zakonisht serveri MCP qëndron pranë API-së ose databazës ekzistuese dhe i thërret ato, si shërbim i vogël më vete ose si pjesë e backend-it. I kam ndërtuar në TypeScript me SDK-në e MCP dhe në Kotlin me Spring AI."
+          "a": "Jo. Zakonisht serveri MCP qëndron pranë API-së ose databazës ekzistuese dhe i thërret ato, si shërbim i vogël më vete ose si pjesë e backend-it. I ndërtojmë në TypeScript me SDK-në e MCP, dhe themeluesi ynë ndërtoi një në Kotlin me Spring AI te Bettermile."
         }
       ],
       "ctaTitle": "Doni produktin tuaj brenda Claude dhe ChatGPT?",
-      "ctaText": "Më dërgoni një përshkrim të shkurtër të produktit dhe çfarë do t'i kërkonin përdoruesit një asistenti në të. Do t'ju kthej përgjigje me një listë të parë mjetesh dhe si mund të funksionojë hyrja."
+      "ctaText": "Na dërgoni një përshkrim të shkurtër të produktit dhe çfarë do t'i kërkonin përdoruesit një asistenti në të. Do t'ju kthejmë përgjigje me një listë të parë mjetesh dhe si mund të funksionojë hyrja."
     }
   }
 }

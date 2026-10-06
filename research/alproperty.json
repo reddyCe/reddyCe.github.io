@@ -3,7 +3,7 @@
   "name": "ALProperty",
   "url": "https://alproperty.al",
   "period": "2026",
-  "role": "Full-stack development (sole developer)",
+  "role": "Full-stack development, end to end",
   "status": "Live",
   "category": "Real-estate website and agency CRM",
   "stack": [
@@ -27,7 +27,7 @@
   "i18n": {
     "en": {
       "tagline": "Listings website and agent CRM for a Durrës agency",
-      "summary": "ALProperty is a real-estate agency in Durrës. I built its public website, where people search listings on a grid or a map, and the CRM its agents use for listings, buyers, sellers and new-build developments. Both run on one Nuxt and Firebase codebase.",
+      "summary": "ALProperty is a real-estate agency in Durrës. We built its public website, where people search listings on a grid or a map, and the CRM its agents use for listings, buyers, sellers and new-build developments. Both run on one Nuxt and Firebase codebase.",
       "useCases": [
         "A family looking for a rental in Durrës filters by neighbourhood, type and price, then checks the results on the map.",
         "An agent writes a listing in Albanian and it appears in five more languages without manual translation.",
@@ -43,7 +43,7 @@
     },
     "it": {
       "tagline": "Sito di annunci e CRM per un'agenzia di Durazzo",
-      "summary": "ALProperty è un'agenzia immobiliare di Durazzo. Ho sviluppato il sito pubblico, dove si cercano gli annunci in griglia o su mappa, e il CRM con cui gli agenti gestiscono annunci, acquirenti, venditori e nuove costruzioni. Entrambi girano su un'unica codebase Nuxt e Firebase.",
+      "summary": "ALProperty è un'agenzia immobiliare di Durazzo. Abbiamo sviluppato il sito pubblico, dove si cercano gli annunci in griglia o su mappa, e il CRM con cui gli agenti gestiscono annunci, acquirenti, venditori e nuove costruzioni. Entrambi girano su un'unica codebase Nuxt e Firebase.",
       "useCases": [
         "Una famiglia che cerca casa in affitto a Durazzo filtra per quartiere, tipologia e prezzo, poi guarda i risultati sulla mappa.",
         "Un agente scrive l'annuncio in albanese e lo trova pubblicato in altre cinque lingue, senza tradurlo a mano.",
@@ -59,7 +59,7 @@
     },
     "sq": {
       "tagline": "Faqe pronash dhe CRM për një agjenci në Durrës",
-      "summary": "ALProperty është një agjenci imobiliare në Durrës. Ndërtova faqen publike, ku njerëzit kërkojnë prona në listë ose në hartë, dhe CRM-në ku agjentët menaxhojnë pronat, blerësit, shitësit dhe ndërtimet e reja. Të dyja punojnë mbi të njëjtin kod në Nuxt dhe Firebase.",
+      "summary": "ALProperty është një agjenci imobiliare në Durrës. Ndërtuam faqen publike, ku njerëzit kërkojnë prona në listë ose në hartë, dhe CRM-në ku agjentët menaxhojnë pronat, blerësit, shitësit dhe ndërtimet e reja. Të dyja punojnë mbi të njëjtin kod në Nuxt dhe Firebase.",
       "useCases": [
         "Një familje që kërkon shtëpi me qira në Durrës filtron sipas lagjes, llojit dhe çmimit, pastaj i sheh rezultatet në hartë.",
         "Një agjent e shkruan njoftimin në shqip dhe e gjen të publikuar edhe në pesë gjuhë të tjera, pa e përkthyer vetë.",

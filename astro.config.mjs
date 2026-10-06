@@ -2,8 +2,8 @@
 import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
 
-// Set SITE_URL when a custom domain is attached (e.g. https://redoncela.com).
-const site = process.env.SITE_URL || 'https://reddyce.github.io';
+// Canonical domain. Override with SITE_URL for previews.
+const site = process.env.SITE_URL || 'https://rzl.si';
 
 export default defineConfig({
   site,

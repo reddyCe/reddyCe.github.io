@@ -3,7 +3,7 @@
   "name": "Pushim.al",
   "url": "https://pushim.al",
   "period": "2026",
-  "role": "Founder, design and full-stack development",
+  "role": "Own product: design and full-stack development",
   "status": "Live",
   "category": "Travel offer comparison site",
   "stack": ["Nuxt", "Vue 3", "Tailwind CSS 4", "Firebase", "Firebase Hosting", "Automated offer extraction (web + social posts)"],

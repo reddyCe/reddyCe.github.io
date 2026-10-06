@@ -7,11 +7,11 @@
     "en": {
       "slug": "web-platform-development",
       "navLabel": "Web platforms",
-      "metaTitle": "Web platform and booking system development | Redon Cela",
+      "metaTitle": "Web platform and booking system development | Red Zone Labs",
       "metaDescription": "Web platform development: booking systems, marketplaces and multi-role portals with calendars, map search, payments and multilingual SEO, built in Nuxt.",
       "eyebrow": "Platforms and booking",
       "h1": "Web platform development for booking systems and marketplaces",
-      "lead": "I build web platforms where different kinds of users meet: patients and doctors, players and coaches, agents and clients. Booking, calendars, map search, payments and multilingual pages that search engines index, in one codebase I write end to end.",
+      "lead": "We build web platforms where different kinds of users meet: patients and doctors, players and coaches, agents and clients. Booking, calendars, map search, payments and multilingual pages that search engines index, in one codebase we write end to end.",
       "problemsTitle": "Where things usually break",
       "problems": [
         "Bookings come in by phone and WhatsApp, and someone copies them into a paper diary or a spreadsheet.",
@@ -20,7 +20,7 @@
         "Your site is in one language, while your customers search in Albanian, Italian and English.",
         "A ready-made platform takes a cut of every booking and doesn't fit how your business actually schedules work."
       ],
-      "buildTitle": "What I build",
+      "buildTitle": "What we build",
       "build": [
         {
           "title": "Multi-role portals",
@@ -55,7 +55,7 @@
         },
         {
           "title": "Build the core flow first",
-          "text": "I build the one path that brings in money or saves time, like search to booking, with real data. You click through it before anything else gets added."
+          "text": "We build the one path that brings in money or saves time, like search to booking, with real data. You click through it before anything else gets added."
         },
         {
           "title": "Add roles and features in releases",
@@ -63,45 +63,45 @@
         },
         {
           "title": "Launch and look after it",
-          "text": "I set up hosting, domains, analytics and Search Console, then watch the first real traffic. The code stays in your repository."
+          "text": "We set up hosting, domains, analytics and Search Console, then watch the first real traffic. The code stays in your repository."
         }
       ],
-      "proofTitle": "Platforms I have built",
-      "proofText": "Four platforms I built end to end: doctor booking in Albania, a real-estate site with its agency CRM, a sports recruiting platform with player and coach portals, and a holiday offer comparison site.",
+      "proofTitle": "Platforms we have built",
+      "proofText": "Four platforms we built end to end: doctor booking in Albania, a real-estate site with its agency CRM, a sports recruiting platform with player and coach portals, and a holiday offer comparison site.",
       "faqTitle": "Questions about web platforms",
       "faq": [
         {
           "q": "Can you build a booking system for my business instead of using a ready-made one?",
-          "a": "Yes. I build booking around how you really work: your services, opening hours, staff and rules for confirming. Saneo, for example, works for a single doctor and for a clinic with a shared calendar. The system is yours, so no platform takes a commission on each booking."
+          "a": "Yes. We build booking around how you really work: your services, opening hours, staff and rules for confirming. Saneo, for example, works for a single doctor and for a clinic with a shared calendar. The system is yours, so no platform takes a commission on each booking."
         },
         {
           "q": "What is the difference between a website and a web platform?",
-          "a": "A website shows information. A platform has accounts, roles and data that change all the time: bookings, listings, messages, payments. That needs a database, permissions and admin tools, which is where I spend most of the work."
+          "a": "A website shows information. A platform has accounts, roles and data that change all the time: bookings, listings, messages, payments. That needs a database, permissions and admin tools, which is where we spend most of the work."
         },
         {
           "q": "Can the platform take payments online?",
-          "a": "Yes, usually with Stripe: one-time payments, subscriptions or credits. The server listens to Stripe's webhooks, so an account only changes once the payment is confirmed. For businesses in Albania and Kosovo I first check which payment providers work for your company and your customers."
+          "a": "Yes, usually with Stripe: one-time payments, subscriptions or credits. The server listens to Stripe's webhooks, so an account only changes once the payment is confirmed. For businesses in Albania and Kosovo we first check which payment providers work for your company and your customers."
         },
         {
           "q": "Will the platform rank on Google in several languages?",
-          "a": "I build public pages with server-side rendering or pre-rendering, a separate URL for each language and hreflang tags, so every language can be indexed. Ranking also depends on your content and your competitors, so I don't promise positions."
+          "a": "We build public pages with server-side rendering or pre-rendering, a separate URL for each language and hreflang tags, so every language can be indexed. Ranking also depends on your content and your competitors, so we don't promise positions."
         },
         {
           "q": "Which technologies do you use?",
-          "a": "Mostly Vue 3 and Nuxt with TypeScript, with Firebase or a TypeScript API on Postgres behind it. I choose based on the data: appointments and patient charts fit Postgres, simpler content fits Firestore. By default everything lives in your own accounts and repository."
+          "a": "Mostly Vue 3 and Nuxt with TypeScript, with Firebase or a TypeScript API on Postgres behind it. We choose based on the data: appointments and patient charts fit Postgres, simpler content fits Firestore. By default everything lives in your own accounts and repository."
         }
       ],
       "ctaTitle": "Have a platform in mind?",
-      "ctaText": "Tell me who the users are and what they need to do. I will reply with how I would structure it and where I would start."
+      "ctaText": "Tell us who the users are and what they need to do. We will reply with how we would structure it and where we would start."
     },
     "it": {
       "slug": "sviluppo-piattaforme-web",
       "navLabel": "Piattaforme web",
-      "metaTitle": "Sviluppo piattaforme web e prenotazioni online | Redon Cela",
+      "metaTitle": "Sviluppo piattaforme web e prenotazioni online | Red Zone Labs",
       "metaDescription": "Sviluppo piattaforme web su misura: prenotazioni online, marketplace e portali con più ruoli, con calendari, ricerca su mappa, pagamenti e SEO multilingua.",
       "eyebrow": "Piattaforme e prenotazioni",
       "h1": "Sviluppo piattaforme web, marketplace e sistemi di prenotazione",
-      "lead": "Sviluppo piattaforme web dove si incontrano utenti diversi: pazienti e medici, giocatori e allenatori, agenti e clienti. Prenotazioni, calendari, ricerca su mappa, pagamenti e pagine in più lingue indicizzate dai motori di ricerca, in un unico codice che scrivo dall'inizio alla fine.",
+      "lead": "Sviluppiamo piattaforme web dove si incontrano utenti diversi: pazienti e medici, giocatori e allenatori, agenti e clienti. Prenotazioni, calendari, ricerca su mappa, pagamenti e pagine in più lingue indicizzate dai motori di ricerca, in un unico codice che scriviamo dall'inizio alla fine.",
       "problemsTitle": "Dove di solito qualcosa si inceppa",
       "problems": [
         "Le prenotazioni arrivano per telefono e WhatsApp, e qualcuno le ricopia su un'agenda di carta o su Excel.",
@@ -110,7 +110,7 @@
         "Il sito è solo in italiano, mentre una parte dei tuoi clienti cerca in inglese.",
         "Una piattaforma già pronta prende una commissione su ogni prenotazione e non si adatta a come organizzi davvero il lavoro."
       ],
-      "buildTitle": "Cosa sviluppo",
+      "buildTitle": "Cosa sviluppiamo",
       "build": [
         {
           "title": "Portali con più ruoli",
@@ -145,7 +145,7 @@
         },
         {
           "title": "Prima il flusso principale",
-          "text": "Sviluppo il percorso che porta incassi o fa risparmiare tempo, per esempio dalla ricerca alla prenotazione, con dati veri. Lo provi tu prima che si aggiunga altro."
+          "text": "Sviluppiamo il percorso che porta incassi o fa risparmiare tempo, per esempio dalla ricerca alla prenotazione, con dati veri. Lo provi tu prima che si aggiunga altro."
         },
         {
           "title": "Ruoli e funzioni a rilasci",
@@ -153,16 +153,16 @@
         },
         {
           "title": "Lancio e assistenza",
-          "text": "Configuro hosting, domini, analytics e Search Console, poi seguo il primo traffico reale. Il codice resta nel tuo repository."
+          "text": "Configuriamo hosting, domini, analytics e Search Console, poi seguiamo il primo traffico reale. Il codice resta nel tuo repository."
         }
       ],
-      "proofTitle": "Piattaforme che ho sviluppato",
-      "proofText": "Quattro piattaforme che ho sviluppato dall'inizio alla fine: prenotazione di visite mediche in Albania, un sito immobiliare con il CRM dell'agenzia, una piattaforma di reclutamento sportivo con portali per giocatori e coach, e un comparatore di offerte vacanza.",
+      "proofTitle": "Piattaforme che abbiamo sviluppato",
+      "proofText": "Quattro piattaforme che abbiamo sviluppato dall'inizio alla fine: prenotazione di visite mediche in Albania, un sito immobiliare con il CRM dell'agenzia, una piattaforma di reclutamento sportivo con portali per giocatori e coach, e un comparatore di offerte vacanza.",
       "faqTitle": "Domande frequenti sulle piattaforme web",
       "faq": [
         {
-          "q": "Puoi sviluppare un gestionale di prenotazioni online su misura per il mio studio?",
-          "a": "Sì. Costruisco le prenotazioni intorno a come lavori davvero: servizi, orari, personale e regole di conferma. Saneo, per esempio, funziona sia per il medico che lavora da solo sia per la clinica con un calendario condiviso. Il sistema è tuo, quindi nessuna piattaforma prende una commissione su ogni prenotazione."
+          "q": "Potete sviluppare un gestionale di prenotazioni online su misura per il mio studio?",
+          "a": "Sì. Costruiamo le prenotazioni intorno a come lavori davvero: servizi, orari, personale e regole di conferma. Saneo, per esempio, funziona sia per il medico che lavora da solo sia per la clinica con un calendario condiviso. Il sistema è tuo, quindi nessuna piattaforma prende una commissione su ogni prenotazione."
         },
         {
           "q": "Che differenza c'è tra un sito web e una piattaforma web?",
@@ -174,24 +174,24 @@
         },
         {
           "q": "La piattaforma sarà indicizzata su Google in più lingue?",
-          "a": "Le pagine pubbliche sono generate sul server o pre-renderizzate, con un URL per ogni lingua e i tag hreflang, così ogni lingua può essere indicizzata. Il posizionamento dipende anche dai contenuti e dalla concorrenza, quindi non prometto posizioni."
+          "a": "Le pagine pubbliche sono generate sul server o pre-renderizzate, con un URL per ogni lingua e i tag hreflang, così ogni lingua può essere indicizzata. Il posizionamento dipende anche dai contenuti e dalla concorrenza, quindi non promettiamo posizioni."
         },
         {
-          "q": "Quali tecnologie usi?",
-          "a": "Soprattutto Vue 3 e Nuxt con TypeScript, con dietro Firebase oppure un'API TypeScript su Postgres. Scelgo in base ai dati: appuntamenti e cartelle cliniche stanno bene in Postgres, contenuti più semplici in Firestore. Di norma tutto resta sui tuoi account e nel tuo repository."
+          "q": "Quali tecnologie usate?",
+          "a": "Soprattutto Vue 3 e Nuxt con TypeScript, con dietro Firebase oppure un'API TypeScript su Postgres. Scegliamo in base ai dati: appuntamenti e cartelle cliniche stanno bene in Postgres, contenuti più semplici in Firestore. Di norma tutto resta sui tuoi account e nel tuo repository."
         }
       ],
       "ctaTitle": "Hai in mente una piattaforma?",
-      "ctaText": "Raccontami chi sono gli utenti e cosa devono fare. Ti rispondo con come la strutturerei e da dove partirei."
+      "ctaText": "Raccontaci chi sono gli utenti e cosa devono fare. Ti rispondiamo con come la struttureremmo e da dove partiremmo."
     },
     "sq": {
       "slug": "zhvillim-platformash-web",
       "navLabel": "Platforma web",
-      "metaTitle": "Zhvillim platformash web dhe sisteme rezervimi | Redon Cela",
+      "metaTitle": "Zhvillim platformash web dhe sisteme rezervimi | Red Zone Labs",
       "metaDescription": "Zhvillim platformash web: sisteme rezervimi online, marketplace dhe portale me disa role, me kalendarë, kërkim në hartë, pagesa dhe SEO në disa gjuhë.",
       "eyebrow": "Platforma dhe rezervime",
       "h1": "Zhvillim platformash web, marketplace dhe sistemesh rezervimi",
-      "lead": "Ndërtoj platforma web ku takohen përdorues të ndryshëm: pacientë dhe mjekë, lojtarë dhe trajnerë, agjentë dhe klientë. Rezervime, kalendarë, kërkim në hartë, pagesa dhe faqe në disa gjuhë që i gjejnë motorët e kërkimit, në një kod të vetëm që e shkruaj nga fillimi në fund.",
+      "lead": "Ndërtojmë platforma web ku takohen përdorues të ndryshëm: pacientë dhe mjekë, lojtarë dhe trajnerë, agjentë dhe klientë. Rezervime, kalendarë, kërkim në hartë, pagesa dhe faqe në disa gjuhë që i gjejnë motorët e kërkimit, në një kod të vetëm që e shkruajmë nga fillimi në fund.",
       "problemsTitle": "Ku zakonisht ngecin gjërat",
       "problems": [
         "Rezervimet vijnë me telefon dhe në WhatsApp, dhe dikush i shkruan në një fletore ose në Excel.",
@@ -200,7 +200,7 @@
         "Faqja është vetëm në shqip, ndërsa diaspora dhe turistët kërkojnë në anglisht dhe italisht.",
         "Një platformë e gatshme merr komision për çdo rezervim dhe nuk i përshtatet mënyrës si punon biznesi yt."
       ],
-      "buildTitle": "Çfarë ndërtoj",
+      "buildTitle": "Çfarë ndërtojmë",
       "build": [
         {
           "title": "Portale me disa role",
@@ -235,7 +235,7 @@
         },
         {
           "title": "Fillimisht rruga kryesore",
-          "text": "Ndërtoj rrugën që sjell të ardhura ose kursen kohë, për shembull nga kërkimi te rezervimi, me të dhëna reale. E provon ti para se të shtohet diçka tjetër."
+          "text": "Ndërtojmë rrugën që sjell të ardhura ose kursen kohë, për shembull nga kërkimi te rezervimi, me të dhëna reale. E provon ti para se të shtohet diçka tjetër."
         },
         {
           "title": "Role dhe funksione me publikime të vogla",
@@ -243,16 +243,16 @@
         },
         {
           "title": "Lançimi dhe mirëmbajtja",
-          "text": "Konfiguroj hostimin, domenet, analitikën dhe Search Console, pastaj ndjek trafikun e parë real. Kodi mbetet në repository-n tënd."
+          "text": "Konfigurojmë hostimin, domenet, analitikën dhe Search Console, pastaj ndjekim trafikun e parë real. Kodi mbetet në repository-n tënd."
         }
       ],
-      "proofTitle": "Platforma që kam ndërtuar",
-      "proofText": "Katër platforma që i kam ndërtuar nga fillimi në fund: rezervime te mjeku në Shqipëri, një faqe pronash me CRM-në e agjencisë në Durrës, një platformë rekrutimi sportiv me portale për lojtarët dhe trajnerët, dhe një krahasues ofertash pushimesh për agjencitë e Tiranës dhe Durrësit.",
+      "proofTitle": "Platforma që kemi ndërtuar",
+      "proofText": "Katër platforma që i kemi ndërtuar nga fillimi në fund: rezervime te mjeku në Shqipëri, një faqe pronash me CRM-në e agjencisë në Durrës, një platformë rekrutimi sportiv me portale për lojtarët dhe trajnerët, dhe një krahasues ofertash pushimesh për agjencitë e Tiranës dhe Durrësit.",
       "faqTitle": "Pyetje për platformat web",
       "faq": [
         {
-          "q": "Mund të më ndërtosh një sistem rezervimesh online për klinikën ose biznesin tim?",
-          "a": "Po. E ndërtoj rezervimin sipas mënyrës si punon realisht: shërbimet, oraret, stafi dhe rregullat e konfirmimit. Saneo, për shembull, punon si për mjekun që punon vetëm, ashtu edhe për klinikën me kalendar të përbashkët. Sistemi është yti, prandaj asnjë platformë nuk merr komision për çdo rezervim."
+          "q": "Mund të më ndërtoni një sistem rezervimesh online për klinikën ose biznesin tim?",
+          "a": "Po. E ndërtojmë rezervimin sipas mënyrës si punon realisht: shërbimet, oraret, stafi dhe rregullat e konfirmimit. Saneo, për shembull, punon si për mjekun që punon vetëm, ashtu edhe për klinikën me kalendar të përbashkët. Sistemi është yti, prandaj asnjë platformë nuk merr komision për çdo rezervim."
         },
         {
           "q": "Cili është ndryshimi mes një faqeje web dhe një platforme web?",
@@ -260,19 +260,19 @@
         },
         {
           "q": "A mund të pranojë platforma pagesa online?",
-          "a": "Po, por në Shqipëri dhe Kosovë fillimisht kontrollojmë cilët ofrues pagesash funksionojnë për kompaninë tënde, sepse jo të gjithë janë të disponueshëm këtu. Ku mundet, përdor Stripe për pagesa një herëshe, abonime ose kredite. Serveri pret konfirmimin e pagesës para se të ndryshojë llogarinë."
+          "a": "Po, por në Shqipëri dhe Kosovë fillimisht kontrollojmë cilët ofrues pagesash funksionojnë për kompaninë tënde, sepse jo të gjithë janë të disponueshëm këtu. Ku mundet, përdorim Stripe për pagesa një herëshe, abonime ose kredite. Serveri pret konfirmimin e pagesës para se të ndryshojë llogarinë."
         },
         {
           "q": "A do të dalë platforma në Google në disa gjuhë?",
-          "a": "Faqet publike renderohen në server ose para-renderohen, me një URL për çdo gjuhë dhe etiketat hreflang, që çdo gjuhë të mund të indeksohet. Renditja varet edhe nga përmbajtja dhe konkurrenca, prandaj nuk premtoj pozicione."
+          "a": "Faqet publike renderohen në server ose para-renderohen, me një URL për çdo gjuhë dhe etiketat hreflang, që çdo gjuhë të mund të indeksohet. Renditja varet edhe nga përmbajtja dhe konkurrenca, prandaj nuk premtojmë pozicione."
         },
         {
-          "q": "Çfarë teknologjish përdor?",
-          "a": "Kryesisht Vue 3 dhe Nuxt me TypeScript, me Firebase ose një API TypeScript mbi Postgres pas tyre. Zgjedh sipas të dhënave: takimet dhe kartelat e pacientëve shkojnë mirë në Postgres, përmbajtja më e thjeshtë në Firestore. Si parazgjedhje, gjithçka mbetet në llogaritë dhe repository-n tënd."
+          "q": "Çfarë teknologjish përdorni?",
+          "a": "Kryesisht Vue 3 dhe Nuxt me TypeScript, me Firebase ose një API TypeScript mbi Postgres pas tyre. Zgjedhim sipas të dhënave: takimet dhe kartelat e pacientëve shkojnë mirë në Postgres, përmbajtja më e thjeshtë në Firestore. Si parazgjedhje, gjithçka mbetet në llogaritë dhe repository-n tënd."
         }
       ],
       "ctaTitle": "Ke në mendje një platformë?",
-      "ctaText": "Më trego kush janë përdoruesit dhe çfarë duhet të bëjnë. Punoj në shqip me biznese në Shqipëri dhe Kosovë, dhe të përgjigjem si do ta strukturoja dhe nga do të nisja."
+      "ctaText": "Na trego kush janë përdoruesit dhe çfarë duhet të bëjnë. Punojmë në shqip me biznese në Shqipëri dhe Kosovë, dhe të përgjigjemi si do ta strukturonim dhe nga do të nisnim."
     }
   }
 }

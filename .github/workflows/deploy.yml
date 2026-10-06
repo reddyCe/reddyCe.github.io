@@ -28,7 +28,7 @@ jobs:
           PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: '1'
       - run: npm run build
         env:
-          SITE_URL: ${{ vars.SITE_URL || format('https://{0}.github.io', github.repository_owner) }}
+          SITE_URL: ${{ vars.SITE_URL || 'https://rzl.si' }}
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist

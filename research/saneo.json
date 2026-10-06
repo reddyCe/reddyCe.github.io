@@ -3,7 +3,7 @@
   "name": "Saneo",
   "url": "https://saneo.al",
   "period": "2026",
-  "role": "Founder, design and full-stack development",
+  "role": "Own product: design and full-stack development",
   "status": "Live",
   "category": "Healthcare booking platform",
   "stack": ["Vue 3", "Vite", "PrimeVue + Tailwind CSS 4", "Pinia", "Hono API (TypeScript)", "Drizzle ORM + Postgres (Neon)", "Firebase Auth", "Capacitor (iOS & Android)", "Mapbox GL"],

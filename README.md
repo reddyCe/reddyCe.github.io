@@ -1,6 +1,6 @@
-# Redon Cela, portfolio
+# Red Zone Labs, studio site
 
-Personal site in English, Italian and Albanian. Static [Astro](https://astro.build) build with no client framework, cookies or trackers.
+Site for Red Zone Labs (rzl.si), the software studio founded by Redon Cela, in English, Italian and Albanian. Static [Astro](https://astro.build) build with no client framework, cookies or trackers.
 
 ## Run it
 
@@ -11,10 +11,10 @@ npm run build      # static output in dist/
 npm run og         # regenerate social preview images in public/og/
 ```
 
-Set `SITE_URL` for canonical URLs, hreflang and the sitemap (it defaults to `https://reddyce.github.io`):
+Canonical URLs, hreflang and the sitemap use `https://rzl.si`. Set `SITE_URL` to build for another host, e.g. a preview:
 
 ```sh
-SITE_URL=https://redoncela.com npm run build
+SITE_URL=https://reddyce.github.io npm run build
 ```
 
 ## Where things live
@@ -36,7 +36,7 @@ All screenshots show invented people and data.
 ## SEO
 
 - One URL per language (`/`, `/it/`, `/sq/`) and one page per project in each language, with `hreflang` alternates and `x-default`.
-- JSON-LD: `Person`, `ProfessionalService`, `ProfilePage`, `ItemList`, and `CreativeWork` plus `BreadcrumbList` on project pages.
+- JSON-LD: `ProfessionalService` (the studio) with its founder as `Person`, `WebPage`, `ItemList`, and `CreativeWork` plus `BreadcrumbList` on project pages.
 - Open Graph and Twitter images per page, built by `scripts/og.mjs`.
 - `sitemap-index.xml`, `robots.txt` and `llms.txt` are generated at build time.
 

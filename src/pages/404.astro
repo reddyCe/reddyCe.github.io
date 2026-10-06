@@ -1,10 +1,12 @@
 ---
 import Base from '../layouts/Base.astro';
+import Logo from '../components/Logo.astro';
 import { useT } from '../i18n/ui';
 const t = useT('en');
 ---
-<Base lang="en" title="Page not found | Redon Cela" description={t('notfound.lede')} path="/404/" noindex>
+<Base lang="en" title="Page not found | Red Zone Labs" description={t('notfound.lede')} path="/404/" noindex>
   <section class="wrap nf">
+    <Logo size={120} />
     <p class="eyebrow">404</p>
     <h1 class="h1">{t('notfound.title')}</h1>
     <p class="lead">{t('notfound.lede')}</p>

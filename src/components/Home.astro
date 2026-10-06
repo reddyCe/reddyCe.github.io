@@ -13,7 +13,7 @@ import logoUcs from '../assets/brands/ucs.png';
 import logoTdown from '../assets/brands/tdown.svg';
 import { projects, getProject, boardType, hostOf } from '../data/projects';
 import { services, serviceHref, servicesIndexHref } from '../data/services';
-import { profile } from '../data/profile';
+import { profile, BRAND, FOUNDER } from '../data/profile';
 import { about } from '../data/about';
 import { projectHref, useT, type Lang } from '../i18n/ui';
 
@@ -64,7 +64,7 @@ const yearsSince = (y: number, m: number) => Math.floor((now.getFullYear() * 12 
 const numbers = [
   [t('numbers.years'), String(yearsSince(2014, 2)), t('numbers.years.sub')],
   [t('numbers.products'), 'Berlin', t('numbers.products.sub')],
-  [t('numbers.bm'), String(yearsSince(2021, 11)), t('numbers.bm.sub')],
+  [t('numbers.bm'), String(projects.length), t('numbers.bm.sub')],
   [t('numbers.langs'), '3', t('numbers.langs.sub')],
 ];
 
@@ -73,7 +73,6 @@ const numbers = [
 <section class="hero wrap" aria-labelledby="hero-title">
   <div class="hero-text">
     <p class="hero-who">
-      {profile.photo && <Image src={profile.photo} alt="" width={96} height={96} format="webp" loading="eager" />}
       <span>{t('hero.eyebrow')}</span>
     </p>
     <h1 id="hero-title" class="h1">{t('hero.title')}</h1>
@@ -201,19 +200,22 @@ const numbers = [
 </section>
 
 <section class="section wrap about" id="about" aria-labelledby="about-title">
-  <div class="panel panel-flip" data-reveal>
+  <div class="panel" data-reveal>
     <div class="panel-text about-copy">
       <p class="eyebrow">{t('about.kicker')}</p>
       <h2 id="about-title" class="h2">{t('about.title')}</h2>
       {ab.bio.map((para) => <p>{para}</p>)}
+    </div>
+    <div class="panel-text about-side">
+      {profile.photo && (
+        <figure class="founder">
+          <Image src={profile.photo} alt={FOUNDER} width={128} height={128} format="webp" quality={85} />
+          <figcaption><strong>{FOUNDER}</strong><span>{t('about.founder', { brand: BRAND })}</span></figcaption>
+        </figure>
+      )}
       <dl class="facts">
         {ab.facts.map(([k, v]) => <div><dt>{k}</dt><dd>{v}</dd></div>)}
       </dl>
-    </div>
-    <div class="panel-media">
-      {profile.photo && (
-        <Image src={profile.photo} alt="Redon Cela" widths={[460]} sizes="(max-width: 900px) 100vw, 50vw" format="webp" quality={85} />
-      )}
     </div>
   </div>
 

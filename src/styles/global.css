@@ -1,4 +1,4 @@
-/* Redon Cela, portfolio.
+/* Red Zone Labs, studio site.
    Layout language borrowed from Raiffeisen Bank Albania: white page, one flat accent,
    bordered 50/50 split panels, small-radius rectangular buttons, icon tiles, data cards.
    Accent is Albanian flag red. Greys are warm to match the near-black ink. */
@@ -455,18 +455,6 @@ ol {
   display: block;
   flex: none;
 }
-.logo-text {
-  display: grid;
-  line-height: 1.2;
-}
-.logo-text strong {
-  font-weight: 700;
-  font-size: 17px;
-}
-.logo-text span {
-  font-size: var(--fs-7);
-  color: var(--muted);
-}
 .nav {
   display: flex;
   gap: 28px;
@@ -493,9 +481,6 @@ ol {
 }
 @media (max-width: 720px) {
   .topbar .topbar-hide,
-  .logo-text span {
-    display: none;
-  }
   .topbar-row {
     gap: 12px;
   }
@@ -1427,27 +1412,46 @@ html:not(.js) .bar span {
 
 /* ---------- about ---------- */
 .about .panel {
-  grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+  grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
 }
-.about .panel-media {
-  min-height: 440px;
+.about .about-side {
+  background: var(--surface);
+  border-left: 1px solid var(--line);
+  justify-content: flex-start;
 }
 @media (max-width: 900px) {
   .about .panel {
     grid-template-columns: 1fr;
   }
-  .about .panel-media {
-    min-height: 0;
-    aspect-ratio: 1;
+  .about .about-side {
+    border-left: 0;
+    border-top: 1px solid var(--line);
   }
 }
-.about .panel-media img {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
+.about .founder {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 0 0 24px;
+}
+.about .founder img {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
   object-fit: cover;
   object-position: 50% 30%;
+  filter: grayscale(0.25);
+}
+.about .founder figcaption {
+  display: flex;
+  flex-direction: column;
+  font-size: var(--fs-6);
+  line-height: var(--lh-6);
+  color: var(--muted);
+}
+.about .founder figcaption strong {
+  color: var(--ink);
+  font-size: var(--fs-5);
 }
 .about .h2 {
   margin-bottom: 20px;
@@ -1567,6 +1571,8 @@ html:not(.js) .bar span {
   max-width: 36em;
 }
 .contact-side {
+  position: relative;
+  overflow: hidden;
   background: #b82419;
   color: #fff;
   padding: clamp(28px, 4vw, 56px);
@@ -1578,6 +1584,27 @@ html:not(.js) .bar span {
 .contact-side .eyebrow {
   color: rgba(255, 255, 255, 0.85);
   margin: 0;
+}
+.contact-side > :not(.contact-watermark) {
+  position: relative;
+}
+/* The label, oversized and tone-on-tone, running off the panel corner. */
+.contact-watermark {
+  position: absolute;
+  right: -30px;
+  bottom: -70px;
+  width: 300px;
+  height: 300px;
+  color: #a51f15;
+  pointer-events: none;
+}
+@media (max-width: 900px) {
+  .contact-watermark {
+    right: -20px;
+    bottom: -80px;
+    width: 200px;
+    height: 200px;
+  }
 }
 .contact-email {
   font-size: var(--fs-3);
@@ -1844,6 +1871,9 @@ html:not(.js) .bar span {
 }
 .nf .h1 {
   margin-bottom: 16px;
+}
+.nf .logo-mark {
+  margin-bottom: 40px;
 }
 
 /* ---------- reveal on scroll ---------- */

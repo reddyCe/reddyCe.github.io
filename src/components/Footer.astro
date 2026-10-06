@@ -14,8 +14,7 @@ const year = new Date().getFullYear();
   <div class="wrap footer-grid">
     <div class="footer-brand">
       <a class="logo" href={home}>
-        <Logo />
-        <span class="logo-text"><strong>Redon Cela</strong></span>
+        <Logo size={72} />
       </a>
       <p>{t('footer.tagline')}</p>
     </div>
@@ -47,7 +46,7 @@ const year = new Date().getFullYear();
     </div>
   </div>
   <div class="wrap footer-bottom">
-    <p>© {year} Redon Cela. {t('footer.note')}</p>
+    <p>© {year} Red Zone Labs. {t('footer.note')}</p>
     <p>{langs.map((l, i) => <>{i > 0 && ' · '}<a href={alts[l]} hreflang={l} lang={l}>{languages[l]}</a></>)}</p>
   </div>
 </footer>

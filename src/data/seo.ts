@@ -1,5 +1,5 @@
 import { projects, type Project } from './projects';
-import { profile, EMAIL } from './profile';
+import { profile, EMAIL, BRAND, FOUNDER } from './profile';
 import { prefix, projectHref, ui, type Lang } from '../i18n/ui';
 import { services, serviceHref, servicesIndexHref, type Service } from './services';
 
@@ -9,15 +9,17 @@ function person(site: URL) {
   return {
     '@type': 'Person',
     '@id': abs(site, '/#redon'),
-    name: 'Redon Cela',
-    url: abs(site, '/'),
+    name: FOUNDER,
+    url: abs(site, '/#about'),
     image: abs(site, '/redon-cela.jpg'),
     email: `mailto:${EMAIL}`,
-    jobTitle: 'Senior Full-Stack & AI Engineer',
-    description:
-      'Freelance full-stack and AI engineer building web platforms, mobile apps, AI assistants and MCP servers.',
+    jobTitle: `Founder, ${BRAND}`,
+    description: `Founder of ${BRAND}. Senior full-stack and AI engineer building web platforms, mobile apps, AI assistants and MCP servers.`,
     address: { '@type': 'PostalAddress', addressLocality: 'Berlin', addressCountry: 'DE' },
-    worksFor: { '@type': 'Organization', name: 'Bettermile', parentOrganization: { '@type': 'Organization', name: 'GLS' } },
+    worksFor: [
+      { '@id': abs(site, '/#studio') },
+      { '@type': 'Organization', name: 'Bettermile', parentOrganization: { '@type': 'Organization', name: 'GLS' } },
+    ],
     alumniOf: { '@type': 'CollegeOrUniversity', name: 'Università degli Studi di Genova' },
     knowsLanguage: ['sq', 'it', 'en'],
     knowsAbout: [
@@ -48,27 +50,31 @@ export function homeJsonLd(lang: Lang, site: URL) {
           '@type': 'WebSite',
           '@id': abs(site, '/#website'),
           url: abs(site, '/'),
-          name: 'Redon Cela',
+          name: BRAND,
           inLanguage: ['en', 'it', 'sq'],
-          publisher: { '@id': abs(site, '/#redon') },
+          publisher: { '@id': abs(site, '/#studio') },
         },
         {
-          '@type': 'ProfilePage',
+          '@type': 'WebPage',
           '@id': `${url}#page`,
           url,
           name: ui[lang]['meta.title'],
           description: ui[lang]['meta.description'],
           inLanguage: lang,
-          mainEntity: { '@id': abs(site, '/#redon') },
+          about: { '@id': abs(site, '/#studio') },
           isPartOf: { '@id': abs(site, '/#website') },
         },
         {
           '@type': 'ProfessionalService',
-          '@id': abs(site, '/#service'),
-          name: 'Redon Cela, software development',
+          '@id': abs(site, '/#studio'),
+          name: BRAND,
+          alternateName: 'RZL',
+          description: ui[lang]['meta.description'],
           url: abs(site, '/'),
           email: EMAIL,
-          image: abs(site, '/redon-cela.jpg'),
+          logo: abs(site, '/apple-touch-icon.png'),
+          image: abs(site, '/og/en.png'),
+          address: { '@type': 'PostalAddress', addressLocality: 'Berlin', addressCountry: 'DE' },
           founder: { '@id': abs(site, '/#redon') },
           areaServed: ['Albania', 'Italy', 'Germany', 'European Union', 'United States', 'Worldwide'],
           availableLanguage: ['English', 'Italian', 'Albanian'],
@@ -113,8 +119,8 @@ export function projectJsonLd(p: Project, lang: Lang, site: URL) {
           keywords: p.stack.join(', '),
           dateCreated: p.period.match(/\d{4}/)?.[0],
           image: p.screenshots.map((s) => abs(site, s.image.src)),
-          author: person(site),
-          creator: { '@id': abs(site, '/#redon') },
+          author: { '@type': 'Organization', '@id': abs(site, '/#studio'), name: BRAND, url: abs(site, '/') },
+          creator: { '@id': abs(site, '/#studio') },
           ...(p.url ? { sameAs: p.url } : {}),
           about: {
             '@type': 'SoftwareApplication',
@@ -127,7 +133,7 @@ export function projectJsonLd(p: Project, lang: Lang, site: URL) {
         {
           '@type': 'BreadcrumbList',
           itemListElement: [
-            { '@type': 'ListItem', position: 1, name: 'Redon Cela', item: abs(site, `${prefix(lang)}/`) },
+            { '@type': 'ListItem', position: 1, name: BRAND, item: abs(site, `${prefix(lang)}/`) },
             { '@type': 'ListItem', position: 2, name: ui[lang]['nav.work'], item: abs(site, `${prefix(lang)}/#work`) },
             { '@type': 'ListItem', position: 3, name: p.name, item: url },
           ],
@@ -152,7 +158,7 @@ export function serviceJsonLd(s: Service, lang: Lang, site: URL) {
           description: c.metaDescription,
           url,
           inLanguage: lang,
-          provider: person(site),
+          provider: { '@type': 'ProfessionalService', '@id': abs(site, '/#studio'), name: BRAND, url: abs(site, '/'), founder: person(site) },
           areaServed: ['Albania', 'Kosovo', 'Italy', 'Germany', 'European Union', 'Worldwide'],
           availableLanguage: ['English', 'Italian', 'Albanian'],
           hasOfferCatalog: {
@@ -171,7 +177,7 @@ export function serviceJsonLd(s: Service, lang: Lang, site: URL) {
         {
           '@type': 'BreadcrumbList',
           itemListElement: [
-            { '@type': 'ListItem', position: 1, name: 'Redon Cela', item: abs(site, `${prefix(lang)}/`) },
+            { '@type': 'ListItem', position: 1, name: BRAND, item: abs(site, `${prefix(lang)}/`) },
             { '@type': 'ListItem', position: 2, name: ui[lang]['nav.services'], item: abs(site, servicesIndexHref(lang)) },
             { '@type': 'ListItem', position: 3, name: c.navLabel, item: url },
           ],

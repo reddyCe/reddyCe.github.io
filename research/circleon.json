@@ -3,7 +3,7 @@
   "name": "CircleOn.me",
   "url": "https://circleon.me",
   "period": "2025–2026",
-  "role": "Lead developer, built with a partner",
+  "role": "Lead development, built with a partner",
   "status": "Live",
   "category": "Sports highlight video tool",
   "stack": ["Nuxt 4", "Vue 3 + TypeScript", "Tailwind CSS", "Firebase (Auth, Firestore, Functions, Storage)", "Stripe", "Python on Modal", "FFmpeg", "yt-dlp", "GitHub Actions"],
@@ -14,7 +14,7 @@
     "Serverless FFmpeg render pipeline on Modal: freeze-frames, circle overlays, music, watermark",
     "81 programmatic SEO pages in the sitemap (sports, positions, divisions, how-to guides)",
     "Admin dashboard with 5 tabs: users, payments, proxies, growth attribution and activity",
-    "136 commits, about 78% by Redon"
+    "136 commits, about 78% by us"
   ],
   "i18n": {
     "en": {

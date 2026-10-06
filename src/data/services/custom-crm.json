@@ -7,11 +7,11 @@
     "en": {
       "slug": "custom-crm-development",
       "navLabel": "Custom CRM",
-      "metaTitle": "Custom CRM and internal tools development | Redon Cela",
+      "metaTitle": "Custom CRM and internal tools development | Red Zone Labs",
       "metaDescription": "Custom CRM development for agencies, clinics and small teams: sales pipelines, client records, admin panels and roles, built to replace Excel and WhatsApp.",
       "eyebrow": "CRM and internal tools",
       "h1": "Custom CRM development for teams that outgrew Excel",
-      "lead": "I build CRMs, admin panels and internal tools that follow the way your team already works. Leads, clients, listings and tasks move out of spreadsheets and chat threads into one place the whole team can open.",
+      "lead": "We build CRMs, admin panels and internal tools that follow the way your team already works. Leads, clients, listings and tasks move out of spreadsheets and chat threads into one place the whole team can open.",
       "problemsTitle": "Does this sound familiar?",
       "problems": [
         "Leads arrive on WhatsApp, Instagram and the phone, and nobody knows who called back.",
@@ -20,7 +20,7 @@
         "You pay for a CRM built for American sales teams and use a tenth of it.",
         "Every Monday someone spends the morning putting numbers together for a report."
       ],
-      "buildTitle": "What I build",
+      "buildTitle": "What we build",
       "build": [
         {
           "title": "Sales pipelines",
@@ -32,7 +32,7 @@
         },
         {
           "title": "Admin panels",
-          "text": "A back office to manage users, plans, payments and content. For CircleOn.me I built an admin dashboard with tabs for users, payments, growth attribution and activity."
+          "text": "A back office to manage users, plans, payments and content. For CircleOn.me we built an admin dashboard with tabs for users, payments, growth attribution and activity."
         },
         {
           "title": "Dashboards",
@@ -50,24 +50,24 @@
       "processTitle": "How a project runs",
       "process": [
         {
-          "title": "I learn how you work",
-          "text": "We go through your current spreadsheets, chats and forms with the people who use them every day. I write down the steps, the roles and who needs to see what."
+          "title": "We learn how you work",
+          "text": "We go through your current spreadsheets, chats and forms with the people who use them every day. We write down the steps, the roles and who needs to see what."
         },
         {
           "title": "A first version on your data",
-          "text": "I build the core screens first, usually the pipeline and the client records, and load a sample of your real data. You click through it with your team and tell me what is wrong."
+          "text": "We build the core screens first, usually the pipeline and the client records, and load a sample of your real data. You click through it with your team and tell us what is wrong."
         },
         {
           "title": "Moving in",
-          "text": "I import your Excel files and contacts, set up accounts and roles, and stay close while the team switches over. The old sheet can stay read-only for a while."
+          "text": "We import your Excel files and contacts, set up accounts and roles, and stay close while the team switches over. The old sheet can stay read-only for a while."
         },
         {
           "title": "Running and improving",
-          "text": "Once the team uses it daily, new requests come up: a report, an export, an extra status. I add them in small releases."
+          "text": "Once the team uses it daily, new requests come up: a report, an export, an extra status. We add them in small releases."
         }
       ],
-      "proofTitle": "Internal tools I've built",
-      "proofText": "Four systems I built where staff manage clients, bookings, athletes or payments behind a public product: an agency CRM in Durrës, a clinic workspace, athlete tracking for a recruiting agency and an admin dashboard for a paid video tool.",
+      "proofTitle": "Internal tools we've built",
+      "proofText": "Four systems we built where staff manage clients, bookings, athletes or payments behind a public product: an agency CRM in Durrës, a clinic workspace, athlete tracking for a recruiting agency and an admin dashboard for a paid video tool.",
       "faqTitle": "Questions about custom CRM development",
       "faq": [
         {
@@ -76,11 +76,11 @@
         },
         {
           "q": "Can you import our existing Excel files and contacts?",
-          "a": "Yes, importing the data you already have is part of the work. I map your columns to the new fields, flag duplicates, and we check the result together before the team switches over."
+          "a": "Yes, importing the data you already have is part of the work. We map your columns to the new fields, flag duplicates, and we check the result together before the team switches over."
         },
         {
           "q": "Will the CRM work on a phone?",
-          "a": "Yes. I build every screen for phones as well as desktops. ALProperty agents use the CRM on their phones to filter listings by status and use the quick actions on each card."
+          "a": "Yes. We build every screen for phones as well as desktops. ALProperty agents use the CRM on their phones to filter listings by status and use the quick actions on each card."
         },
         {
           "q": "Can different people see different things?",
@@ -91,17 +91,17 @@
           "a": "By default the code lives in your own repository and the data in your own cloud account, such as Firebase or Postgres. If we stop working together, you keep everything and another developer can take over."
         }
       ],
-      "ctaTitle": "Tell me how your team works today",
-      "ctaText": "Send me a short description of your process and where it lives now: Excel, WhatsApp, a notebook. I'll reply with how I would approach it."
+      "ctaTitle": "Tell us how your team works today",
+      "ctaText": "Send us a short description of your process and where it lives now: Excel, WhatsApp, a notebook. We'll reply with how we would approach it."
     },
     "it": {
       "slug": "crm-su-misura",
       "navLabel": "CRM su misura",
-      "metaTitle": "Sviluppo CRM su misura e gestionali web | Redon Cela",
+      "metaTitle": "Sviluppo CRM su misura e gestionali web | Red Zone Labs",
       "metaDescription": "Sviluppo CRM su misura per agenzie, studi medici e piccole aziende: pipeline, schede clienti, pannelli admin e ruoli, al posto di Excel e WhatsApp.",
       "eyebrow": "CRM e gestionali",
       "h1": "CRM su misura per chi lavora ancora con Excel e WhatsApp",
-      "lead": "Sviluppo CRM, gestionali e pannelli di amministrazione che seguono il modo in cui il tuo team lavora già. Contatti, clienti, immobili e attività escono dai fogli Excel e dalle chat e finiscono in un unico posto, aperto a tutto il team.",
+      "lead": "Sviluppiamo CRM, gestionali e pannelli di amministrazione che seguono il modo in cui il tuo team lavora già. Contatti, clienti, immobili e attività escono dai fogli Excel e dalle chat e finiscono in un unico posto, aperto a tutto il team.",
       "problemsTitle": "Ti riconosci in queste situazioni?",
       "problems": [
         "I contatti arrivano su WhatsApp, Instagram e al telefono, e nessuno sa chi ha richiamato chi.",
@@ -110,7 +110,7 @@
         "Paghi un CRM pensato per i team commerciali americani e ne usi un decimo.",
         "Ogni lunedì qualcuno passa la mattina a mettere insieme i numeri per un report."
       ],
-      "buildTitle": "Cosa sviluppo",
+      "buildTitle": "Cosa sviluppiamo",
       "build": [
         {
           "title": "Pipeline di vendita",
@@ -122,7 +122,7 @@
         },
         {
           "title": "Pannelli di amministrazione",
-          "text": "Un back office per gestire utenti, piani, pagamenti e contenuti. Per CircleOn.me ho realizzato un pannello con schede per utenti, pagamenti, provenienza delle iscrizioni e attività."
+          "text": "Un back office per gestire utenti, piani, pagamenti e contenuti. Per CircleOn.me abbiamo realizzato un pannello con schede per utenti, pagamenti, provenienza delle iscrizioni e attività."
         },
         {
           "title": "Dashboard",
@@ -140,23 +140,23 @@
       "processTitle": "Come lavoriamo",
       "process": [
         {
-          "title": "Capisco come lavora il tuo team",
-          "text": "Guardiamo insieme fogli Excel, chat e moduli con le persone che li usano ogni giorno. Annoto i passaggi, i ruoli e chi deve vedere cosa."
+          "title": "Capiamo come lavora il tuo team",
+          "text": "Guardiamo insieme fogli Excel, chat e moduli con le persone che li usano ogni giorno. Annotiamo i passaggi, i ruoli e chi deve vedere cosa."
         },
         {
           "title": "Una prima versione con i tuoi dati",
-          "text": "Parto dalle schermate principali, di solito la pipeline e le schede clienti, e carico una parte dei tuoi dati reali. La provi con il team e mi dici cosa non torna."
+          "text": "Partiamo dalle schermate principali, di solito la pipeline e le schede clienti, e carichiamo una parte dei tuoi dati reali. La provi con il team e ci dici cosa non torna."
         },
         {
           "title": "Il passaggio",
-          "text": "Importo i file Excel e la rubrica, creo account e ruoli e seguo da vicino il team durante il cambio. Il vecchio foglio può restare in sola lettura per un po'."
+          "text": "Importiamo i file Excel e la rubrica, creiamo account e ruoli e seguiamo da vicino il team durante il cambio. Il vecchio foglio può restare in sola lettura per un po'."
         },
         {
           "title": "Uso quotidiano e miglioramenti",
-          "text": "Quando il team lo usa ogni giorno arrivano nuove richieste: un report, un export, uno stato in più. Le aggiungo con piccoli rilasci."
+          "text": "Quando il team lo usa ogni giorno arrivano nuove richieste: un report, un export, uno stato in più. Le aggiungiamo con piccoli rilasci."
         }
       ],
-      "proofTitle": "Gestionali che ho sviluppato",
+      "proofTitle": "Gestionali che abbiamo sviluppato",
       "proofText": "Quattro sistemi in cui lo staff gestisce clienti, prenotazioni, atleti o pagamenti dietro un prodotto pubblico: il CRM di un'agenzia immobiliare a Durazzo, l'area per cliniche di Saneo, il percorso degli atleti di USA College Sport e il pannello admin di CircleOn.me.",
       "faqTitle": "Domande sul CRM su misura",
       "faq": [
@@ -165,8 +165,8 @@
           "a": "I CRM pronti funzionano bene quando il tuo processo somiglia al loro. Quando non è così, il team torna su Excel e il CRM resta mezzo vuoto. Un CRM su misura ha i tuoi stati, i tuoi campi e la tua lingua, e niente che non usi."
         },
         {
-          "q": "Puoi importare i nostri file Excel e la rubrica clienti?",
-          "a": "Sì, l'importazione dei dati che hai già fa parte del lavoro. Collego le tue colonne ai nuovi campi, segnalo i doppioni e controlliamo insieme il risultato prima del passaggio."
+          "q": "Potete importare i nostri file Excel e la rubrica clienti?",
+          "a": "Sì, l'importazione dei dati che hai già fa parte del lavoro. Colleghiamo le tue colonne ai nuovi campi, segnaliamo i doppioni e controlliamo insieme il risultato prima del passaggio."
         },
         {
           "q": "Il CRM funziona anche da smartphone?",
@@ -181,17 +181,17 @@
           "a": "Di base il codice sta in un repository tuo e i dati in un tuo account cloud, per esempio Firebase o Postgres. Se smettiamo di lavorare insieme tieni tutto, e un altro sviluppatore può continuare."
         }
       ],
-      "ctaTitle": "Raccontami come lavora oggi il tuo team",
-      "ctaText": "Scrivimi due righe sul tuo processo e su dove vive adesso: Excel, WhatsApp, un quaderno. Ti rispondo con come lo imposterei, in italiano."
+      "ctaTitle": "Raccontaci come lavora oggi il tuo team",
+      "ctaText": "Scrivici due righe sul tuo processo e su dove vive adesso: Excel, WhatsApp, un quaderno. Ti rispondiamo con come lo imposteremmo, in italiano."
     },
     "sq": {
       "slug": "zhvillim-crm",
       "navLabel": "CRM me porosi",
-      "metaTitle": "Zhvillim CRM dhe softuer me porosi | Redon Cela",
+      "metaTitle": "Zhvillim CRM dhe softuer me porosi | Red Zone Labs",
       "metaDescription": "Zhvillim CRM me porosi për agjenci, klinika dhe biznese të vogla: pipeline shitjesh, kartela klientësh, panele administrimi dhe role, në vend të Excel-it.",
       "eyebrow": "CRM dhe mjete të brendshme",
       "h1": "Zhvillim CRM me porosi për biznese që punojnë ende në Excel",
-      "lead": "Ndërtoj CRM, panele administrimi dhe mjete të brendshme që ndjekin mënyrën si punon tashmë ekipi yt. Kontaktet, klientët, pronat dhe detyrat dalin nga tabelat Excel dhe bisedat në WhatsApp dhe mblidhen në një vend të vetëm, të hapur për gjithë ekipin.",
+      "lead": "Ndërtojmë CRM, panele administrimi dhe mjete të brendshme që ndjekin mënyrën si punon tashmë ekipi yt. Kontaktet, klientët, pronat dhe detyrat dalin nga tabelat Excel dhe bisedat në WhatsApp dhe mblidhen në një vend të vetëm, të hapur për gjithë ekipin.",
       "problemsTitle": "A të duken të njohura?",
       "problems": [
         "Kërkesat vijnë në WhatsApp, Instagram dhe me telefon, dhe askush nuk e di kush e ka kthyer telefonatën.",
@@ -200,7 +200,7 @@
         "Paguan për një CRM të huaj, në anglisht, dhe përdor vetëm një pjesë të vogël të tij.",
         "Çdo të hënë dikush harxhon gjithë mëngjesin duke mbledhur shifrat për një raport."
       ],
-      "buildTitle": "Çfarë ndërtoj",
+      "buildTitle": "Çfarë ndërtojmë",
       "build": [
         {
           "title": "Pipeline shitjesh",
@@ -212,7 +212,7 @@
         },
         {
           "title": "Panele administrimi",
-          "text": "Një panel për të menaxhuar përdoruesit, planet, pagesat dhe përmbajtjen. Për CircleOn.me ndërtova një panel me skeda për përdoruesit, pagesat, burimin e regjistrimeve dhe aktivitetin."
+          "text": "Një panel për të menaxhuar përdoruesit, planet, pagesat dhe përmbajtjen. Për CircleOn.me ndërtuam një panel me skeda për përdoruesit, pagesat, burimin e regjistrimeve dhe aktivitetin."
         },
         {
           "title": "Panele me shifra",
@@ -230,23 +230,23 @@
       "processTitle": "Si ecën një projekt",
       "process": [
         {
-          "title": "Mësoj si punon ekipi yt",
-          "text": "Shohim bashkë tabelat Excel, bisedat dhe formularët me njerëzit që i përdorin çdo ditë. Shënoj hapat, rolet dhe kush duhet të shohë çfarë."
+          "title": "Mësojmë si punon ekipi yt",
+          "text": "Shohim bashkë tabelat Excel, bisedat dhe formularët me njerëzit që i përdorin çdo ditë. Shënojmë hapat, rolet dhe kush duhet të shohë çfarë."
         },
         {
           "title": "Versioni i parë me të dhënat e tua",
-          "text": "Nis me ekranet kryesore, zakonisht pipeline-n dhe kartelat e klientëve, dhe ngarkoj një pjesë të të dhënave të tua reale. E provon me ekipin dhe më thua çfarë nuk shkon."
+          "text": "Nisim me ekranet kryesore, zakonisht pipeline-n dhe kartelat e klientëve, dhe ngarkojmë një pjesë të të dhënave të tua reale. E provon me ekipin dhe na thua çfarë nuk shkon."
         },
         {
           "title": "Kalimi në sistemin e ri",
-          "text": "Importoj skedarët Excel dhe kontaktet, krijoj llogaritë dhe rolet, dhe i qëndroj pranë ekipit gjatë kalimit. Tabela e vjetër mund të mbetet vetëm për lexim për ca kohë."
+          "text": "Importojmë skedarët Excel dhe kontaktet, krijojmë llogaritë dhe rolet, dhe i qëndrojmë pranë ekipit gjatë kalimit. Tabela e vjetër mund të mbetet vetëm për lexim për ca kohë."
         },
         {
           "title": "Përdorimi i përditshëm dhe përmirësimet",
-          "text": "Kur ekipi e përdor çdo ditë, dalin kërkesat e reja: një raport, një eksport, një status më shumë. I shtoj me përditësime të vogla."
+          "text": "Kur ekipi e përdor çdo ditë, dalin kërkesat e reja: një raport, një eksport, një status më shumë. I shtojmë me përditësime të vogla."
         }
       ],
-      "proofTitle": "Sisteme që kam ndërtuar",
+      "proofTitle": "Sisteme që kemi ndërtuar",
       "proofText": "Katër sisteme ku stafi menaxhon klientë, rezervime, atletë ose pagesa pas një produkti publik: CRM-ja e një agjencie imobiliare në Durrës, hapësira e klinikave në Saneo, ndjekja e atletëve në USA College Sport dhe paneli i administrimit të CircleOn.me.",
       "faqTitle": "Pyetje për zhvillimin e CRM-së",
       "faq": [
@@ -255,8 +255,8 @@
           "a": "CRM-të e gatshme funksionojnë mirë kur procesi yt u ngjan atyre. Kur nuk u ngjan, ekipi kthehet te Excel-i dhe CRM-ja mbetet gjysmë bosh. Një CRM me porosi ka statuset, fushat dhe gjuhën tënde, pa asgjë që nuk e përdor."
         },
         {
-          "q": "A mund t'i importosh skedarët tanë Excel dhe kontaktet ekzistuese?",
-          "a": "Po, importimi i të dhënave që ke tashmë është pjesë e punës. Lidh kolonat e tua me fushat e reja, shënoj dublikatat dhe e kontrollojmë bashkë rezultatin para kalimit."
+          "q": "A mund t'i importoni skedarët tanë Excel dhe kontaktet ekzistuese?",
+          "a": "Po, importimi i të dhënave që ke tashmë është pjesë e punës. Lidhim kolonat e tua me fushat e reja, shënojmë dublikatat dhe e kontrollojmë bashkë rezultatin para kalimit."
         },
         {
           "q": "A funksionon CRM-ja edhe në celular?",
@@ -271,8 +271,8 @@
           "a": "Si parazgjedhje, kodi qëndron në repository-n tënde dhe të dhënat në llogarinë tënde në cloud, për shembull Firebase ose Postgres. Nëse e ndërpresim bashkëpunimin, gjithçka mbetet e jotja dhe një zhvillues tjetër mund ta vazhdojë punën."
         }
       ],
-      "ctaTitle": "Më trego si punon ekipi yt sot",
-      "ctaText": "Më shkruaj shkurt si e ndiqni punën tani: në Excel, në WhatsApp apo në një fletore. Të kthej përgjigje me mënyrën si do ta ndërtoja, në shqip."
+      "ctaTitle": "Na trego si punon ekipi yt sot",
+      "ctaText": "Na shkruaj shkurt si e ndiqni punën tani: në Excel, në WhatsApp apo në një fletore. Të kthejmë përgjigje me mënyrën si do ta ndërtonim, në shqip."
     }
   }
 }

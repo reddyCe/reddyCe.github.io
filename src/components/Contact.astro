@@ -1,5 +1,6 @@
 ---
 import Icon from './Icon.astro';
+import Logo from './Logo.astro';
 import { useT, type Lang } from '../i18n/ui';
 import { EMAIL, profile } from '../data/profile';
 interface Props { lang: Lang; title?: string; lede?: string }
@@ -22,6 +23,7 @@ const mailto = `mailto:${EMAIL}?subject=${encodeURIComponent(t('contact.subject'
       <p class="sr-only" aria-live="polite" data-copy-status></p>
     </div>
     <div class="contact-side">
+      <Logo ghost size={300} class="contact-watermark" />
       <p class="eyebrow">Email</p>
       <a class="contact-email" href={mailto}>{EMAIL}</a>
       <ul>

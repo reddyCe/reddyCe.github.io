@@ -7,6 +7,8 @@ const li: any = Object.values(raw)[0]?.default ?? {};
 const photos = import.meta.glob<{ default: ImageMetadata }>('../assets/me.{jpg,jpeg,png,webp}', { eager: true });
 
 export const EMAIL = 'redoncela@gmail.com';
+export const BRAND = 'Red Zone Labs';
+export const FOUNDER = 'Redon Cela';
 
 export const profile = {
   name: 'Redon Cela',
