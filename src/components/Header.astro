@@ -1,4 +1,5 @@
 ---
+import Logo from './Logo.astro';
 import Icon from './Icon.astro';
 import { langs, languages, prefix, homeHref, useT, type Lang } from '../i18n/ui';
 import { EMAIL, profile } from '../data/profile';
@@ -37,7 +38,7 @@ const links = [
 <header class="mainbar">
   <div class="wrap mainbar-row">
     <a class="logo" href={home} aria-label="Redon Cela, home">
-      <span class="logo-mark" aria-hidden="true">RC</span>
+      <Logo />
       <span class="logo-text"><strong>Redon Cela</strong><span>{t('hero.eyebrow')}</span></span>
     </a>
     <nav class="nav" aria-label="Primary">

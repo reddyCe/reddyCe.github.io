@@ -42,4 +42,4 @@ All screenshots show invented people and data.
 
 ## Deploy
 
-`.github/workflows/deploy.yml` builds and publishes to GitHub Pages on every push to `main`. To turn it on: make the repo public (or use a plan with private Pages), then go to Settings → Pages → Source and pick "GitHub Actions". For a custom domain, add it under Pages, set the repo variable `SITE_URL` to it, and push again.
+`.github/workflows/deploy.yml` builds and publishes to GitHub Pages on every push to `main`. To turn it on: make the repo public (or use a plan with private Pages), then go to Settings → Pages → Source, pick "GitHub Actions", and set the repository variable `PAGES_ENABLED` to `true` (Settings → Secrets and variables → Actions → Variables). The deploy job is skipped until then. For a custom domain, add it under Pages, set the repo variable `SITE_URL` to it, and push again.

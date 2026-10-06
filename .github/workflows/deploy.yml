@@ -34,6 +34,8 @@ jobs:
           path: dist
 
   deploy:
+    # Turn on by setting the repository variable PAGES_ENABLED=true once Pages is enabled.
+    if: vars.PAGES_ENABLED == 'true'
     needs: build
     runs-on: ubuntu-latest
     environment:

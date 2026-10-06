@@ -1,0 +1,16 @@
+---
+// The R mark: its leg runs off the edge of the tile.
+interface Props { size?: number; inverse?: boolean }
+const { size = 40, inverse = false } = Astro.props;
+const id = `rc-clip-${Math.random().toString(36).slice(2, 8)}`;
+const tile = inverse ? '#ffffff' : 'var(--accent, #d52b1e)';
+const ink = inverse ? 'var(--accent, #d52b1e)' : '#ffffff';
+---
+<svg class="logo-mark" viewBox="0 0 40 40" width={size} height={size} aria-hidden="true">
+  <defs><clipPath id={id}><rect width="40" height="40" rx="5" /></clipPath></defs>
+  <rect width="40" height="40" rx="5" fill={tile} />
+  <g clip-path={`url(#${id})`} fill={ink}>
+    <path fill-rule="evenodd" d="M12 9h9.5a7 7 0 0 1 0 14H17v8h-5zm5 4.5v5h4.3a2.5 2.5 0 0 0 0-5z" />
+    <path d="M19.6 21.4h5.6l10.9 18.6h-5.8z" />
+  </g>
+</svg>

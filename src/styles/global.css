@@ -452,16 +452,8 @@ ol {
   text-decoration: none;
 }
 .logo-mark {
-  display: grid;
-  place-items: center;
-  width: 40px;
-  height: 40px;
-  border-radius: var(--r-btn);
-  background: var(--accent);
-  color: #fff;
-  font-weight: 700;
-  font-size: 15px;
-  letter-spacing: -0.02em;
+  display: block;
+  flex: none;
 }
 .logo-text {
   display: grid;
