@@ -1,6 +1,6 @@
 {
   "slug": "pushim",
-  "name": "Pushim",
+  "name": "Pushim.al",
   "url": "https://pushim.al",
   "period": "2026",
   "role": "Founder, design and full-stack development",
@@ -17,7 +17,7 @@
   "i18n": {
     "en": {
       "tagline": "Holiday offers from Tirana and Durrës agencies, compared",
-      "summary": "Pushim gathers the holiday offers that travel agencies in Tirana and Durrës publish on their websites, Instagram and Facebook, and turns them into one searchable catalogue. Travellers compare price per person, dates and agency, then book directly with the agency.",
+      "summary": "Pushim.al gathers the holiday offers that travel agencies in Tirana and Durrës publish on their websites, Instagram and Facebook, and turns them into one searchable catalogue. Travellers compare price per person, dates and agency, then book directly with the agency.",
       "useCases": [
         "A family filters beach holidays under €500 per person for August and compares agencies on the same trip.",
         "A traveller in Tirana opens the last-minute page to see departures in the next 14 days.",
@@ -33,7 +33,7 @@
     },
     "it": {
       "tagline": "Le offerte delle agenzie di Tirana e Durazzo, a confronto",
-      "summary": "Pushim raccoglie le offerte vacanza che le agenzie di Tirana e Durazzo pubblicano sui loro siti, su Instagram e Facebook, e le trasforma in un unico catalogo ricercabile. Chi viaggia confronta prezzo a persona, date e agenzia, poi prenota direttamente con l'agenzia.",
+      "summary": "Pushim.al raccoglie le offerte vacanza che le agenzie di Tirana e Durazzo pubblicano sui loro siti, su Instagram e Facebook, e le trasforma in un unico catalogo ricercabile. Chi viaggia confronta prezzo a persona, date e agenzia, poi prenota direttamente con l'agenzia.",
       "useCases": [
         "Una famiglia filtra le vacanze al mare sotto i 500 € a persona ad agosto e confronta le agenzie sullo stesso viaggio.",
         "Un viaggiatore di Tirana apre la pagina last minute per vedere le partenze nei prossimi 14 giorni.",
@@ -49,7 +49,7 @@
     },
     "sq": {
       "tagline": "Ofertat e agjencive të Tiranës dhe Durrësit, krah për krah",
-      "summary": "Pushim mbledh ofertat e pushimeve që agjencitë e Tiranës dhe Durrësit publikojnë në faqet e tyre, në Instagram dhe Facebook, dhe i kthen në një katalog të vetëm me kërkim. Udhëtarët krahasojnë çmimin për person, datat dhe agjencinë, pastaj rezervojnë direkt me agjencinë.",
+      "summary": "Pushim.al mbledh ofertat e pushimeve që agjencitë e Tiranës dhe Durrësit publikojnë në faqet e tyre, në Instagram dhe Facebook, dhe i kthen në një katalog të vetëm me kërkim. Udhëtarët krahasojnë çmimin për person, datat dhe agjencinë, pastaj rezervojnë direkt me agjencinë.",
       "useCases": [
         "Një familje filtron pushimet në plazh nën 500 € për person në gusht dhe krahason agjencitë për të njëjtin udhëtim.",
         "Një udhëtar në Tiranë hap faqen last minute për të parë nisjet e 14 ditëve të ardhshme.",

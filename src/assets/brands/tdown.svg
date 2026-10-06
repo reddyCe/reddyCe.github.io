@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- live-teal rounded square filling the canvas; touchdown arrow pointing
+       bottom-right (mirrored via negative x scale), white with a deep-teal
+       border, pulled inward so the box fully encloses the point -->
+  <g transform="translate(563.2 -51.2) scale(-25.6 25.6)">
+    <!-- rx 4.5/20 = 22.5%, matching the iOS home-screen icon mask radius -->
+    <rect x="2" y="2" width="20" height="20" rx="4.5" fill="#00BDAA"/>
+    <g transform="translate(2.5 -2.5)">
+      <path fill="none" stroke="#057274" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" d="M3 15V21H9M11 13 3 21"/>
+      <path fill="#FFFFFF" fill-rule="evenodd" d="M9.75 21a.75.75 0 0 1-.75.75H3a.75.75 0 0 1-.75-.75v-6a.75.75 0 0 1 1.5 0v4.19l6.72-6.72a.75.75 0 1 1 1.06 1.06l-6.72 6.72H9a.75.75 0 0 1 .75.75Z"/>
+    </g>
+  </g>
+</svg>

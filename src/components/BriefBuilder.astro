@@ -90,37 +90,38 @@ const template = { hi: copy.hi, need: copy.need, ideaLine: copy.ideaLine, bye: c
 ---
 
 <form class="brief" data-brief data-email={EMAIL} data-tpl={JSON.stringify(template)} action={`mailto:${EMAIL}`} method="get" novalidate>
-  <h2 class="brief-title">{copy.title}</h2>
-  <p class="brief-lede">{copy.lede}</p>
+  <div class="brief-inputs">
+    <h2 id="brief-title" class="h2 brief-title">{copy.title}</h2>
+    <p class="brief-lede">{copy.lede}</p>
 
-  {groups.map(([name, legend]) => (
-    <fieldset class="brief-group">
-      <legend>{legend}</legend>
-      <div class="chips">
-        {copy.opts[name].map(([value, label]) => (
-          <label class="chip">
-            <input type="radio" name={name} value={value} checked={defaults[name] === value} />
-            <span>{label}</span>
-          </label>
-        ))}
-      </div>
-    </fieldset>
-  ))}
+    {groups.map(([name, legend]) => (
+      <fieldset class="brief-group">
+        <legend>{legend}</legend>
+        <div class="chips">
+          {copy.opts[name].map(([value, label]) => (
+            <label class="chip">
+              <input type="radio" name={name} value={value} checked={defaults[name] === value} />
+              <span>{label}</span>
+            </label>
+          ))}
+        </div>
+      </fieldset>
+    ))}
 
-  <label class="brief-idea">
-    <span>{copy.idea}</span>
-    <input type="text" name="idea" maxlength="160" placeholder={copy.ideaPh} autocomplete="off" />
-  </label>
-
-  <div class="brief-draft">
-    <p class="brief-draft-label" id="brief-draft-label">{copy.draft}</p>
-    <output class="brief-letter" for="idea" aria-labelledby="brief-draft-label" data-letter></output>
+    <label class="brief-idea">
+      <span>{copy.idea}</span>
+      <input type="text" name="idea" maxlength="160" placeholder={copy.ideaPh} autocomplete="off" />
+    </label>
   </div>
 
-  <p class="brief-actions">
-    <a class="btn btn-accent" href={`mailto:${EMAIL}`} data-send><Icon name="mail" />{copy.send}</a>
-    <button class="more" type="button" data-copy-brief data-done={copy.copied}><Icon name="copy" /><span>{copy.copy}</span></button>
-  </p>
+  <div class="brief-output">
+    <p class="brief-draft-label" id="brief-draft-label">{copy.draft}</p>
+    <output class="brief-letter" for="idea" aria-labelledby="brief-draft-label" data-letter></output>
+    <p class="brief-actions">
+      <a class="btn btn-accent" href={`mailto:${EMAIL}`} data-send><Icon name="mail" />{copy.send}</a>
+      <button class="more" type="button" data-copy-brief data-done={copy.copied}><Icon name="copy" /><span>{copy.copy}</span></button>
+    </p>
+  </div>
 </form>
 
 <script>

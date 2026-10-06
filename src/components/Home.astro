@@ -1,11 +1,17 @@
 ---
 import { Image } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
 import BriefBuilder from './BriefBuilder.astro';
 import ProjectCase from './ProjectCase.astro';
 import ChatDemo from './ChatDemo.astro';
 import Contact from './Contact.astro';
 import Icon from './Icon.astro';
-import { projects } from '../data/projects';
+import Frame from './Frame.astro';
+import logoSaneo from '../assets/brands/saneo.svg';
+import logoAlproperty from '../assets/brands/alproperty.png';
+import logoUcs from '../assets/brands/ucs.png';
+import logoTdown from '../assets/brands/tdown.svg';
+import { projects, getProject, boardType, hostOf } from '../data/projects';
 import { services, serviceHref, servicesIndexHref } from '../data/services';
 import { profile } from '../data/profile';
 import { about } from '../data/about';
@@ -34,6 +40,25 @@ const tiles = [
   ['quiz', 'tiles.quiz', '#quizmaster'],
 ] as const;
 
+// Hero showcase: one real screen per project, switched by the tabs under it.
+const showcase = [
+  ['saneo', logoSaneo, '#036499', 'doctor-calendar-day'],
+  ['alproperty', logoAlproperty, '#015548', 'website-map-3d'],
+  ['ucs', logoUcs, '#f4f1ec', 'player-clip-editor'],
+  ['tdown', logoTdown, '#057274', 'flight-mobile'],
+].map(([slug, logo, brand, shot]) => {
+  const p = getProject(slug as string)!;
+  return {
+    slug,
+    logo,
+    brand,
+    name: p.name.replace(/\s*\(.*\)$/, ''),
+    kind: boardType[slug as string][lang],
+    host: hostOf(p.url),
+    shot: p.screenshots.find((s) => s.file.includes(`/${shot}.`))!,
+  };
+}) as { slug: string; logo: ImageMetadata; brand: string; name: string; kind: string; host: string; shot: (typeof projects)[number]['screenshots'][number] }[];
+
 const now = new Date();
 const yearsSince = (y: number, m: number) => Math.floor((now.getFullYear() * 12 + now.getMonth() - (y * 12 + m - 1)) / 12);
 const numbers = [
@@ -46,20 +71,55 @@ const numbers = [
 ---
 
 <section class="hero wrap" aria-labelledby="hero-title">
-  <div class="panel">
-    <div class="panel-text panel-accent">
-      <p class="eyebrow">{t('hero.eyebrow')}</p>
-      <h1 id="hero-title" class="h1">{t('hero.title')}</h1>
-      <p class="lead">{t('hero.lede')}</p>
-      <p class="btn-row">
-        <a class="btn btn-dark" href="#work">{t('hero.cta')}</a>
-        <a class="btn btn-outline-light" href="#about">{t('hero.cta2')}</a>
-      </p>
+  <div class="hero-text">
+    <p class="hero-who">
+      {profile.photo && <Image src={profile.photo} alt="" width={96} height={96} format="webp" loading="eager" />}
+      <span>{t('hero.eyebrow')}</span>
+    </p>
+    <h1 id="hero-title" class="h1">{t('hero.title')}</h1>
+    <p class="lead">{t('hero.lede')}</p>
+    <p class="btn-row">
+      <a class="btn btn-accent" href="#work">{t('hero.cta')}</a>
+      <a class="btn btn-outline" href="#about">{t('hero.cta2')}</a>
+    </p>
+  </div>
+
+  <div class="hero-show" data-showcase>
+    <div class="hero-stage">
+      {showcase.map((s, i) => (
+        <figure class:list={['hero-shot', { 'is-active': i === 0 }]} id={`hero-shot-${s.slug}`} role="tabpanel" aria-labelledby={`hero-tab-${s.slug}`} data-i={i}>
+          {s.shot.kind === 'mobile' ? (
+            <div class="hero-device">
+              <Frame image={s.shot.image} kind="mobile" alt={`${s.name}: ${s.shot.caption[lang]}`} sizes="240px" />
+            </div>
+          ) : (
+            <Frame image={s.shot.image} kind="desktop" url={s.host} alt={`${s.name}: ${s.shot.caption[lang]}`} eager={i === 0} sizes="(max-width: 900px) 100vw, 760px" />
+          )}
+          <figcaption>
+            <span>{s.shot.caption[lang]}</span>
+            <a class="more" href={`#${s.slug}`}>{t('hero.case')} <Icon name="chevron" /></a>
+          </figcaption>
+        </figure>
+      ))}
     </div>
-    <div class="panel-media hero-brief">
-      <BriefBuilder lang={lang} />
+    <div class="hero-tabs" role="tablist" aria-label={t('work.title')}>
+      {showcase.map((s, i) => (
+        <button type="button" class="hero-tab" role="tab" id={`hero-tab-${s.slug}`} aria-controls={`hero-shot-${s.slug}`} aria-selected={i === 0 ? 'true' : 'false'} tabindex={i === 0 ? 0 : -1}>
+          <span class="hero-tab-logo" style={`--brand: ${s.brand}`}>
+            <Image src={s.logo} alt="" width={64} height={64} format={s.logo.format === 'svg' ? 'svg' : 'webp'} />
+          </span>
+          <span class="hero-tab-text">
+            <span class="hero-tab-name">{s.name}</span>
+            <span class="hero-tab-kind">{s.kind}</span>
+          </span>
+        </button>
+      ))}
     </div>
   </div>
+</section>
+
+<section class="section wrap brief-section" id="brief" aria-labelledby="brief-title">
+  <BriefBuilder lang={lang} />
 </section>
 
 <section class="section wrap" aria-labelledby="tiles-title">
@@ -174,3 +234,26 @@ const numbers = [
 </section>
 
 <Contact lang={lang} />
+
+<script>
+  // Hero showcase tabs: click or arrow keys swap the screen. No autoplay.
+  document.querySelectorAll<HTMLElement>('[data-showcase]').forEach((root) => {
+    const shots = root.querySelectorAll<HTMLElement>('.hero-shot');
+    const tabs = [...root.querySelectorAll<HTMLButtonElement>('.hero-tab')];
+    const show = (i: number, focus = false) => {
+      shots.forEach((s) => s.classList.toggle('is-active', s.dataset.i === String(i)));
+      tabs.forEach((t, j) => {
+        t.setAttribute('aria-selected', String(j === i));
+        t.tabIndex = j === i ? 0 : -1;
+      });
+      if (focus) tabs[i].focus();
+    };
+    tabs.forEach((t, i) => t.addEventListener('click', () => show(i)));
+    root.querySelector('.hero-tabs')?.addEventListener('keydown', (e) => {
+      const ev = e as KeyboardEvent;
+      if (!['ArrowLeft', 'ArrowRight'].includes(ev.key)) return;
+      const cur = tabs.findIndex((t) => t.getAttribute('aria-selected') === 'true');
+      show((cur + (ev.key === 'ArrowRight' ? 1 : -1) + tabs.length) % tabs.length, true);
+    });
+  });
+</script>
