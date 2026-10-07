@@ -65,6 +65,8 @@ export default defineConfig({
   integrations: [
     sitemap({
       i18n: { defaultLocale: 'en', locales: { en: 'en', it: 'it', sq: 'sq' } },
+      // Readable view in browsers; crawlers ignore it.
+      xslURL: '/sitemap.xsl',
       serialize(item) {
         const path = new URL(item.url).pathname;
         const alts = serviceAlternates.get(path);
