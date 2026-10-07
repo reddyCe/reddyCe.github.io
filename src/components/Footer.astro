@@ -13,7 +13,7 @@ const year = new Date().getFullYear();
 <footer class="site-footer">
   <div class="wrap footer-grid">
     <div class="footer-brand">
-      <a class="logo" href={home} aria-label="Red Zone Labs, home">
+      <a class="logo" href={home} aria-label="Red Zeta Labs, home">
         <Logo size={72} />
       </a>
       <p>{t('footer.tagline')}</p>
@@ -46,7 +46,7 @@ const year = new Date().getFullYear();
     </div>
   </div>
   <div class="wrap footer-bottom">
-    <p>© {year} Red Zone Labs. {t('footer.note')}</p>
+    <p>© {year} Red Zeta Labs. {t('footer.note')}</p>
     <p>{langs.map((l, i) => <>{i > 0 && ' · '}<a href={alts[l]} hreflang={l} lang={l}>{languages[l]}</a></>)}</p>
   </div>
 </footer>

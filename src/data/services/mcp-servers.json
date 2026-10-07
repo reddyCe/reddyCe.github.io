@@ -9,7 +9,7 @@
     "en": {
       "slug": "mcp-server-development",
       "navLabel": "MCP servers",
-      "metaTitle": "MCP server development for Claude and ChatGPT | Red Zone Labs",
+      "metaTitle": "MCP server development for Claude and ChatGPT | Red Zeta Labs",
       "metaDescription": "MCP server development: make your product usable from Claude, ChatGPT and other AI assistants, with clear tools, OAuth sign-in and per-user permissions.",
       "eyebrow": "Model Context Protocol",
       "h1": "MCP server development for Claude, ChatGPT and other assistants",
@@ -99,7 +99,7 @@
     "it": {
       "slug": "sviluppo-server-mcp",
       "navLabel": "Server MCP",
-      "metaTitle": "Sviluppo server MCP per Claude e ChatGPT | Red Zone Labs",
+      "metaTitle": "Sviluppo server MCP per Claude e ChatGPT | Red Zeta Labs",
       "metaDescription": "Sviluppo server MCP: il vostro prodotto usabile da Claude, ChatGPT e altri assistenti AI, con strumenti chiari, accesso OAuth e permessi per ogni utente.",
       "eyebrow": "Model Context Protocol",
       "h1": "Sviluppo server MCP per Claude, ChatGPT e altri assistenti AI",
@@ -189,7 +189,7 @@
     "sq": {
       "slug": "zhvillim-server-mcp",
       "navLabel": "Servera MCP",
-      "metaTitle": "Zhvillim serveri MCP për Claude dhe ChatGPT | Red Zone Labs",
+      "metaTitle": "Zhvillim serveri MCP për Claude dhe ChatGPT | Red Zeta Labs",
       "metaDescription": "Zhvillim serveri MCP: produkti juaj i përdorshëm nga Claude, ChatGPT dhe asistentë AI, me mjete të qarta, hyrje me OAuth dhe leje për çdo përdorues.",
       "eyebrow": "Model Context Protocol",
       "h1": "Zhvillim serveri MCP për Claude, ChatGPT dhe asistentë të tjerë AI",

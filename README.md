@@ -1,6 +1,6 @@
-# Red Zone Labs, studio site
+# Red Zeta Labs, studio site
 
-Site for Red Zone Labs (rzl.si), the software studio founded by Redon Cela, in English, Italian and Albanian. Static [Astro](https://astro.build) build with no client framework, cookies or trackers.
+Site for Red Zeta Labs (rzl.si), the software studio founded by Redon Cela, in English, Italian and Albanian. Static [Astro](https://astro.build) build with no client framework, cookies or trackers.
 
 ## Run it
 

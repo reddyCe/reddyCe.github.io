@@ -12,9 +12,9 @@ export const projectHref = (lang: Lang, slug: string) => `${prefix(lang)}/projec
 
 export const ui = {
   en: {
-    'meta.title': 'Red Zone Labs | Web, mobile and AI transformation studio in Berlin',
+    'meta.title': 'Red Zeta Labs | Web, mobile and AI transformation studio in Berlin',
     'meta.description':
-      'Red Zone Labs builds web platforms and mobile apps and brings AI into everyday business work. Software studio in Berlin, working in English, Italian and Albanian.',
+      'Red Zeta Labs builds web platforms and mobile apps and brings AI into everyday business work. Software studio in Berlin, working in English, Italian and Albanian.',
     'nav.work': 'Projects',
     'nav.ai': 'AI transformation',
     'nav.services': 'Services',
@@ -124,8 +124,8 @@ export const ui = {
     'notfound.lede': 'The link may be old. The project list is on the home page.',
     'notfound.cta': 'Go to the home page',
     'svc.all': 'All services',
-    'svc.index.title': 'Services | Web, mobile, CRM and AI development | Red Zone Labs',
-    'svc.index.desc': 'Web platforms, custom CRMs, mobile apps, AI transformation, digital transformation and MCP servers, built end to end by Red Zone Labs.',
+    'svc.index.title': 'Services | Web, mobile, CRM and AI development | Red Zeta Labs',
+    'svc.index.desc': 'Web platforms, custom CRMs, mobile apps, AI transformation, digital transformation and MCP servers, built end to end by Red Zeta Labs.',
     'svc.index.h1': 'What we build for companies',
     'svc.index.lead': 'Each kind of work below is backed by products we designed, built and still run. Pick the one closest to your problem.',
     'svc.read': 'How we build {name}',
@@ -134,9 +134,9 @@ export const ui = {
     'svc.examples': 'See examples',
   },
   it: {
-    'meta.title': 'Red Zone Labs | Studio per web, mobile e trasformazione AI a Berlino',
+    'meta.title': 'Red Zeta Labs | Studio per web, mobile e trasformazione AI a Berlino',
     'meta.description':
-      'Red Zone Labs realizza piattaforme web e app mobile e porta l’AI nel lavoro di ogni giorno. Studio software a Berlino, lavoriamo in italiano, inglese e albanese.',
+      'Red Zeta Labs realizza piattaforme web e app mobile e porta l’AI nel lavoro di ogni giorno. Studio software a Berlino, lavoriamo in italiano, inglese e albanese.',
     'nav.work': 'Progetti',
     'nav.ai': 'Trasformazione AI',
     'nav.services': 'Servizi',
@@ -246,8 +246,8 @@ export const ui = {
     'notfound.lede': 'Il link potrebbe essere vecchio. L’elenco dei progetti è nella home.',
     'notfound.cta': 'Vai alla home',
     'svc.all': 'Tutti i servizi',
-    'svc.index.title': 'Servizi | Sviluppo web, mobile, CRM e AI | Red Zone Labs',
-    'svc.index.desc': 'Piattaforme web, CRM su misura, app mobile, trasformazione AI, trasformazione digitale e server MCP, realizzati da Red Zone Labs dall’inizio alla fine.',
+    'svc.index.title': 'Servizi | Sviluppo web, mobile, CRM e AI | Red Zeta Labs',
+    'svc.index.desc': 'Piattaforme web, CRM su misura, app mobile, trasformazione AI, trasformazione digitale e server MCP, realizzati da Red Zeta Labs dall’inizio alla fine.',
     'svc.index.h1': 'Cosa realizziamo per le aziende',
     'svc.index.lead': 'Ogni tipo di lavoro qui sotto è dimostrato da prodotti che abbiamo progettato, sviluppato e che gestiamo ancora. Scegli quello più vicino al tuo problema.',
     'svc.read': 'Come realizziamo: {name}',
@@ -256,9 +256,9 @@ export const ui = {
     'svc.examples': 'Guarda gli esempi',
   },
   sq: {
-    'meta.title': 'Red Zone Labs | Studio për web, mobile dhe transformim me AI në Berlin',
+    'meta.title': 'Red Zeta Labs | Studio për web, mobile dhe transformim me AI në Berlin',
     'meta.description':
-      'Red Zone Labs ndërton platforma web dhe aplikacione mobile dhe e sjell AI-në në punën e përditshme. Studio softueri në Berlin, punojmë në shqip, anglisht dhe italisht.',
+      'Red Zeta Labs ndërton platforma web dhe aplikacione mobile dhe e sjell AI-në në punën e përditshme. Studio softueri në Berlin, punojmë në shqip, anglisht dhe italisht.',
     'nav.work': 'Projektet',
     'nav.ai': 'Transformimi me AI',
     'nav.services': 'Shërbimet',
@@ -368,8 +368,8 @@ export const ui = {
     'notfound.lede': 'Linku mund të jetë i vjetër. Lista e projekteve është në faqen kryesore.',
     'notfound.cta': 'Shko te faqja kryesore',
     'svc.all': 'Të gjitha shërbimet',
-    'svc.index.title': 'Shërbimet | Zhvillim web, mobile, CRM dhe AI | Red Zone Labs',
-    'svc.index.desc': 'Platforma web, CRM me porosi, aplikacione mobile, transformim me AI, transformim dixhital dhe servera MCP, të ndërtuara nga Red Zone Labs nga fillimi në fund.',
+    'svc.index.title': 'Shërbimet | Zhvillim web, mobile, CRM dhe AI | Red Zeta Labs',
+    'svc.index.desc': 'Platforma web, CRM me porosi, aplikacione mobile, transformim me AI, transformim dixhital dhe servera MCP, të ndërtuara nga Red Zeta Labs nga fillimi në fund.',
     'svc.index.h1': 'Çfarë ndërtojmë për kompanitë',
     'svc.index.lead': 'Çdo lloj pune më poshtë provohet me produkte që i kemi projektuar, ndërtuar dhe që i menaxhojmë ende. Zgjidh atë që i afrohet më shumë problemit tënd.',
     'svc.read': 'Si e ndërtojmë: {name}',
