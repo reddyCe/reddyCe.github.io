@@ -22,8 +22,8 @@
   --chrome: #ebe8e2;
   --focus: #211f1c;
 
-  --font: 'Manrope', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
-  --mono: 'Geist Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+  --font: var(--font-manrope);
+  --mono: var(--font-geist-mono);
 
   /* type scale with paired line heights */
   --fs-1: clamp(2.125rem, 1.4rem + 3vw, 4rem);

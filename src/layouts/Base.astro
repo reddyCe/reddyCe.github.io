@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import { Font } from 'astro:assets';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { langs, prefix, ogLocale, useT, type Lang } from '../i18n/ui';
@@ -19,8 +20,10 @@ interface Props {
   noindex?: boolean;
 }
 
-const { lang, title, description, path, alternates = {}, image, imageAlt, type = 'website', jsonLd = [], noindex = false } = Astro.props;
+const { lang, title: rawTitle, description, path, alternates = {}, image, imageAlt, type = 'website', jsonLd = [], noindex = false } = Astro.props;
 const site = Astro.site!;
+// Search results show the site name above the title, so drop the brand suffix when it would push the title past ~65 chars.
+const title = rawTitle.length > 65 ? rawTitle.replace(/ \| Red Zone Labs$/, '') : rawTitle;
 const abs = (p: string) => new URL(p, site).href;
 const alts = Object.fromEntries(langs.map((l) => [l, alternates[l] ?? `${prefix(l)}${path}`])) as Record<Lang, string>;
 const canonical = abs(alts[lang]);
@@ -34,7 +37,7 @@ const ogImage = abs(image ?? `/og/${lang}.png`);
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title}</title>
     <meta name="description" content={description} />
-    <meta name="author" content="Redon Cela" />
+    <meta name="author" content="Red Zone Labs" />
     <meta name="robots" content={noindex ? 'noindex, follow' : 'index, follow, max-image-preview:large'} />
     <link rel="canonical" href={canonical} />
     {langs.map((l) => <link rel="alternate" hreflang={l} href={abs(alts[l])} />)}
@@ -55,6 +58,7 @@ const ogImage = abs(image ?? `/og/${lang}.png`);
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={ogImage} />
+    {imageAlt && <meta name="twitter:image:alt" content={imageAlt} />}
 
     <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
     <meta name="theme-color" content="#171614" media="(prefers-color-scheme: dark)" />
@@ -63,12 +67,8 @@ const ogImage = abs(image ?? `/og/${lang}.png`);
     <link rel="manifest" href="/site.webmanifest" />
     <link rel="sitemap" href="/sitemap-index.xml" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@500&family=Manrope:wght@400;500;600;700&display=swap"
-    />
+    <Font cssVariable="--font-manrope" preload={[{ subset: 'latin' }]} />
+    <Font cssVariable="--font-geist-mono" />
 
     {jsonLd.map((d) => <script type="application/ld+json" set:html={JSON.stringify(d)} />)}
 

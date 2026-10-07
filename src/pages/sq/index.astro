@@ -6,6 +6,6 @@ import { useT } from '../../i18n/ui';
 const lang = 'sq';
 const t = useT(lang);
 ---
-<Base lang={lang} title={t('meta.title')} description={t('meta.description')} path="/" type="profile" jsonLd={homeJsonLd(lang, Astro.site!)}>
+<Base lang={lang} title={t('meta.title')} description={t('meta.description')} path="/" type="website" jsonLd={homeJsonLd(lang, Astro.site!)}>
   <Home lang={lang} />
 </Base>

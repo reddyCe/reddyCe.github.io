@@ -78,8 +78,22 @@ export function homeJsonLd(lang: Lang, site: URL) {
           image: abs(site, '/og/en.png'),
           address: { '@type': 'PostalAddress', addressLocality: 'Berlin', addressCountry: 'DE' },
           founder: { '@id': abs(site, '/#redon') },
+          contactPoint: {
+            '@type': 'ContactPoint',
+            contactType: 'sales',
+            email: EMAIL,
+            availableLanguage: ['English', 'Italian', 'Albanian'],
+          },
           areaServed: ['Albania', 'Italy', 'Germany', 'European Union', 'United States', 'Worldwide'],
           availableLanguage: ['English', 'Italian', 'Albanian'],
+          hasOfferCatalog: {
+            '@type': 'OfferCatalog',
+            name: ui[lang]['nav.services'],
+            itemListElement: services.map((s) => ({
+              '@type': 'Offer',
+              itemOffered: { '@type': 'Service', name: s.i18n[lang].navLabel, url: abs(site, serviceHref(lang, s)) },
+            })),
+          },
           serviceType: [
             ui[lang]['services.1.t'],
             ui[lang]['services.2.t'],

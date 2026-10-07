@@ -14,7 +14,7 @@ export const ui = {
   en: {
     'meta.title': 'Red Zone Labs | Web, mobile and AI transformation studio in Berlin',
     'meta.description':
-      'Red Zone Labs builds web platforms and mobile apps and brings AI into existing business workflows: documents read and filed, answers from company data, MCP servers. Work includes Saneo.al, AlProperty, USA College Sport, CircleOn.me, The Quiz Master, tdown.live and Pushim.al. Open to new projects.',
+      'Red Zone Labs builds web platforms and mobile apps and brings AI into everyday business work. Software studio in Berlin, working in English, Italian and Albanian.',
     'nav.work': 'Projects',
     'nav.ai': 'AI transformation',
     'nav.services': 'Services',
@@ -136,7 +136,7 @@ export const ui = {
   it: {
     'meta.title': 'Red Zone Labs | Studio per web, mobile e trasformazione AI a Berlino',
     'meta.description':
-      'Red Zone Labs realizza piattaforme web e app mobile e porta l’AI nei processi aziendali: documenti letti e archiviati, risposte dai dati aziendali, server MCP. Tra i lavori: Saneo.al, AlProperty, USA College Sport, CircleOn.me, The Quiz Master, tdown.live e Pushim.al. Disponibili per nuovi progetti.',
+      'Red Zone Labs realizza piattaforme web e app mobile e porta l’AI nel lavoro di ogni giorno. Studio software a Berlino, lavoriamo in italiano, inglese e albanese.',
     'nav.work': 'Progetti',
     'nav.ai': 'Trasformazione AI',
     'nav.services': 'Servizi',
@@ -258,7 +258,7 @@ export const ui = {
   sq: {
     'meta.title': 'Red Zone Labs | Studio për web, mobile dhe transformim me AI në Berlin',
     'meta.description':
-      'Red Zone Labs ndërton platforma web dhe aplikacione mobile dhe e sjell AI-në në proceset e biznesit: dokumente të lexuara dhe të arkivuara, përgjigje nga të dhënat e kompanisë, servera MCP. Ndër punët: Saneo.al, AlProperty, USA College Sport, CircleOn.me, The Quiz Master, tdown.live dhe Pushim.al. Të hapur për projekte të reja.',
+      'Red Zone Labs ndërton platforma web dhe aplikacione mobile dhe e sjell AI-në në punën e përditshme. Studio softueri në Berlin, punojmë në shqip, anglisht dhe italisht.',
     'nav.work': 'Projektet',
     'nav.ai': 'Transformimi me AI',
     'nav.services': 'Shërbimet',
