@@ -48,6 +48,7 @@
   "i18n": {
     "en": {
       "tagline": "Pub-quiz hosting app that AI assistants can write into",
+      "seoTitle": "The Quiz Master: pub-quiz app with MCP server",
       "summary": "Quiz Master is a web app for running pub-quiz nights: build the running order, rehearse it, then present it full-screen while scoring teams from a control panel. Its MCP server lets AI assistants such as Claude or ChatGPT write quizzes directly into the host's library. Ask for \"a 3-round pub quiz on 90s football\" and the finished quiz appears in Quiz Master, ready to host.",
       "useCases": [
         "A pub quiz host asks Claude for a themed night and gets a full quiz with rounds, answer reveals and a scoreboard.",
@@ -64,6 +65,7 @@
     },
     "it": {
       "tagline": "Quiz da pub condotti in sala e scritti anche dall'AI",
+      "seoTitle": "The Quiz Master: app per quiz con server MCP",
       "summary": "Quiz Master è una web app per condurre serate quiz: si costruisce la scaletta, la si prova e poi la si proietta a schermo intero, assegnando i punti alle squadre da un pannello di controllo. Il suo server MCP permette ad assistenti AI come Claude o ChatGPT di scrivere i quiz direttamente nella libreria dell'host. Basta chiedere \"un quiz da pub in 3 round sul calcio anni '90\" e il quiz completo compare in Quiz Master, pronto da condurre.",
       "useCases": [
         "Un presentatore di quiz chiede a Claude una serata a tema e riceve un quiz completo con round, soluzioni e classifica.",
@@ -80,6 +82,7 @@
     },
     "sq": {
       "tagline": "Aplikacion për kuize pubi, ku shkruan edhe asistenti AI",
+      "seoTitle": "The Quiz Master: kuize pubi me server MCP",
       "summary": "Quiz Master është një aplikacion web për të drejtuar mbrëmje kuizi: ndërton radhën e programit, e provon dhe pastaj e shfaq në ekran të plotë, ndërsa u jep pikë skuadrave nga një panel kontrolli. Serveri i tij MCP u lejon asistentëve AI si Claude ose ChatGPT të shkruajnë kuize direkt në bibliotekën e organizatorit. Mjafton të kërkosh \"një kuiz pubi me 3 raunde për futbollin e viteve '90\" dhe kuizi i plotë shfaqet në Quiz Master, gati për t'u drejtuar.",
       "useCases": [
         "Një organizator kuizesh i kërkon Claude-it një mbrëmje me temë dhe merr një kuiz të plotë me raunde, përgjigje dhe renditje.",

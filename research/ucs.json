@@ -28,6 +28,7 @@
   "i18n": {
     "en": {
       "tagline": "Recruiting platform for European athletes aiming at US colleges",
+      "seoTitle": "USA College Sport: athlete recruiting platform",
       "summary": "A rebuild of the platform for an agency that has placed European student-athletes in US colleges since 2015. Players build a profile and turn full match videos into a highlight reel. College coaches search players by position, class year, GPA and game film.",
       "useCases": [
         "A football player in Genoa pastes a YouTube link to a match, tags their best plays and gets the clips back already cut.",
@@ -44,6 +45,7 @@
     },
     "it": {
       "tagline": "Piattaforma di reclutamento per atleti europei verso i college USA",
+      "seoTitle": "USA College Sport: reclutamento per college USA",
       "summary": "Il rifacimento della piattaforma di un'agenzia che dal 2015 porta studenti-atleti europei nei college americani. I giocatori compilano il profilo e trasformano le partite intere in un video di highlight. I coach dei college cercano gli atleti per ruolo, anno di diploma, GPA e video.",
       "useCases": [
         "Un calciatore di Genova incolla il link YouTube di una partita, tagga le sue azioni migliori e riceve le clip già tagliate.",
@@ -60,6 +62,7 @@
     },
     "sq": {
       "tagline": "Platformë rekrutimi për atletë evropianë drejt kolegjeve amerikane",
+      "seoTitle": "USA College Sport: rekrutim atletësh për kolegje",
       "summary": "Rindërtimi i platformës së një agjencie që prej vitit 2015 çon student-atletë evropianë në kolegjet amerikane. Lojtarët plotësojnë profilin dhe i kthejnë ndeshjet e plota në një video me momentet më të mira. Trajnerët e kolegjeve kërkojnë lojtarë sipas pozicionit, vitit të diplomimit, GPA-së dhe videove.",
       "useCases": [
         "Një futbollist në Genova ngjit linkun YouTube të një ndeshjeje, shënon aksionet më të mira dhe i merr klipet të prera.",

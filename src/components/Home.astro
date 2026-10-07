@@ -89,19 +89,21 @@ const numbers = [
   <div class="hero-show" data-showcase>
     <div class="hero-stage">
       {showcase.map((s, i) => (
-        <figure class:list={['hero-shot', { 'is-active': i === 0 }]} id={`hero-shot-${s.slug}`} role="tabpanel" aria-labelledby={`hero-tab-${s.slug}`} data-i={i}>
-          {s.shot.kind === 'mobile' ? (
-            <div class="hero-device">
-              <Frame image={s.shot.image} kind="mobile" alt={`${s.name}: ${s.shot.caption[lang]}`} sizes="240px" />
-            </div>
-          ) : (
-            <Frame image={s.shot.image} kind="desktop" url={s.host} alt={`${s.name}: ${s.shot.caption[lang]}`} eager={i === 0} sizes="(max-width: 900px) 100vw, 760px" />
-          )}
-          <figcaption>
-            <span>{s.shot.caption[lang]}</span>
-            <a class="more" href={`#${s.slug}`}>{t('hero.case')} <Icon name="chevron" /></a>
-          </figcaption>
-        </figure>
+        <div class:list={['hero-shot', { 'is-active': i === 0 }]} id={`hero-shot-${s.slug}`} role="tabpanel" aria-labelledby={`hero-tab-${s.slug}`} data-i={i}>
+          <figure>
+            {s.shot.kind === 'mobile' ? (
+              <div class="hero-device">
+                <Frame image={s.shot.image} kind="mobile" alt={`${s.name}: ${s.shot.caption[lang]}`} sizes="240px" />
+              </div>
+            ) : (
+              <Frame image={s.shot.image} kind="desktop" url={s.host} alt={`${s.name}: ${s.shot.caption[lang]}`} eager={i === 0} sizes="(max-width: 900px) 100vw, 760px" />
+            )}
+            <figcaption>
+              <span>{s.shot.caption[lang]}</span>
+              <a class="more" href={`#${s.slug}`}>{t('hero.case')} <Icon name="chevron" /></a>
+            </figcaption>
+          </figure>
+        </div>
       ))}
     </div>
     <div class="hero-tabs" role="tablist" aria-label={t('work.title')}>

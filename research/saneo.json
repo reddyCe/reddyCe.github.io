@@ -17,6 +17,7 @@
   "i18n": {
     "en": {
       "tagline": "Doctor booking for patients and clinics in Albania",
+      "seoTitle": "Saneo: doctor booking platform for Albania",
       "summary": "Patients in Albania use Saneo to search doctors by specialty and city, see open slots and book a visit in person or by video. Doctors and clinics use the same product for their shared calendar, patient charts, reminders and a public booking page.",
       "useCases": [
         "A patient in Tirana finds a cardiologist on the map and books tomorrow's 11:30 slot from their phone.",
@@ -33,6 +34,7 @@
     },
     "it": {
       "tagline": "Prenotazione di visite mediche per pazienti e cliniche in Albania",
+      "seoTitle": "Saneo: prenotazione visite mediche in Albania",
       "summary": "Con Saneo i pazienti in Albania cercano un medico per specialità e città, vedono gli orari liberi e prenotano una visita in studio o in video. Medici e cliniche usano lo stesso prodotto per il calendario condiviso, le cartelle dei pazienti, i promemoria e una pagina di prenotazione pubblica.",
       "useCases": [
         "Un paziente a Tirana trova un cardiologo sulla mappa e dal telefono prenota per domani alle 11:30.",
@@ -49,6 +51,7 @@
     },
     "sq": {
       "tagline": "Rezervime te mjeku për pacientë dhe klinika në Shqipëri",
+      "seoTitle": "Saneo: rezervime online te mjeku në Shqipëri",
       "summary": "Me Saneo pacientët në Shqipëri kërkojnë mjekë sipas specialitetit dhe qytetit, shohin oraret e lira dhe rezervojnë vizitë në klinikë ose me video. Mjekët dhe klinikat përdorin të njëjtin produkt për kalendarin e përbashkët, kartelat e pacientëve, kujtesat dhe një faqe publike rezervimi.",
       "useCases": [
         "Një pacient në Tiranë gjen një kardiolog në hartë dhe nga telefoni rezervon për nesër në orën 11:30.",

@@ -19,6 +19,7 @@
   "i18n": {
     "en": {
       "tagline": "Circle yourself in game film for college recruiters",
+      "seoTitle": "CircleOn.me: highlight videos for recruiters",
       "summary": "CircleOn.me is a browser tool for student athletes making recruiting videos. They paste a YouTube link or upload game film, click on themselves at each key play and get back an MP4 with freeze-frames, an animated circle and optional music. There is a free tier, and paid plans run through Stripe.",
       "useCases": [
         "A high-school player circles themselves in a full match so college coaches can follow them on every play.",
@@ -35,6 +36,7 @@
     },
     "it": {
       "tagline": "Video di reclutamento con un cerchio sul giocatore",
+      "seoTitle": "CircleOn.me: video highlight per il reclutamento",
       "summary": "CircleOn.me è uno strumento nel browser per studenti-atleti che preparano video di reclutamento. Si incolla un link YouTube o si carica il video della partita, si clicca su sé stessi nelle azioni chiave e si riceve un MP4 con fermo immagine, cerchio animato e musica opzionale. C'è un piano gratuito, e i piani a pagamento passano da Stripe.",
       "useCases": [
         "Un giocatore delle superiori si cerchia nella partita intera, così gli allenatori dei college lo seguono in ogni azione.",
@@ -51,6 +53,7 @@
     },
     "sq": {
       "tagline": "Video rekrutimi me një rreth mbi lojtarin",
+      "seoTitle": "CircleOn.me: video rekrutimi për lojtarë",
       "summary": "CircleOn.me është një mjet në shfletues për atletët studentë që përgatisin video rekrutimi. Ata ngjitin një link YouTube ose ngarkojnë videon e ndeshjes, klikojnë mbi veten në çdo aksion kyç dhe marrin një MP4 me ngrirje kuadri, rreth të animuar dhe muzikë sipas dëshirës. Ka një plan falas, ndërsa planet me pagesë kalojnë përmes Stripe.",
       "useCases": [
         "Një lojtar i shkollës së mesme shënon veten me rreth në ndeshjen e plotë, që trajnerët e kolegjit ta ndjekin në çdo aksion.",

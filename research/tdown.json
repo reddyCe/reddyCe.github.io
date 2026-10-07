@@ -28,6 +28,7 @@
   "i18n": {
     "en": {
       "tagline": "Flight tracker for picking someone up at the airport",
+      "seoTitle": "tdown.live: flight tracker for airport pickups",
       "summary": "Touchdown follows one flight and tells you when it lands and when to leave to pick someone up. You type a flight number and share the link, and everyone sees the same countdown, the plane on the map and a pickup plan. It runs on the web at tdown.live and as iOS and Android apps.",
       "useCases": [
         "Someone shares a tdown.live link in the family chat, and everyone at home watches the same countdown to landing.",
@@ -44,6 +45,7 @@
     },
     "it": {
       "tagline": "Tracciamento voli per chi va a prendere qualcuno in aeroporto",
+      "seoTitle": "tdown.live: segui il volo di chi vai a prendere",
       "summary": "Touchdown segue un volo e ti dice quando atterra e quando uscire per andare a prendere qualcuno. Inserisci il numero di volo e condividi il link: tutti vedono lo stesso conto alla rovescia, l'aereo sulla mappa e un piano per il ritiro. Funziona sul web su tdown.live e come app per iOS e Android.",
       "useCases": [
         "Qualcuno condivide un link tdown.live nella chat di famiglia, e chi aspetta a casa segue lo stesso conto alla rovescia fino all'atterraggio.",
@@ -60,6 +62,7 @@
     },
     "sq": {
       "tagline": "Ndjekje fluturimi për ata që presin dikë në aeroport",
+      "seoTitle": "tdown.live: ndiq fluturimin kur pret dikë",
       "summary": "Touchdown ndjek një fluturim dhe të tregon kur ulet dhe kur duhet të nisesh për të marrë dikë. Shkruan numrin e fluturimit dhe ndan linkun: të gjithë shohin të njëjtin numërim mbrapsht, avionin në hartë dhe një plan për marrjen. Punon në web te tdown.live dhe si aplikacion për iOS dhe Android.",
       "useCases": [
         "Dikush ndan një link tdown.live në grupin e familjes, dhe kush pret në shtëpi ndjek të njëjtin numërim mbrapsht deri në ulje.",

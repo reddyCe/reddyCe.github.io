@@ -17,6 +17,7 @@
   "i18n": {
     "en": {
       "tagline": "Holiday offers from Tirana and Durrës agencies, compared",
+      "seoTitle": "Pushim.al: holiday offers compared in Albania",
       "summary": "Pushim.al gathers the holiday offers that travel agencies in Tirana and Durrës publish on their websites, Instagram and Facebook, and turns them into one searchable catalogue. Travellers compare price per person, dates and agency, then book directly with the agency.",
       "useCases": [
         "A family filters beach holidays under €500 per person for August and compares agencies on the same trip.",
@@ -33,6 +34,7 @@
     },
     "it": {
       "tagline": "Le offerte delle agenzie di Tirana e Durazzo, a confronto",
+      "seoTitle": "Pushim.al: offerte vacanze in Albania a confronto",
       "summary": "Pushim.al raccoglie le offerte vacanza che le agenzie di Tirana e Durazzo pubblicano sui loro siti, su Instagram e Facebook, e le trasforma in un unico catalogo ricercabile. Chi viaggia confronta prezzo a persona, date e agenzia, poi prenota direttamente con l'agenzia.",
       "useCases": [
         "Una famiglia filtra le vacanze al mare sotto i 500 € a persona ad agosto e confronta le agenzie sullo stesso viaggio.",
@@ -49,6 +51,7 @@
     },
     "sq": {
       "tagline": "Ofertat e agjencive të Tiranës dhe Durrësit, krah për krah",
+      "seoTitle": "Pushim.al: ofertat e pushimeve krah për krah",
       "summary": "Pushim.al mbledh ofertat e pushimeve që agjencitë e Tiranës dhe Durrësit publikojnë në faqet e tyre, në Instagram dhe Facebook, dhe i kthen në një katalog të vetëm me kërkim. Udhëtarët krahasojnë çmimin për person, datat dhe agjencinë, pastaj rezervojnë direkt me agjencinë.",
       "useCases": [
         "Një familje filtron pushimet në plazh nën 500 € për person në gusht dhe krahason agjencitë për të njëjtin udhëtim.",

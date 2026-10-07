@@ -5,6 +5,8 @@ type Localized<T> = Record<Lang, T>;
 
 export interface ProjectCopy {
   tagline: string;
+  /** Short <title> for search results; falls back to "name: tagline". */
+  seoTitle?: string;
   summary: string;
   useCases: string[];
   highlights: string[];
