@@ -1,7 +1,7 @@
 {
   "name": "Red Zeta Labs, software studio",
   "short_name": "Red Zeta Labs",
-  "icons": [{ "src": "/apple-touch-icon.png", "sizes": "180x180", "type": "image/png" }, { "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml" }],
+  "icons": [{ "src": "/favicon-96.png", "sizes": "96x96", "type": "image/png" }, { "src": "/apple-touch-icon.png", "sizes": "180x180", "type": "image/png" }, { "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml" }],
   "theme_color": "#d52b1e",
   "background_color": "#ffffff",
   "display": "browser",
