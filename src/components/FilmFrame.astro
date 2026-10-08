@@ -1,0 +1,48 @@
+---
+// A project film in the browser window frame. Plays muted and looping only
+// while on screen, and not at all under prefers-reduced-motion.
+import { getImage } from 'astro:assets';
+import Icon from './Icon.astro';
+import type { Film } from '../data/projects';
+interface Props {
+  film: Film;
+  title: string;
+  url?: string;
+}
+const { film, title, url = '' } = Astro.props;
+const poster = await getImage({ src: film.poster, width: 1280, format: 'webp', quality: 80 });
+---
+<div class="browser">
+  <div class="browser-bar" aria-hidden="true">
+    <span class="tl"></span><span class="tl"></span><span class="tl"></span>
+    <span class="browser-url"><Icon name="lock" />{url}</span>
+    <span class="spacer"></span>
+  </div>
+  <video
+    class="film"
+    src={film.src}
+    poster={poster.src}
+    width={film.poster.width}
+    height={film.poster.height}
+    title={title}
+    aria-label={title}
+    muted
+    loop
+    playsinline
+    controls
+    preload="none"
+    data-film
+  ></video>
+</div>
+
+<script>
+  const still = matchMedia('(prefers-reduced-motion: reduce)');
+  const io = new IntersectionObserver((entries) => {
+    for (const e of entries) {
+      const v = e.target as HTMLVideoElement;
+      if (e.isIntersecting && !still.matches) v.play().catch(() => {});
+      else if (!e.isIntersecting) v.pause();
+    }
+  }, { threshold: 0.5 });
+  document.querySelectorAll<HTMLVideoElement>('[data-film]').forEach((v) => io.observe(v));
+</script>

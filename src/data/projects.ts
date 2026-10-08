@@ -20,6 +20,13 @@ export interface Shot {
   image: ImageMetadata;
 }
 
+export interface Film {
+  /** Path under public/. */
+  src: string;
+  title: Localized<string>;
+  poster: ImageMetadata;
+}
+
 export interface Project {
   slug: string;
   name: string;
@@ -34,6 +41,8 @@ export interface Project {
   screenshots: Shot[];
   surfaces: string[];
   mcpTools?: { name: string; description: string }[];
+  /** Plays in the hero instead of the cover screenshot. */
+  film?: Film;
   year: string;
 }
 
@@ -59,7 +68,9 @@ export const projects: Project[] = ORDER.map((slug) => raw[`../../research/${slu
       .filter((s: Shot) => s.image);
     const surfaces = [...new Set(screenshots.map((s) => s.surface))];
     const year = String(p.period ?? '').match(/\d{4}(?!.*\d{4})/)?.[0] ?? '';
-    return { ...p, screenshots, surfaces, year, facts: p.facts ?? [], stack: p.stack ?? [] };
+    const poster = p.film && resolveImage(p.film.poster);
+    const film = poster ? { ...p.film, poster } : undefined;
+    return { ...p, screenshots, surfaces, film, year, facts: p.facts ?? [], stack: p.stack ?? [] };
   });
 
 export const getProject = (slug: string) => projects.find((p) => p.slug === slug);

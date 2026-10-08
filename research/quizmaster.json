@@ -45,6 +45,15 @@
     { "name": "remove_question_from_round", "description": "Unlinks a question from a round without deleting it." },
     { "name": "import_media", "description": "Copies a remote image, audio or video file into Quiz Master storage and returns a permanent URL." }
   ],
+  "film": {
+    "src": "/projects/quizmaster/mcp-film.mp4",
+    "poster": "projects/quizmaster/mcp-film-poster.jpg",
+    "title": {
+      "en": "Building a quiz by talking to your AI: the assistant calls the Quiz Master MCP tools and the quiz lands in the library, ready to host.",
+      "it": "Creare un quiz parlando con la propria AI: l'assistente usa gli strumenti MCP di The Quiz Master e il quiz arriva in libreria, pronto da condurre.",
+      "sq": "Një kuiz i ndërtuar duke folur me AI-në: asistenti përdor mjetet MCP të Quiz Master dhe kuizi del në bibliotekë, gati për t'u prezantuar."
+    }
+  },
   "i18n": {
     "en": {
       "tagline": "Pub-quiz hosting app that AI assistants can write into",

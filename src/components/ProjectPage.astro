@@ -1,5 +1,6 @@
 ---
 import Contact from './Contact.astro';
+import FilmFrame from './FilmFrame.astro';
 import Frame from './Frame.astro';
 import Icon from './Icon.astro';
 import { projects, hostOf, boardType, type Project } from '../data/projects';
@@ -45,7 +46,9 @@ const live = /live/i.test(p.status);
         )}
       </div>
       <div class="panel-media">
-        {cover && <Frame image={cover.image} kind={cover.kind} alt={`${p.name}: ${cover.caption?.[lang] ?? ''}`} url={host} eager sizes="(max-width: 900px) 100vw, 640px" />}
+        {p.film ? (
+          <FilmFrame film={p.film} title={p.film.title[lang] ?? p.film.title.en} url={host} />
+        ) : cover && <Frame image={cover.image} kind={cover.kind} alt={`${p.name}: ${cover.caption?.[lang] ?? ''}`} url={host} eager sizes="(max-width: 900px) 100vw, 640px" />}
       </div>
     </div>
   </header>

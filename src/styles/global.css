@@ -2271,3 +2271,9 @@ html:not(.js) .bar span {
 .svc-proof-media .phone {
   width: 170px;
 }
+.browser .film {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: #000;
+}
